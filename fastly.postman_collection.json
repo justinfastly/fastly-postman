@@ -515,6 +515,238 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Backend",
+			"description": "A backend is an address (IP or domain) from which Fastly pulls content. There can be multiple backends for a service.\n\n[Backend Documentation](https://docs.fastly.com/api/config#backend)",
+			"item": [
+				{
+					"name": "/service/service_id/version/version_no/backend",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/backend",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nList all backends for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#backend_fb0e875c9a7669f071cbf89ca32c7f69)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/backend/backend_name",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/backend/backend_name",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGet the backend for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no** \n- Update URL with **backend_name**\n\n[Documentation](https://docs.fastly.com/api/config#backend_5c0b2bcd6144eadbb6570ddf3c454b8b)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/backend",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/backend",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "ipv4",
+									"value": "127.0.0.1",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "name",
+									"value": "backend_name",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "port",
+									"value": "80",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "comment",
+									"value": "your_comment",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nCreate a backend for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no** \n- Update **ipv4** property in body\n- Update **name** property in body\n- Update **port** property in body\n- Update **comment** property in body\n\n[Documentation](https://docs.fastly.com/api/config#backend_85c170418ee71191dbb3b5046aeb6c2c)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/backend/backend_name",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/backend/backend_name",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "ipv4",
+									"value": "127.0.0.2",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "name",
+									"value": "updated_backend_name",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "port",
+									"value": "443",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "comment",
+									"value": "your_updated_comment",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nUpdate the backend for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no** \n- Update URL with **backend_name** \n- Update **ipv4** property in body\n- Update **name** property in body\n- Update **port** property in body\n- Update **comment** property in body\n\n[Documentation](https://docs.fastly.com/api/config#backend_fb3b3529417c70f57458644f7aec652e)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/backend/backend_name",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/backend/backend_name",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nDelete the backend for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no** \n- Update URL with **backend_name**\n\n[Documentation](https://docs.fastly.com/api/config#backend_a00ce4b7a448b63d26016837907e7bfa)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Billing",
+			"description": "Get information on current and past bills.\n\n[Billing Documentation](https://docs.fastly.com/api/account#billing)",
+			"item": [
+				{
+					"name": " /billing/year/billing_year/month/billing_month",
+					"request": {
+						"url": "{{url}}/billing/year/2017/month/01",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nGet the invoice for a given year and month.\n\n**Request Configuration:**\n\n- Update URL with **billing_year**\n- Update URL with **billing_month**\n\n[Documentation](https://docs.fastly.com/api/account#billing_bd3ea2cbea58ddbb82bbde0c1981fd8b)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Billing Address",
+			"description": "A billing address is used to calculate your bill correctly.\n\n[Billing Address Documentation](https://docs.fastly.com/api/account#billing_address)",
+			"item": [
+				{
+					"name": "/customer/customer_id/billing_address",
+					"request": {
+						"url": "{{url}}/customer/{{customer_id}}/billing_address",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGet a customer's billing address.\n\n[Documentation](https://docs.fastly.com/api/account#billing_address_01449df2d3702b2f6b333e0c1a33c6d5)"
+					},
+					"response": []
+				},
+				{
+					"name": "/customer/customer_id/billing_address",
+					"request": {
+						"url": "{{url}}/customer/{{customer_id}}/billing_address",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nDelete a customer's billing address.\n\n[Documentation](https://docs.fastly.com/api/account#billing_address_522cd343bac2efbd334cdf90ebf5d619)"
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
