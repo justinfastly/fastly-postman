@@ -37,7 +37,10 @@ At the moment the collection contains **0** out of **166** (not including Real-t
 
 | Category        | Collection Requests | API Requests | Coverage |
 | :-------------- | :------------------ | :----------- | :------- |
-|                 | **0**               | **166**      | **0%**   |
+| ACL             | 5                   | 5            | 100%     |
+| ACL Entry       | 6                   | 6            | 100%     |
+| API Tokens      | 6                   | 6            | 100%     |
+|                 | **17**              | **166**      | **10%**  |
 
 ## Usage
 
