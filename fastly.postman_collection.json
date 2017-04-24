@@ -1,0 +1,520 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Fastly",
+		"_postman_id": "59046e29-e0ba-7c6e-8e93-69572ffd6c88",
+		"description": "The Fastly API is a RESTful API that supports all features available through the Fastly web interface. Use the libraries below to guide the development of your sites and applications.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ACL",
+			"description": "An ACL is a named access control list for matching against a client's IP address during VCL processing. A new ACL is empty and is attached to a working version of a service (not locked or active). The version associated with the ACL must be activated to be used. To remove an ACL from use, the ACL must be deleted from a working version (not locked or active), and that version without the ACL must be activated.\n\n[ACL Documentation](https://docs.fastly.com/api/config#acl)\n\n",
+			"item": [
+				{
+					"name": "/service/service_id/version/version_no/acl",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/acl",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nList ACLs.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#acl_5dfdb4b644ee42fcb71f3c3f139e3b0d)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/acl/acl_name",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/acl/my_acl",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nRetrieve a single ACL by name for the version and service.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **acl_name**\n\n[Documentation](https://docs.fastly.com/api/config#acl_ea46be7e9fb009d231bdc47690cc1762)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/acl",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/acl",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "my_acl",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nCreate a new ACL for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update **name** property in body\n\n[Documentation](https://docs.fastly.com/api/config#acl_c2e66498f77f346e715deedb616f2dcd)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/acl/acl_name",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/acl/my_acl",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "updated_acl",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nUpdate ACL for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **acl_name**\n- Update **name** property in body\n\n[Documentation](https://docs.fastly.com/api/config#acl_a07615df96bab601c4889062fa5869a0)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/acl/acl_name",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/acl/my_acl",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nDelete an ACL for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **acl_name**\n\n[Documentation](https://docs.fastly.com/api/config#acl_62526fdbe826b794a6655fbb66f987a9)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ACL Entry",
+			"description": "An ACL entry holds an IP address with optional subnet to make up an entry in an ACL. ACL entries are versionless and can be modified without activating a new version. ACL entries can also be negated.\n\n[ACL Entry Documentation](https://docs.fastly.com/api/config#acl_entry)",
+			"item": [
+				{
+					"name": " /service/service_id/acl/acl_id/entries",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/acl/2tbYapWRORg2XEkiejXlzI/entries",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nList of ACL entries given service and ACL ID.\n\n**Request Configuration:**\n\n- Update URL with **acl_id**\n\n[Documentation](https://docs.fastly.com/api/config#acl_entry_25ff5c4d6ab5f53842e216a4ea355978)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/acl/acl_id/entry/entry_id",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/acl/2tbYapWRORg2XEkiejXlzI/entry/6JiQAHy6y03sQgs0A1l3ay",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nRetrieve a single ACL entry given service, ACL ID and entry ID.\n\n**Request Configuration:**\n\n- Update URL with **acl_id**\n- Update URL with **entry_id**\n\n[Documentation](https://docs.fastly.com/api/config#acl_entry_a637fad7f4c0014d2168d0a3b6f6a769)"
+					},
+					"response": []
+				},
+				{
+					"name": " /service/service_id/acl/acl_id/entry",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/acl/2tbYapWRORg2XEkiejXlzI/entry",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "ip",
+									"value": "127.0.0.1",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "subnet",
+									"value": "8",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "negated",
+									"value": "false",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "comment",
+									"value": "entry_comment",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nCreate ACL entry given service, ACL ID and properties.\n\n**Request Configuration:**\n\n- Update URL with **acl_id**\n- Update **ip** property in body\n- Update **subnet** property in body\n- Update **negated** property in body\n- Update **comment** property in body\n\n[Documentation](https://docs.fastly.com/api/config#acl_entry_777431aac7f63fee19c553c1fc9fae06)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/acl/acl_id/entry/entry_id",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/acl/2tbYapWRORg2XEkiejXlzI/entry/2sbWWkC9sFC4AU2i8GtMRy",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nDelete ACL entry given service, ACL ID, and entry ID.\n\n**Request Configuration:**\n\n- Update URL with **acl_id**\n- Update URL with **entry_id**\n\n[Documentation](https://docs.fastly.com/api/config#acl_entry_8ab8e771a201b24bee9ee64c7a45f464)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/acl/acl_id/entry/entry_id",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/acl/2tbYapWRORg2XEkiejXlzI/entry/2sbWWkC9sFC4AU2i8GtMRy",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "ip",
+									"value": "127.0.0.2",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "subnet",
+									"value": "10",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "negated",
+									"value": "true",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "comment",
+									"value": "updated_comment",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nUpdate ACL entry given service, ACL ID, entry ID and properties.\n\n**Request Configuration:**\n\n- Update URL with **acl_id**\n- Update URL with **entry_id**\n- Update **ip** property in body\n- Update **subnet** property in body\n- Update **negated** property in body\n- Update **comment** property in body\n\n[Documentation](https://docs.fastly.com/api/config#acl_entry_2d6a045ce1db8c8d5229747d9c494e4b)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/acl/acl_id/entries",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/acl/2tbYapWRORg2XEkiejXlzI/entries",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"entries\": [\n\t\t{\n\t\t\t\"op\": \"create\",\n\t\t\t\"ip\": \"192.168.0.1\",\n\t\t\t\"subnet\": \"8\",\n\t\t\t\"negated\": false,\n\t\t\t\"comment\": \"your_comment\"\n\t\t},\n\t\t{\n\t\t\t\"op\": \"update\",\n\t\t\t\"id\": \"6yxNzlOpW1V7JfSwvLGtOc\",\n\t\t\t\"ip\": \"192.168.0.2\",\n\t\t\t\"subnet\": \"16\",\n\t\t\t\"negated\": true,\n\t\t\t\"comment\": \"your_updated_comment\"\n\t\t},\n\t\t{\n\t\t\t\"op\": \"delete\",\n\t\t\t\"id\": \"1ujrCmULAWHUPP7Mzjefxa\"\n\t\t}\n\t]\n}"
+						},
+						"description": "**Description:**\n\nUpdate ACL entries in batch given service, ACL ID, entry ID and properties.\n\nValue of **op** can be either:\n- create\n- update\n- delete\n\n**Request Configuration:**\n\n- Update URL with **acl_id**\n- Update **op** property in body\n- Update **ip** property in body\n- Update **subnet** property in body\n- Update **negated** property in body\n- Update **comment** property in body\n\n[Documentation](https://docs.fastly.com/api/config#acl_entry_c352ca5aee49b7898535cce488e3ba82)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Tokens",
+			"description": "API tokens are unique authentication identifiers that you can create for the users and applications authorized to interact with your service. You can scope the authorization of tokens to a single service, and you can restrict access to purge all by limiting tokens to purging by URL and surrogate keys. Because users can create multiple API tokens, you can rotate tokens without taking services offline, and you can revoke individual tokens without having to update other API integrations.\n\n[API Tokens Documentation](https://docs.fastly.com/api/auth#tokens)",
+			"item": [
+				{
+					"name": "/tokens",
+					"request": {
+						"url": "{{url}}/tokens",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nList all tokens belonging to the authenticated user.\n\n[Documentation](https://docs.fastly.com/api/auth#tokens_d59ff8612bae27a2317278abb048db0c)"
+					},
+					"response": []
+				},
+				{
+					"name": "/customer/customer_id/tokens",
+					"request": {
+						"url": "{{url}}/customer/{{customer_id}}/tokens",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nList all tokens belonging to a specific customer.\n\n[Documentation](https://docs.fastly.com/api/auth#tokens_bc1370f9b3432d4423d35aa25a889c5a)"
+					},
+					"response": []
+				},
+				{
+					"name": " /tokens/self",
+					"request": {
+						"url": "{{url}}/tokens/self",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGet a single token based on the access_token used in the request.\n\n[Documentation](https://docs.fastly.com/api/auth#tokens_bb00e7ed542cbcd7f32b5c908b8ce244)"
+					},
+					"response": []
+				},
+				{
+					"name": "/tokens/limited",
+					"request": {
+						"url": "{{url}}/tokens",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-OTP",
+								"value": "531883",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "service_id",
+									"value": "{{service_id}}",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "expires_at",
+									"value": "2017-12-24T06:51:13Z",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "scope",
+									"value": "purge_select",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "name",
+									"value": "token_name",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nCreate an API token.\n\nThis token is limited to a service, to an expiration, and to a scope access level!\n\n- Expiration date format (e.g., 2016-07-28T19:24:50+00:00)\n- Scopes (global, purge_select, purge_all)\n\n**Request Configuration:**\n\n- Update **Fastly-OTP** property in headers (only if two-factor authentication is enabled)\n- Update **expires_at** property in body\n- Update **scope** property in body\n- Update **name** property in body\n\n[Documentation](https://docs.fastly.com/api/auth#tokens_db4655a45a0107448eb0676577446e40)"
+					},
+					"response": []
+				},
+				{
+					"name": "/tokens/not_limited",
+					"request": {
+						"url": "{{url}}/tokens",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-OTP",
+								"value": "xxxxxx",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "name",
+									"value": "token_name",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nCreate an API token.\n\nThis token is not limited to a service, to an expiration, and to a scope access level!\n\n**Request Configuration:**\n\n- Update **Fastly-OTP** property in headers (only if two-factor authentication is enabled)\n- Update **name** property in body\n\n[Documentation](https://docs.fastly.com/api/auth#tokens_db4655a45a0107448eb0676577446e40)"
+					},
+					"response": []
+				},
+				{
+					"name": "/tokens/self",
+					"request": {
+						"url": "{{url}}/tokens/self",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nRevoke a token that is used to authenticate the request.\n\n[Documentation](https://docs.fastly.com/api/auth#tokens_e0b9ecbbbfc21f5ee6531441bf743082)"
+					},
+					"response": []
+				},
+				{
+					"name": "/tokens/token_id",
+					"request": {
+						"url": "{{url}}/tokens/3xOa80Fkaci7IqKh8wUgRu",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nRevoke a specific token by its id.\n\n**Request Configuration:**\n\n- Update URL with **token_id**\n\n[Documentation](https://docs.fastly.com/api/auth#tokens_4a958ba69402500937f0d8570f7ce86f)"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
