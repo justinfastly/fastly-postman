@@ -379,7 +379,7 @@
 						"header": [
 							{
 								"key": "Fastly-OTP",
-								"value": "531883",
+								"value": "978349",
 								"description": ""
 							},
 							{
@@ -441,7 +441,7 @@
 						"header": [
 							{
 								"key": "Fastly-OTP",
-								"value": "xxxxxx",
+								"value": "974222",
 								"description": ""
 							},
 							{
@@ -743,6 +743,344 @@
 							"raw": ""
 						},
 						"description": "**Description:**\n\nDelete a customer's billing address.\n\n[Documentation](https://docs.fastly.com/api/account#billing_address_522cd343bac2efbd334cdf90ebf5d619)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cache Settings",
+			"description": "Controls how caching is performed on Fastly. When used in conjunction with Conditions the Cache Settings provide you with fine grain control over how long content persists in the cache.\n\n[Cache Settings Documentation](https://docs.fastly.com/api/config#cache_settings)",
+			"item": [
+				{
+					"name": "/service/service_id/version/version_no/cache_settings",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/cache_settings",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nGet a list of all cache settings for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#cache_settings_0d6fb6b78afaa453ec69a5dbd4038322)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/cache_settings/cache_setting_name",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/cache_settings/your_cache_setting",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nGet a specific cache settings object.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n- Update URL with **cache_setting_name**\n\n[Documentation](https://docs.fastly.com/api/config#cache_settings_9e1fcc14944551fadf3da3f87ff338a9)"
+					},
+					"response": []
+				},
+				{
+					"name": " /service/service_id/version/version_no/cache_settings",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/cache_settings",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "your_cache_setting",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "stale_ttl",
+									"value": "1200",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "ttl",
+									"value": "1000",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "action",
+									"value": "cache",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nCreate a cache settings object.\n\nAction can be:\n- cache\n- pass\n- restart\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update **name** property in body\n- Update **stale_ttl** property in body\n- Update **ttl** property in body\n- Update **action** property in body\n\n[Documentation](https://docs.fastly.com/api/config#cache_settings_015578a5dee074dd7fa45c4962b2c867)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/cache_settings/cache_setting_name",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/cache_settings/your_cache_setting",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "your_updated_cache_setting",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "stale_ttl",
+									"value": "2000",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "ttl",
+									"value": "1200",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "action",
+									"value": "cache",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nUpdate a specific cache settings object.\n\nAction can be:\n- cache\n- pass\n- restart\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **cache_setting_name**\n- Update **name** property in body\n- Update **stale_ttl** property in body\n- Update **ttl** property in body\n- Update **action** property in body\n\n[Documentation](https://docs.fastly.com/api/config#cache_settings_3416e629201894d017dc69fd07500eda)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/cache_settings/cache_setting_name",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/cache_settings/your_cache_setting",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nDelete a specific cache settings object.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **cache_setting_name**\n\n[Documentation](https://docs.fastly.com/api/config#cache_settings_9adabaabeb01d84b2c02c2dbc5b4bbda)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Condition",
+			"description": "Conditions are used to control when and how other objects are used in a service configuration. They contain a statement that evaluates to either true or false and is used to determine whether the condition is met. \n\nDepending on the type of the condition, the statement field can make reference to the Varnish variables **req**, **resp**, and/or **beresp**.\n\n[Condition Documentation](https://docs.fastly.com/api/config#condition)",
+			"item": [
+				{
+					"name": "/service/service_id/version/version_no/condition",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/condition",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nGet all conditions for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#condition_b61196c572f473c89863a81cc5912861)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/condition/condition_name",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/condition/your_condition",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test_condition",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "statement",
+									"value": "req.url~ \\\"index.html\\\"",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "priority",
+									"value": "10",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "comment",
+									"value": "your_comment",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nGet the specified condition.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **condition_name**\n\n[Documentation](https://docs.fastly.com/api/config#condition_149a2f48485ceb335f70504e5269b77e)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/condition",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/condition",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"your_condition\",\n\t\"statement\": \"req.url~ \\\"index.html\\\"\",\n\t\"priority\": 10,\n\t\"comment\": \"your_comment\",\n\t\"type\": \"CACHE\"\n}"
+						},
+						"description": "**Description:**\n\nCreates a new condition.\n\nType of the condition can be:\n- REQUEST\n- RESPONSE\n- CACHE\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update **name** property in body\n- Update **statement** property in body\n- Update **priority** property in body\n- Update **comment** property in body\n- Update **type** property in body\n\n[Documentation](https://docs.fastly.com/api/config#condition_551199dbec2271195319b675d8659226)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/condition/condition_name",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/condition/your_condition",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"statement\": \"req.url ~ \\\"\\.jpg$\\\"\",\n\t\"priority\": 10,\n\t\"comment\": \"your_updated_comment\",\n\t\"type\": \"CACHE\"\n}"
+						},
+						"description": "**Description:**\n\nUpdates the specified condition.\n\nType of the condition can be:\n- REQUEST\n- RESPONSE\n- CACHE\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **condition_name**\n- Update **name** property in body\n- Update **statement** property in body\n- Update **priority** property in body\n- Update **comment** property in body\n- Update **type** property in body\n\n[Documentation](https://docs.fastly.com/api/config#condition_01a2c4e4b44943b541e001013b665deb)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/condition/condition_name",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/condition/your_condition",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nDeletes the specified condition.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **condition_name**\n\n[Documentation](https://docs.fastly.com/api/config#condition_2b902b7649c46b4541f00a920d06c94d)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"description": "A Customer is the base object which owns your Users and Services.\n\n[Customer Documentation](https://docs.fastly.com/api/account#customer)",
+			"item": [
+				{
+					"name": "/customer/customer_id/users",
+					"request": {
+						"url": " {{url}}/customer/{{customer_id}}/users",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nList all users from a specified customer id.\n\n[Documentation](https://docs.fastly.com/api/account#customer_12f4a69627ba3bbb1c8668aae03a60ad)"
+					},
+					"response": []
+				},
+				{
+					"name": "/current_customer",
+					"request": {
+						"url": " {{url}}/current_customer",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGet the logged in customer.\n\n[Documentation](https://docs.fastly.com/api/account#customer_01dffc0769482c6e3501ccb07da8491e)"
 					},
 					"response": []
 				}
