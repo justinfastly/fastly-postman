@@ -1085,6 +1085,477 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Dictionary",
+			"description": "A Dictionary is a table that stores key value pairs accessible to VCL functions during VCL processing. A new dictionary is empty and attached to a working version of a service (not locked/active). In order for the dictionary to appear in generated VCL, the version associated with the dictionary must be activated. To remove a dictionary, the dictionary must be deleted on a working version (not locked/active), and that version without the dictionary then must be activated.\n\n[Dictionary Documentation](https://docs.fastly.com/api/config#dictionary)",
+			"item": [
+				{
+					"name": "/service/service_id/version/version_no/dictionary",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/dictionary",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test_condition",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "statement",
+									"value": "req.url~ \\\"index.html\\\"",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "priority",
+									"value": "10",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "comment",
+									"value": "your_comment",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nList all dictionaries for the version of the service.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#dictionary_6d2cc293b994eb8c16d93e92e91f3915)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/dictionary/dictionary_name",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/dictionary/my_dictionary",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test_condition",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "statement",
+									"value": "req.url~ \\\"index.html\\\"",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "priority",
+									"value": "10",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "comment",
+									"value": "your_comment",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nRetrieve a single dictionary by name for the version and service.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **dictionary_name**\n\n[Documentation](https://docs.fastly.com/api/config#dictionary_0e16df083830ed3b6c30b73dcef64014)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/dictionary",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/dictionary",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "my_dictionary",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nCreate named dictionary for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update **name** property in body\n\n[Documentation](https://docs.fastly.com/api/config#dictionary_7d48b87bf82433162a3b209292722125)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/dictionary/dictionary_name",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/dictionary/my_dictionary",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "updated_dictionary",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nUpdate named dictionary for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **dictionary_name**\n- Update **name** property in body\n\n[Documentation](https://docs.fastly.com/api/config#dictionary_8c9da370b1591d99e5389143a5589a32)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/dictionary/dictionary_name",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/version/50/dictionary/my_dictionary",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nDelete named dictionary for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **dictionary_name**\n\n[Documentation](https://docs.fastly.com/api/config#dictionary_9a447790d8a0788896cac0679a0350f8)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dictionary Item",
+			"description": "A DictionaryItem holds a key and value that make up an entry in a Dictionary. DictionaryItems are versionless so they can be modified without activating a new version.\n\n[Dictionary Item Documentation](https://docs.fastly.com/api/config#dictionary_item)",
+			"item": [
+				{
+					"name": "/service/service_id/dictionary/dictionary_id/items",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/dictionary/7Yvn9TVPRhTSL7TVs2FVBE/items",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test_condition",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "statement",
+									"value": "req.url~ \\\"index.html\\\"",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "priority",
+									"value": "10",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "comment",
+									"value": "your_comment",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nList of DictionaryItems given service and dictionary ID.\n\n**Request Configuration:**\n\n- Update URL with **dictionary_id**\n\n[Documentation](https://docs.fastly.com/api/config#dictionary_item_a48de28cd7e76c1ea58523f39bb7204b)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/dictionary/dictionary_id/item/item_key",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/dictionary/7Yvn9TVPRhTSL7TVs2FVBE/item/some_key",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test_condition",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "statement",
+									"value": "req.url~ \\\"index.html\\\"",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "priority",
+									"value": "10",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "comment",
+									"value": "your_comment",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nRetrieve a single DictionaryItem given service, dictionary ID and item key.\n\n**Request Configuration:**\n\n- Update URL with **dictionary_id**\n- Update URL with **item_key**\n\n[Documentation](https://docs.fastly.com/api/config#dictionary_item_08f090cd03ed4602ae63f131087e2f29)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/dictionary/dictionary_id/item",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/dictionary/7Yvn9TVPRhTSL7TVs2FVBE/item",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "item_key",
+									"value": "some_key",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "item_value",
+									"value": "some_value",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nCreate DictionaryItem given service, dictionary ID, item key, and item value.\n\n**Request Configuration:**\n\n- Update URL with **dictionary_id**\n- Update **item_key** property in body\n- Update **item_value** property in body\n\n[Documentation](https://docs.fastly.com/api/config#dictionary_item_6ec455c0ba1b21671789e1362bc7fe55)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/dictionary/dictionary_id/item/item_key",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/dictionary/7Yvn9TVPRhTSL7TVs2FVBE/item/some_key",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "item_value",
+									"value": "updated_value",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nUpsert DictionaryItem given service, dictionary ID, item key, and item value.\n\n**Request Configuration:**\n\n- Update URL with **dictionary_id**\n- Update URL with **item_key**\n- Update **item_value** property in body\n\n[Documentation](https://docs.fastly.com/api/config#dictionary_item_34c884a7cdce84dfcfd38dac7a0b5bb0)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/dictionary/dictionary_id/item/item_key",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/dictionary/7Yvn9TVPRhTSL7TVs2FVBE/item/some_key",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "item_value",
+									"value": "updated_value",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nUpdate DictionaryItem given service, dictionary ID, item key, and item value.\n\n**Request Configuration:**\n\n- Update URL with **dictionary_id**\n- Update URL with **item_key**\n- Update **item_value** property in body\n\n[Documentation](https://docs.fastly.com/api/config#dictionary_item_40bd364dad67e55f6f7edb92a82a4fd0)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/dictionary/dictionary_id/items",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/dictionary/7Yvn9TVPRhTSL7TVs2FVBE/items",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"items\": [\n\t\t{\n\t\t\t\"op\": \"create\",\n\t\t\t\"item_key\": \"some_key\",\n\t\t\t\"item_value\": \"some_value\"\n\t\t},\n\t\t{\n\t\t\t\"op\": \"update\",\n\t\t\t\"item_key\": \"some_key\",\n\t\t\t\"item_value\": \"updated_value\"\n\t\t},\n\t\t{\n\t\t\t\"op\": \"delete\",\n\t\t\t\"item_key\": \"some_key\"\n\t\t}\n\t]\n}"
+						},
+						"description": "**Description:**\n\nUpdate DictionaryItem in batch for given service, dictionary ID and key/value pairs for items.\n\nValue of **op** can be either:\n- create\n- update\n- delete\n\n**Request Configuration:**\n\n- Update URL with **dictionary_id**\n- Update **op** property in body\n- Update **item_key** property in body\n- Update **item_value** property in body\n\n[Documentation](https://docs.fastly.com/api/config#dictionary_item_dc826ce1255a7c42bc48eb204eed8f7f)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/dictionary/dictionary_id/item/item_key",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/dictionary/7Yvn9TVPRhTSL7TVs2FVBE/item/some_key",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nDelete DictionaryItem given service, dictionary ID, and item key.\n\n**Request Configuration:**\n\n- Update URL with **dictionary_id**\n- Update URL with **item_key**\n\n[Documentation](https://docs.fastly.com/api/config#dictionary_item_664347e743b8eafc9a93c729d9da0427)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Diff",
+			"description": "See the changes in configuration between two different versions of a service.\n\n[Diff Documentation](https://docs.fastly.com/api/config#diff)",
+			"item": [
+				{
+					"name": "/service/service_id/diff/from/from_version/to/to_version",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/diff/from/1/to/2",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test_condition",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "statement",
+									"value": "req.url~ \\\"index.html\\\"",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "priority",
+									"value": "10",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "comment",
+									"value": "your_comment",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nGet diff between two versions.\n\n**Request Configuration:**\n\n- Update URL with **from_version**\n- Update URL with **to_version**\n\n[Documentation](https://docs.fastly.com/api/config#diff_58ed0abc145283e02d20489a24bc439b)"
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
