@@ -37,13 +37,16 @@ At the moment the collection contains **0** out of **166** (not including Real-t
 
 | Category        | Collection Requests | API Requests | Coverage |
 | :-------------- | :------------------ | :----------- | :------- |
-| ACL             | 5                   | 5            | 100%     |
-| ACL Entry       | 6                   | 6            | 100%     |
-| API Tokens      | 6                   | 6            | 100%     |
-| Backend         | 5                   | 5            | 100%     |
-| Billing         | 1                   | 1            | 100%     |
-| Billing Address | 2                   | 4            | 50%      |
-|                 | **25**              | **27**       | **10%**  |
+| ACL             |   5                 |   5          | 100%     |
+| ACL Entry       |   6                 |   6          | 100%     |
+| API Tokens      |   6                 |   6          | 100%     |
+| Backend         |   5                 |   5          | 100%     |
+| Billing         |   1                 |   1          | 100%     |
+| Billing Address |   2                 |   4          |  50%     |
+| Cache Settings  |   5                 |   5          | 100%     |
+| Condition       |   5                 |   5          | 100%     |
+| Customer        |   2                 |   5          |  40%     |
+|                 | **37**              | **42**       | **88%**  |
 
 ## Usage
 
