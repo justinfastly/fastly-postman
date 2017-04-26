@@ -35,21 +35,24 @@ At the moment the collection contains **0** out of **166** (not including Real-t
 
 > Fastly announced that account-level API keys will be retired in favor of personal API tokens on May 15th, 2017. This collection and environment is only supporting API tokens! It's a piece of cake to create an API token with Postman if you don't have one yet!
 
-| Category        | Collection Requests | API Requests | Coverage |
-| :-------------- | :------------------ | :----------- | :------- |
-| ACL             | 5                   | 5            | 100%     |
-| ACL Entry       | 6                   | 6            | 100%     |
-| API Tokens      | 6                   | 6            | 100%     |
-| Backend         | 5                   | 5            | 100%     |
-| Billing         | 1                   | 1            | 100%     |
-| Billing Address | 2                   | 4            | 50%      |
-| Cache Settings  | 5                   | 5            | 100%     |
-| Condition       | 5                   | 5            | 100%     |
-| Customer        | 2                   | 5            | 40%      |
-| Dictionary      | 5                   | 5            | 100%     |
-| Dictionary Item | 7                   | 7            | 100%     |
-| Diff            | 1                   | 1            | 100%     |
-|                 | **50**              | **55**       | **91%**  |
+| Category         | Collection Requests | API Requests | Coverage |
+| :--------------- | :------------------ | :----------- | :------- |
+| ACL              | 5                   | 5            | 100%     |
+| ACL Entry        | 6                   | 6            | 100%     |
+| API Tokens       | 6                   | 6            | 100%     |
+| Backend          | 5                   | 5            | 100%     |
+| Billing          | 1                   | 1            | 100%     |
+| Billing Address  | 2                   | 4            | 50%      |
+| Cache Settings   | 5                   | 5            | 100%     |
+| Condition        | 5                   | 5            | 100%     |
+| Customer         | 2                   | 5            | 40%      |
+| Dictionary       | 5                   | 5            | 100%     |
+| Dictionary Item  | 7                   | 7            | 100%     |
+| Diff             | 1                   | 1            | 100%     |
+| Director         | 5                   | 5            | 100%     |
+| Director Backend | 3                   | 3            | 100%     |
+| Domain           | 7                   | 7            | 100%     |
+|                  | **65**              | **70**       | **93%**  |
 
 ## Usage
 
