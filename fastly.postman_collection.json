@@ -1556,6 +1556,432 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Director",
+			"description": "A Director is responsible for balancing requests among a group of Backends. In addition to simply balancing, Directors can be configured to attempt retrying failed requests. Additionally, Directors have a quorum setting which can be used to determine when the Director as a whole is considered \"up\", in order to prevent \"server whack-a-mole\" following an outage as servers come back up.\n\n[Director Documentation](https://docs.fastly.com/api/config#director)",
+			"item": [
+				{
+					"name": "/service/service_id/version/version_no/director",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/13/director",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nList the directors for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#director_a0bd94075a81102f3ca4ff1f498a48ef)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/director/director_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/13/director/director_name",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGet the director for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **director_name**\n\n[Documentation](https://docs.fastly.com/api/config#director_98da5c0617843d547c33a47d214eeb26)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/director",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/13/director",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "director_name",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "comment",
+									"value": "director_description",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "quorum",
+									"value": "75",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "retries",
+									"value": "5",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "capacity",
+									"value": "100",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nCreate a director for a particular service and version.\n\nType of the director can be:\n- 1=random\n- 2=round-robin\n- 3=hash\n- 3=hash\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update **name** property in body\n- Update **comment** property in body\n- Update **type** property in body\n- Update **quorum** property in body\n- Update **retries** property in body\n- Update **capacity** property in body\n\n[Documentation](https://docs.fastly.com/api/config#director_c533bd0e9feb118959406c540b085ce1)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/director/director_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/13/director/director_name",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "comment",
+									"value": "updated_director_description",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "type",
+									"value": "2",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "quorum",
+									"value": "80",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "retries",
+									"value": "10",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "capacity",
+									"value": "200",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nUpdate the director for a particular service and version.\n\nType of the director can be:\n- 1=random\n- 2=round-robin\n- 3=hash\n- 3=hash\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **director_name**\n- Update **comment** property in body\n- Update **type** property in body\n- Update **quorum** property in body\n- Update **retries** property in body\n- Update **capacity** property in body\n\n[Documentation](https://docs.fastly.com/api/config#director_96a02b07eb58711a94d585ea228e62c3)"
+					},
+					"response": []
+				},
+				{
+					"name": " /service/service_id/version/version_no/director/director_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/13/director/director_name",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nDelete the director for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **director_name**\n\n[Documentation](https://docs.fastly.com/api/config#director_a0279c85ea20c315855e393ab63e2524)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Director Backend",
+			"description": "Maps and relates backends as belonging to directors. Backends can belong to any number of directors but directors can only hold one reference to a specific backend.\n\n[Director Backend Documentation](https://docs.fastly.com/api/config#director_backend)",
+			"item": [
+				{
+					"name": "/service/service_id/version/version_no/director/director_name/backend/backend_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/director/test_director/backend/test_backend",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nReturns the relationship between a Backend and a Director. If the Backend has been associated with the Director, it returns a simple record indicating this. Otherwise, returns a 404.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **director_name**\n- Update URL with **backend_name**\n\n[Documentation](https://docs.fastly.com/api/config#director_backend_80bd8da752936527f466566783c10733)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/director/director_name/backend/backend_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/director/test_director/backend/test_backend",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nEstablishes a relationship between a Backend and a Director. The Backend is then considered a member of the Director and can be used to balance traffic onto.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **director_name**\n- Update URL with **backend_name**\n\n[Documentation](https://docs.fastly.com/api/config#director_backend_6926a1fc561d50ab8773e8c6c8382d38)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/director/director_name/backend/backend_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/director/test_director/backend/test_backend",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nDeletes the relationship between a Backend and a Director. The Backend is no longer considered a member of the Director and thus will not have traffic balanced onto it from this Director.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **director_name**\n- Update URL with **backend_name**\n\n[Documentation](https://docs.fastly.com/api/config#director_backend_92985fb9fc147d24a0c8a3720dafd5e1)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Domain",
+			"description": "A domain represents the domain name through which visitors will retrieve content. There can be multiple domains for a service.\n\n[Domain Documentation](https://docs.fastly.com/api/config#domain)",
+			"item": [
+				{
+					"name": "/service/service_id/version/version_no/domain/check_all",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/domain/check_all",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nChecks the status of all domains' DNS records for a Service Version. Returns an array of 3 items. The first is the details for the domain, the second is the current CNAME of the domain, and the third is a boolean indicating whether or not it has been properly setup to use Fastly.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#domain_e33a599694c3316f00b6b8d53a2db7d9)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/domain/domain_name/check",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/domain/www.my-example.com/check",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nChecks the status of a specific domain's DNS record for a Service Version. Returns an array in the same format as domain/check_all.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **domain_name**\n\n[Documentation](https://docs.fastly.com/api/config#domain_30a3f14c9a0ce5730757d39983ab7dc6)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/domain",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/domain",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nList all the domains for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#domain_6d340186666771f022ca20f81609d03d)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/domain/domain_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/domain/www.my-example.com",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGet the domain for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **domain_name**\n\n[Documentation](https://docs.fastly.com/api/config#domain_f1b5fab17a0729daeeaf7594b47759c5)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/domain",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/domain",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "www.my-example.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "comment",
+									"value": "your_comment",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nCreate a domain for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update **name** property in body\n- Update **comment** property in body\n\n[Documentation](https://docs.fastly.com/api/config#domain_90345101274774ff1b84f0a7dd010b01)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/domain/domain_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/domain/www.my-example.com",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "www.my-updated-example.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "comment",
+									"value": "your_updated_comment",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nUpdate the domain for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **domain_name**\n- Update **name** property in body\n- Update **comment** property in body\n\n[Documentation](https://docs.fastly.com/api/config#domain_2ef42bd9b4c56c86b46dc0e36096ab10)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/domain/domain_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/domain/www.my-example.com",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nDelete the domain for a particular service and versions.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **domain_name**\n\n[Documentation](https://docs.fastly.com/api/config#domain_aab5a322f58df2b1db8dc276e8594a70)"
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
