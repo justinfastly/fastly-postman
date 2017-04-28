@@ -52,7 +52,10 @@ At the moment the collection contains **0** out of **166** (not including Real-t
 | Director         | 5                   | 5            | 100%     |
 | Director Backend | 3                   | 3            | 100%     |
 | Domain           | 7                   | 7            | 100%     |
-|                  | **65**              | **70**       | **93%**  |
+| Event Log        | 1                   | 1            | 100%     |
+| Event Logs       | 2                   | 2            | 100%     |
+| Gzip             | 5                   | 5            | 100%     |
+|                  | **73**              | **78**       | **93%**  |
 
 ## Usage
 
