@@ -1982,6 +1982,241 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Event Log",
+			"description": "EventLogs keep track of things that occur within your services or organization. We track events such as activation and deactivation of Versions and mass purges.\n\n[Event Log Documentation]()",
+			"item": [
+				{
+					"name": "/event_log/service_id",
+					"request": {
+						"url": " {{url}}/event_log/{{service_id}}",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nGet the specified event log.\n\n[Documentation](https://docs.fastly.com/api/account#event_log_ec1aa4c6ee90ac79296b84fc3b0e5cfe)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Event Logs",
+			"description": "Event logs used to audit actions performed by customers. Events can be filtered by user_id, service_id, customer_id and event_type.\n\n[Event Logs Documentation]()",
+			"item": [
+				{
+					"name": " /events",
+					"request": {
+						"url": " {{url}}/events",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nList all events for a particular customer.\n\n[Documentation](https://docs.fastly.com/api/account#events_78ed310c6d59be709d53ddafbe786699)"
+					},
+					"response": []
+				},
+				{
+					"name": "/events/event_id",
+					"request": {
+						"url": " {{url}}/events/6KfNEtGBlNwx4k1zvIsaSO",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGet a specific event.\n\n**Request Configuration:**\n\n- Update URL with **event_id**\n\n[Documentation](https://docs.fastly.com/api/account#events_af65d8072ba18f4045361d6a904a4a64)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gzip",
+			"description": "Gzip configuration allows you to choose resources to automatically compress.\n\n[Gzip Documentation](https://docs.fastly.com/api/config#gzip)",
+			"item": [
+				{
+					"name": "/service/service_id/version/version_no/gzip",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/gzip",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nList all gzip configurations for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#gzip_48db6845448669e5b59928ed821efe25)"
+					},
+					"response": []
+				},
+				{
+					"name": " /service/service_id/version/version_no/gzip/gzip_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/gzip/gzip_name",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGet the gzip configuration for a particular service, version, and name.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **gzip_name**\n\n[Documentation](https://docs.fastly.com/api/config#gzip_bf53ccf18e903955cdf96acf4e10d397)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/gzip",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/gzip",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "gzip_name",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "extensions",
+									"value": "html css js",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "content_types",
+									"value": "text/html text/css application/javascript",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "cache_condition",
+									"value": "your_condition",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nCreate a named gzip configuration on a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update **name** property in body\n- Update **extensions** property in body\n- Update **content_types** property in body\n- Update **cache_condition** property in body\n\n**Attention:**\n\n- **extensions** is a space-separated list of file extensions\n- **content_types** is a space-separated list of content types\n\n[Documentation](https://docs.fastly.com/api/config#gzip_79873f2776db6de57dafef8fe8bf3632)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/gzip/gzip_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/gzip/gzip_name",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "gzip_updated_name",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "extensions",
+									"value": "html css js json",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "content_types",
+									"value": "text/html text/css application/javascript application/json",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "cache_condition",
+									"value": "your_condition",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nUpdate a named gzip configuration on a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **gzip_name**\n- Update **name** property in body\n- Update **extensions** property in body\n- Update **content_types** property in body\n- Update **cache_condition** property in body\n\n**Attention:**\n\n- **extensions** is a space-separated list of file extensions\n- **content_types** is a space-separated list of content types\n\n[Documentation](https://docs.fastly.com/api/config#gzip_3c85d35aa907dc9f85ba314ddac441e0)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/gzip/gzip_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/gzip/gzip_name",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nDelete a named gzip configuration on a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **gzip_name**\n\n[Documentation](https://docs.fastly.com/api/config#gzip_6e6755b376c892af11b8fd1343f8c6ff)"
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
