@@ -55,7 +55,9 @@ At the moment the collection contains **0** out of **166** (not including Real-t
 | Event Log        | 1                   | 1            | 100%     |
 | Event Logs       | 2                   | 2            | 100%     |
 | Gzip             | 5                   | 5            | 100%     |
-|                  | **73**              | **78**       | **93%**  |
+| Header           | 5                   | 5            | 100%     |
+| Healthcheck      | 5                   | 5            | 100%     |
+|                  | **83**              | **88**       | **93%**  |
 
 ## Usage
 
