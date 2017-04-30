@@ -1985,7 +1985,7 @@
 		},
 		{
 			"name": "Event Log",
-			"description": "EventLogs keep track of things that occur within your services or organization. We track events such as activation and deactivation of Versions and mass purges.\n\n[Event Log Documentation]()",
+			"description": "EventLogs keep track of things that occur within your services or organization. We track events such as activation and deactivation of Versions and mass purges.\n\n[Event Log Documentation](https://docs.fastly.com/api/account#event_log)",
 			"item": [
 				{
 					"name": "/event_log/service_id",
@@ -2008,7 +2008,7 @@
 		},
 		{
 			"name": "Event Logs",
-			"description": "Event logs used to audit actions performed by customers. Events can be filtered by user_id, service_id, customer_id and event_type.\n\n[Event Logs Documentation]()",
+			"description": "Event logs used to audit actions performed by customers. Events can be filtered by user_id, service_id, customer_id and event_type.\n\n[Event Logs Documentation](https://docs.fastly.com/api/account#events)",
 			"item": [
 				{
 					"name": " /events",
@@ -2213,6 +2213,381 @@
 							"raw": ""
 						},
 						"description": "**Description:**\n\nDelete a named gzip configuration on a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **gzip_name**\n\n[Documentation](https://docs.fastly.com/api/config#gzip_6e6755b376c892af11b8fd1343f8c6ff)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Header",
+			"description": "Header objects are used to add, modify, or delete headers from requests and responses. The header content can be simple strings or be derived from variables inside Varnish. Regular expressions can be used to customize the headers even further.\n\n[Header Documentation](https://docs.fastly.com/api/config#header)",
+			"item": [
+				{
+					"name": "/service/service_id/version/version_no/header",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/header",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nRetrieves all Header objects for a particular Version of a Service.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#header_dd9da0592b2f1ff8ef0a4c1943f8abff)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/header/header_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/header/your_header",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nRetrieves a Header object by name.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **header_name**\n\n[Documentation](https://docs.fastly.com/api/config#header_86469e5eba4e5d6b1463e81f82a847e0)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/header",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/header",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"your_header\",\n\t\"type\": \"response\",\n\t\"action\": \"set\",\n\t\"dst\": \"http.Location\",\n\t\"src\": \"https://www.fastly.com/\",\n\t\"ignore_if_set\": 0,\n\t\"priority\": 10,\n\t\"cache_condition\": null,\n\t\"request_condition\": null,\n\t\"response_condition\": null,\n\t\"regex\": \"\",\n\t\"substitution\":\t\"\"\n}"
+						},
+						"description": "**Description:**\n\nCreates a new Header object.\n\nAction can be:\n- set - sets (or resets) a header\n- append - appends to an existing header\n- delete - delete a header\n- regex - perform a single regex replacement on a header\n- regex_repeat - perform a global regex replacement on a header\n\nType can be:\n- request - performs on the request before lookup occurs\n- fetch - performs on the request to the origin server\n- cache - performs on the response before it's stored in the cache\n- response - performs on the response before delivering to the client\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update **name** property in body\n- Update **type** property in body\n- Update **action** property in body\n- Update **dst** property in body\n- Update **src** property in body\n- Update **ignore_if_set** property in body\n- Update **priority** property in body\n- Update either **cache_condition**, **request_condition**, or **response_condition** property in body\n- Update **regex** property in body\n- Update **substitution** propert in body\n\n[Documentation](https://docs.fastly.com/api/config#header_151df4ce647a8e222e730b260287cb39)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/header/header_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/header/your_header",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"your_updated_header\",\n\t\"type\": \"request\",\n\t\"action\": \"set\",\n\t\"dst\": \"http.Host\",\n\t\"src\": \"awesome-bucket.s3-eu-west-1.amazonaws.com\",\n\t\"ignore_if_set\": 1,\n\t\"priority\": 20,\n\t\"cache_condition\": null,\n\t\"request_condition\": null,\n\t\"response_condition\": null,\n\t\"regex\": \"\",\n\t\"substitution\":\t\"\"\n}"
+						},
+						"description": "**Description:**\n\nModifies an existing Header object by name.\n\nAction can be:\n- set - sets (or resets) a header\n- append - appends to an existing header\n- delete - delete a header\n- regex - perform a single regex replacement on a header\n- regex_repeat - perform a global regex replacement on a header\n\nType can be:\n- request - performs on the request before lookup occurs\n- fetch - performs on the request to the origin server\n- cache - performs on the response before it's stored in the cache\n- response - performs on the response before delivering to the client\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **header_name**\n- Update **name** property in body\n- Update **type** property in body\n- Update **action** property in body\n- Update **dst** property in body\n- Update **src** property in body\n- Update **ignore_if_set** property in body\n- Update **priority** property in body\n- Update either **cache_condition**, **request_condition**, or **response_condition** property in body\n- Update **regex** property in body\n- Update **substitution** propert in body\n\n[Documentation](https://docs.fastly.com/api/config#header_c4257a0fd0eb017ea47b1fbb318fd61c)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/header/header_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/header/your_header",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nDeletes a Header object by name.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **header_name**\n\n[Documentation](https://docs.fastly.com/api/config#header_4bbb73fffda4d189bf5a19b474399a83)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Healthcheck",
+			"description": "Healthchecks are used to customize the way Fastly checks on your Backends. If an origin server is marked unhealthy due to health checks, Fastly will stop attempting to send requests to it. If all origin servers are marked unhealthy, Fastly will attempt to serve stale. If no stale object is available, a 503 will be returned to the client.\n\n[Healthcheck Documentation](https://docs.fastly.com/api/config#healthcheck)",
+			"item": [
+				{
+					"name": "/service/service_id/version/version_no/healthcheck",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/healthcheck",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nList all of the healthchecks for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#healthcheck_126cb37382d68583269420ba772ded36)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/healthcheck/healthcheck_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/healthcheck/your_healthcheck",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGet the healthcheck for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **healthcheck_name**\n\n[Documentation](https://docs.fastly.com/api/config#healthcheck_b54ea357a2377e62ae7649e609b94966)"
+					},
+					"response": []
+				},
+				{
+					"name": " /service/service_id/version/version_no/healthcheck",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/healthcheck",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "check_interval",
+									"value": "5000",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "comment",
+									"value": "your_comment",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "expected_response",
+									"value": "200",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "host",
+									"value": "example.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "http_version",
+									"value": "1.1",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "initial",
+									"value": "2",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "method",
+									"value": "GET",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "name",
+									"value": "your_healthcheck",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "path",
+									"value": "/images/test.jpg",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "threshold",
+									"value": "3",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "timeout",
+									"value": "500",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "window",
+									"value": "5",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nCreate a healthcheck for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update **check_interval** property in body\n- Update **comment** property in body\n- Update **expected_response** property in body\n- Update **host** property in body\n- Update **http_version** property in body\n- Update **initial** property in body\n- Update **method** property in body\n- Update **name** property in body\n- Update **path** property in body\n- Update **threshold** property in body\n- Update **timeout** property in body\n- Update **window** property in body\n\n[Documentation](https://docs.fastly.com/api/config#healthcheck_8712be8923dd419c54393da3ac31f6d3)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/healthcheck/healthcheck_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/healthcheck/your_healthcheck",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "check_interval",
+									"value": "8000",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "comment",
+									"value": "your_updated_comment",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "expected_response",
+									"value": "200",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "host",
+									"value": "example.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "http_version",
+									"value": "1.1",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "initial",
+									"value": "2",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "method",
+									"value": "HEAD",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "name",
+									"value": "your_updated_healthcheck",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "path",
+									"value": "/images/test.jpg",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "threshold",
+									"value": "5",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "timeout",
+									"value": "1000",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "window",
+									"value": "3",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "**Description:**\n\nUpdate the healthcheck for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **healthcheck_name**\n- Update **check_interval** property in body\n- Update **comment** property in body\n- Update **expected_response** property in body\n- Update **host** property in body\n- Update **http_version** property in body\n- Update **initial** property in body\n- Update **method** property in body\n- Update **name** property in body\n- Update **path** property in body\n- Update **threshold** property in body\n- Update **timeout** property in body\n- Update **window** property in body\n\n[Documentation](https://docs.fastly.com/api/config#healthcheck_9a60b6005125c4afeaa80111e69d7586)"
+					},
+					"response": []
+				},
+				{
+					"name": " /service/service_id/version/version_no/healthcheck/healthcheck_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/healthcheck/your_healthcheck",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nDelete the healthcheck for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **healthcheck_name**\n\n[Documentation](https://docs.fastly.com/api/config#healthcheck_a22900c40a2fd59db5028061dc5dfa36)"
 					},
 					"response": []
 				}
