@@ -2592,6 +2592,238 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Request Settings",
+			"description": "Settings used to customize Fastly's request handling. When used with Conditions the Request Settings object allows you to fine tune how specific types of requests are handled.\n\n[Request Settings Documentation](https://docs.fastly.com/api/config#request_settings)",
+			"item": [
+				{
+					"name": "/service/service_id/version/version_no/request_settings",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/request_settings",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nReturns a list of all Request Settings objects for the given service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#request_settings_c98bc45765ce2b1ffd414402ed46746a)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/request_settings/request_settings_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/request_settings/your_request_settings_name",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGets the specified Request Settings object.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **request_settings_name**\n\n[Documentation](https://docs.fastly.com/api/config#request_settings_db0338e03fa36787e13f4e4026f73753)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/request_settings",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/request_settings",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"action\": \"lookup\",\n\t\"bypass_busy_wait\": false,\n\t\"default_host\": null,\n\t\"force_miss\": false,\n\t\"force_ssl\": false,\n\t\"geo_headers\": true,\n\t\"hash_keys\": null,\n\t\"max_stale_age\": 60,\n\t\"name\": \"your_request_settings_name\",\n\t\"request_condition\": null,\n\t\"timer_support\": false,\n\t\"xff\": \"append\"\n}"
+						},
+						"description": "**Description:**\n\nCreates a new Request Settings object.\n\nAction can be:\n- lookup\n- pass\n\nShort for X-Forwarded-For (xxf) can be:\n- clear\n- leave\n- append\n- append_all\n- overwrite\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update **action** property in body\n- Update **bypass_busy_wait** property in body\n- Update **default_host** property in body\n- Update **force_miss** property in body\n- Update **force_ssl** property in body\n- Update **geo_headers** property in body\n- Update **hash_keys** property in body\n- Update **max_stale_age** property in body\n- Update **name** property in body\n- Update **request_condition** property in body\n- Update **timer_support** property in body\n- Update **xff** property in body\n\n[Documentation](https://docs.fastly.com/api/config#request_settings_9d998e8a3ab30f9e01d1025b82d2d798)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/request_settings/request_settings_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/request_settings/your_request_settings_name",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"action\": \"lookup\",\n\t\"bypass_busy_wait\": false,\n\t\"default_host\": null,\n\t\"force_miss\": false,\n\t\"force_ssl\": false,\n\t\"geo_headers\": true,\n\t\"hash_keys\": null,\n\t\"max_stale_age\": 60,\n\t\"name\": \"your_updated_request_settings_name\",\n\t\"request_condition\": null,\n\t\"timer_support\": false,\n\t\"xff\": \"append\"\n}"
+						},
+						"description": "**Description:**\n\nUpdates the specified Request Settings object.\n\nAction can be:\n- lookup\n- pass\n\nShort for X-Forwarded-For (xxf) can be:\n- clear\n- leave\n- append\n- append_all\n- overwrite\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **request_settings_name**\n- Update **action** property in body\n- Update **bypass_busy_wait** property in body\n- Update **default_host** property in body\n- Update **force_miss** property in body\n- Update **force_ssl** property in body\n- Update **geo_headers** property in body\n- Update **hash_keys** property in body\n- Update **max_stale_age** property in body\n- Update **name** property in body\n- Update **request_condition** property in body\n- Update **timer_support** property in body\n- Update **xff** property in body\n\n\n[Documentation](https://docs.fastly.com/api/config#request_settings_daff48a5aee7dfa22d9d8a7d9dbc8803)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/request_settings/request_settings_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/request_settings/your_request_settings_name",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nRemoves the specified Request Settings object.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **request_settings_name**\n\n[Documentation](https://docs.fastly.com/api/config#request_settings_f5840761113247566338f97d7e26d20e)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Response Object",
+			"description": "Allows you to create synthetic responses that exist entirely on the varnish machine. Useful for creating error or maintenance pages that exists outside the scope of your datacenter. Best when used with Condition objects.\n\n[Response Object Documentation](https://docs.fastly.com/api/config#response_object)",
+			"item": [
+				{
+					"name": "/service/service_id/version/version_no/response_object",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/response_object",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nReturns all Response Objects for the specified service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#response_object_23a204e8990ec3c07556f31e48bf6394)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/response_object/response_object_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/response_object/your_response_object_name",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGets the specified Response Object.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **response_object_name**\n\n[Documentation](https://docs.fastly.com/api/config#response_object_86eee1a775e72abb37f1ee364862a6b6)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/response_object",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/response_object",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"cache_condition\": null,\n\t\"content\": \"the content to deliver for the response object, can be empty\",\n\t\"content_type\": \"the MIME type of the content, can be empty\",\n\t\"name\": \"your_response_object_name\",\n\t\"request_condition\": null,\n\t\"response\": \"Ok\",\n\t\"status\": \"200\"\n}"
+						},
+						"description": "**Description:**\n\nCreates a new Response Object.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update **cache_condition** property in body\n- Update **content** property in body\n- Update **content_type** property in body\n- Update **name** property in body\n- Update **request_condition** property in body\n- Update **response** property in body\n- Update **status** property in body\n\n[Documentation](https://docs.fastly.com/api/config#response_object_69864bff7d00bf4c82dbb44be8ee45f4)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/response_object/response_object_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/response_object/your_response_object_name",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"cache_condition\": null,\n\t\"content\": \"the content to deliver for the response object, can be empty\",\n\t\"content_type\": \"the MIME type of the content, can be empty\",\n\t\"name\": \"your_updated_response_object_name\",\n\t\"request_condition\": null,\n\t\"response\": \"Ok\",\n\t\"status\": \"200\"\n}"
+						},
+						"description": "**Description:**\n\nUpdates the specified Response Object.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **response_object_name**\n- Update **cache_condition** property in body\n- Update **content** property in body\n- Update **content_type** property in body\n- Update **name** property in body\n- Update **request_condition** property in body\n- Update **response** property in body\n- Update **status** property in body\n\n[Documentation](https://docs.fastly.com/api/config#response_object_60ca76a86f3427d7f85a00ec8eb25b3e)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/response_object/response_object_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/response_object/your_response_object_name",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nDeletes the specified Response Object.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **response_object_name**\n\n[Documentation](https://docs.fastly.com/api/config#response_object_50fb3ca925978a9c56e97906ed09ea48)"
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
