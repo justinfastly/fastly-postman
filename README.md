@@ -57,7 +57,9 @@ At the moment the collection contains **0** out of **166** (not including Real-t
 | Gzip             | 5                   | 5            | 100%     |
 | Header           | 5                   | 5            | 100%     |
 | Healthcheck      | 5                   | 5            | 100%     |
-|                  | **83**              | **88**       | **93%**  |
+| Request Settings | 5                   | 5            | 100%     |
+| Response Object  | 5                   | 5            | 100%     |
+|                  | **93**              | **98**       | **95%**  |
 
 ## Usage
 
