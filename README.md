@@ -59,7 +59,10 @@ At the moment the collection contains **0** out of **166** (not including Real-t
 | Healthcheck      | 5                   | 5            | 100%     |
 | Request Settings | 5                   | 5            | 100%     |
 | Response Object  | 5                   | 5            | 100%     |
-|                  | **93**              | **98**       | **95%**  |
+| Service          | 8                   | 8            | 100%     |
+| Settings         | 2                   | 2            | 100%     |
+| Stats            | 1                   | 1            | 100%     |
+|                  | **104**             | **109**      | **95%**  |
 
 ## Usage
 
