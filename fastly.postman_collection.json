@@ -379,55 +379,18 @@
 						"header": [
 							{
 								"key": "Fastly-OTP",
-								"value": "978349",
+								"value": "413833",
 								"description": ""
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/x-www-form-urlencoded",
+								"value": "application/json",
 								"description": ""
 							}
 						],
 						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "username",
-									"value": "{{username}}",
-									"type": "text",
-									"enabled": true
-								},
-								{
-									"key": "password",
-									"value": "{{password}}",
-									"type": "text",
-									"enabled": true
-								},
-								{
-									"key": "service_id",
-									"value": "{{service_id}}",
-									"type": "text",
-									"enabled": true
-								},
-								{
-									"key": "expires_at",
-									"value": "2017-12-24T06:51:13Z",
-									"type": "text",
-									"enabled": true
-								},
-								{
-									"key": "scope",
-									"value": "purge_select",
-									"type": "text",
-									"enabled": true
-								},
-								{
-									"key": "name",
-									"value": "token_name",
-									"type": "text",
-									"enabled": true
-								}
-							]
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"{{username}}\",\n\t\"password\": \"{{password}}\",\n\t\"services\": [\"7JK4PXW7kJLv1EmZw9zrMM\"],\n\t\"expires_at\": \"2017-12-24T06:51:13Z\",\n\t\"scope\": \"purge_select\",\n\t\"name\": \"token_name\"\t\n}"
 						},
 						"description": "**Description:**\n\nCreate an API token.\n\nThis token is limited to a service, to an expiration, and to a scope access level!\n\n- Expiration date format (e.g., 2016-07-28T19:24:50+00:00)\n- Scopes (global, purge_select, purge_all)\n\n**Request Configuration:**\n\n- Update **Fastly-OTP** property in headers (only if two-factor authentication is enabled)\n- Update **expires_at** property in body\n- Update **scope** property in body\n- Update **name** property in body\n\n[Documentation](https://docs.fastly.com/api/auth#tokens_db4655a45a0107448eb0676577446e40)"
 					},
@@ -2820,6 +2783,279 @@
 							"raw": ""
 						},
 						"description": "**Description:**\n\nDeletes the specified Response Object.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **response_object_name**\n\n[Documentation](https://docs.fastly.com/api/config#response_object_50fb3ca925978a9c56e97906ed09ea48)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Service",
+			"description": "A Service represents the configuration for a website, app, API, or anything else to be served through Fastly. A Service can have many Versions, through which Backends, Domains, and more can be configured.\n\n[Service Documentation](https://docs.fastly.com/api/config#service)",
+			"item": [
+				{
+					"name": "/service",
+					"request": {
+						"url": "{{url}}/service",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nList Services.\n\n[Documentation](https://docs.fastly.com/api/config#service_74d98f7e5d018256e44d1cf820388ef8)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/details",
+					"request": {
+						"url": "{{url}}//service/{{service_id}}/details",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nList detailed information on a specified service.\n\n[Documentation](https://docs.fastly.com/api/config#service_c967d3038e6c7cfb74bed38fa338a77b)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/search?name=service_name",
+					"request": {
+						"url": "{{url}}/service/search?name={{service_name}}",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGet a specific service by name.\n\n[Documentation](https://docs.fastly.com/api/config#service_9097a9c6d5f73d8836ea3b3c04cc41b7)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGet a specific service by id.\n\n[Documentation](https://docs.fastly.com/api/config#service_a884a9abd5af9723f6fcbb1ed13ae4cc)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/domain",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/domain",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nList the domains within a service.\n\n[Documentation](https://docs.fastly.com/api/config#service_d5578a1e3bc75512711ddd0a58ce7a36)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service",
+					"request": {
+						"url": "{{url}}/service",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"comment\": \"Description field\",\n\t\"name\": \"The name of this service\"\n}"
+						},
+						"description": "**Description:**\n\nCreate a service.\n\n**Request Configuration:**\n\n- Update **comment** property in body\n- Update **name** property in body\n\n[Documentation](https://docs.fastly.com/api/config#service_ba1ea579a64baeede8d2edab797672d7)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"comment\": \"Description field\",\n\t\"name\": \"The name of this service\"\n}"
+						},
+						"description": "**Description:**\n\nUpdate a service.\n\n**Request Configuration:**\n\n- Update **comment** property in body\n- Update **name** property in body\n\n[Documentation](https://docs.fastly.com/api/config#service_bf9f23e769b8bc1bc131217d7134effd)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nDelete a service.\n\n[Documentation](https://docs.fastly.com/api/config#service_98ecbd5edc28e5f7fe0a0570aa098e60)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Settings",
+			"description": "Handles default settings for a particular version of a service.\n\n[Settings Documentation](https://docs.fastly.com/api/config#settings)",
+			"item": [
+				{
+					"name": "/service/service_id/version/version_no/settings",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/settings",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGet the settings for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#settings_a0d1a4ac4a9b4ca72f16fa32d2f58e55)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/settings",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/settings",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"general.default_host\": \"www.my-example.com\",\n\t\"general.default_ttl\": 3600\n}"
+						},
+						"description": "**Description:**\n\nUpdate the settings for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update **general.default_host** property in body\n- Update **general.default_ttl** property in body\n\n[Documentation](https://docs.fastly.com/api/config#settings_9740ff4ac0c1777f455274c4850ece23)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stats",
+			"description": "Stats give you information on the usage and performance of your Service. They can be request by Service and over a particular time span. Stats are broken down per datacenter, giving you information on how your Services are being used across the world. There is now a more flexible, and fully featured Stats API available.\n\n[Stats Documentation](https://docs.fastly.com/api/config#stats)",
+			"item": [
+				{
+					"name": "/service/service_id/stats/summary?year=year&month=month",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/stats/summary?year=2017&month=4",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGet the stats from a service for a block of time. This lists all stats by PoP location, starting with AMS.\n\n**Request Configuration:**\n\n- Update query string **year** parameter in URL\n- Update query string **month** parameter in URL\n\n[Documentation](https://docs.fastly.com/api/config#stats_117f06732a0269b12562c62209f6a5dc)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/stats/summary?start_time=timestamp&end_time=timestamp",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/stats/summary?start_time=2017-03-24T06:51:13Z&end_time=2017-04-24T06:51:13Z",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGet the stats from a service for a block of time. This lists all stats by PoP location, starting with AMS.\n\n**Request Configuration:**\n\n- Update query string **timestamp** parameters in URL\n\n[Documentation](https://docs.fastly.com/api/config#stats_117f06732a0269b12562c62209f6a5dc)"
 					},
 					"response": []
 				}
