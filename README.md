@@ -62,7 +62,10 @@ At the moment the collection contains **0** out of **166** (not including Real-t
 | Service          | 8                   | 8            | 100%     |
 | Settings         | 2                   | 2            | 100%     |
 | Stats            | 1                   | 1            | 100%     |
-|                  | **104**             | **109**      | **95%**  |
+| VCL              | 11                  | 11           | 100%     |
+| Version          | 9                   | 9            | 100%     |
+| Wordpress        | 5                   | 5            | 100%     |
+|                  | **129**             | **134**      | **96%**  |
 
 ## Usage
 
