@@ -3060,6 +3060,524 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "VCL",
+			"description": "A VCL is a Varnish configuration file used to customize the configuration for a Service.\n\n[VCL Documentation](https://docs.fastly.com/api/config#vcl)",
+			"item": [
+				{
+					"name": "/service/service_id/version/version_no/vcl",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/61/vcl",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nList the uploaded VCLs for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_17eaf920acd6f04a7f4a997695a8a18a)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/boilerplate",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/60/boilerplate",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nReturn boilerplate VCL with the service's TTL from the settings.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_ff97d3664dca35fca3e235b683825730)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/vcl/vcl_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/61/vcl/fastly_boilerplate",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nGet the uploaded VCL for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **vcl_name**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_621f303da373d60854e6d2d45dc2de75)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/vcl/vcl_name/content",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/61/vcl/fastly_boilerplate/content?lineno=true",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nGet the uploaded VCL for a particular service and version with HTML syntax highlighting Include line numbers by sending **lineno=true** as a request parameter.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **vcl_name**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_438f27abcd1c9203c8315a54cbcfde1a)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/vcl/vcl_name/download",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/61/vcl/fastly_boilerplate/download",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nDownload the specified VCL.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **vcl_name**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_86deff673cc0dfdcb938a780dd328fcd)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/generated_vcl",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/60/generated_vcl",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nDisplay the generated VCL for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_ad9da3d303580a36d0c1be5e10728e81)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/generated_vcl/content",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/60/generated_vcl/content?lineno=true",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nDisplay the content of generated VCL with HTML syntax highlighting Include line numbers by sending **lineno=true** as a request parameter.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_d7c0ba46e90676f4bcdd804fb3d417a3)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/vcl",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/61/vcl",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"fastly_boilerplate\",\n\t\"main\": true,\n\t\"content\": \"sub vcl_recv {\\n#FASTLY recv\\n\\n  if (req.request != \\\"HEAD\\\" && req.request != \\\"GET\\\" && req.request != \\\"FASTLYPURGE\\\") {\\n    return(pass);\\n  }\\n\\n  return(lookup);\\n}\\n\\nsub vcl_fetch {\\n#FASTLY fetch\\n\\n  if ((beresp.status == 500 || beresp.status == 503) && req.restarts < 1 && (req.request == \\\"GET\\\" || req.request == \\\"HEAD\\\")) {\\n    restart;\\n  }\\n\\n  if (req.restarts > 0) {\\n    set beresp.http.Fastly-Restarts = req.restarts;\\n  }\\n\\n  if (beresp.http.Set-Cookie) {\\n    set req.http.Fastly-Cachetype = \\\"SETCOOKIE\\\";\\n    return(pass);\\n  }\\n\\n  if (beresp.http.Cache-Control ~ \\\"private\\\") {\\n    set req.http.Fastly-Cachetype = \\\"PRIVATE\\\";\\n    return(pass);\\n  }\\n\\n  if (beresp.status == 500 || beresp.status == 503) {\\n    set req.http.Fastly-Cachetype = \\\"ERROR\\\";\\n    set beresp.ttl = 1s;\\n    set beresp.grace = 5s;\\n    return(deliver);\\n  }\\n\\n  if (beresp.http.Expires || beresp.http.Surrogate-Control ~ \\\"max-age\\\" || beresp.http.Cache-Control ~ \\\"(s-maxage|max-age)\\\") {\\n    # keep the ttl here\\n  } else {\\n    # apply the default ttl\\n    set beresp.ttl = 3600s;\\n  }\\n\\n  return(deliver);\\n}\\n\\nsub vcl_hit {\\n#FASTLY hit\\n\\n  if (!obj.cacheable) {\\n    return(pass);\\n  }\\n  return(deliver);\\n}\\n\\nsub vcl_miss {\\n#FASTLY miss\\n  return(fetch);\\n}\\n\\nsub vcl_deliver {\\n#FASTLY deliver\\n  return(deliver);\\n}\\n\\nsub vcl_error {\\n#FASTLY error\\n}\\n\\nsub vcl_pass {\\n#FASTLY pass\\n}\\n\\nsub vcl_log {\\n#FASTLY log\\n}\\n\"\n}"
+						},
+						"description": "**Description:**\n\nUpload a VCL for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **name** [string] - The name of this VCL.\n- **main** [boolean] - Set to true when this is the main VCL, otherwise false.\n- **content** [string] - The VCL code to be included.\n\n[Documentation](https://docs.fastly.com/api/config#vcl_7ade6ab5926b903b6acf3335a85060cc)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/vcl/vcl_name/main",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/61/vcl/fastly_boilerplate/main",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nSet the specified VCL as the main.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **vcl_name**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_5576c38e7652f5a7261bfcad41c0faf1)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/vcl/vcl_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/61/vcl/fastly_boilerplate",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"fastly_boilerplate\",\n\t\"main\": true,\n\t\"content\": \"sub vcl_recv {\\n#FASTLY recv\\n\\n  if (req.request != \\\"HEAD\\\" && req.request != \\\"GET\\\" && req.request != \\\"FASTLYPURGE\\\") {\\n    return(pass);\\n  }\\n\\n  return(lookup);\\n}\\n\\nsub vcl_fetch {\\n#FASTLY fetch\\n\\n  if ((beresp.status == 500 || beresp.status == 503) && req.restarts < 1 && (req.request == \\\"GET\\\" || req.request == \\\"HEAD\\\")) {\\n    restart;\\n  }\\n\\n  if (req.restarts > 0) {\\n    set beresp.http.Fastly-Restarts = req.restarts;\\n  }\\n\\n  if (beresp.http.Set-Cookie) {\\n    set req.http.Fastly-Cachetype = \\\"SETCOOKIE\\\";\\n    return(pass);\\n  }\\n\\n  if (beresp.http.Cache-Control ~ \\\"private\\\") {\\n    set req.http.Fastly-Cachetype = \\\"PRIVATE\\\";\\n    return(pass);\\n  }\\n\\n  if (beresp.status == 500 || beresp.status == 503) {\\n    set req.http.Fastly-Cachetype = \\\"ERROR\\\";\\n    set beresp.ttl = 1s;\\n    set beresp.grace = 5s;\\n    return(deliver);\\n  }\\n\\n  if (beresp.http.Expires || beresp.http.Surrogate-Control ~ \\\"max-age\\\" || beresp.http.Cache-Control ~ \\\"(s-maxage|max-age)\\\") {\\n    # keep the ttl here\\n  } else {\\n    # apply the default ttl\\n    set beresp.ttl = 3600s;\\n  }\\n\\n  return(deliver);\\n}\\n\\nsub vcl_hit {\\n#FASTLY hit\\n\\n  if (!obj.cacheable) {\\n    return(pass);\\n  }\\n  return(deliver);\\n}\\n\\nsub vcl_miss {\\n#FASTLY miss\\n  return(fetch);\\n}\\n\\nsub vcl_deliver {\\n#FASTLY deliver\\n  return(deliver);\\n}\\n\\nsub vcl_error {\\n#FASTLY error\\n}\\n\\nsub vcl_pass {\\n#FASTLY pass\\n}\\n\\nsub vcl_log {\\n#FASTLY log\\n}\\n\"\n}"
+						},
+						"description": "**Description:**\n\nUpdate the uploaded VCL for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **vcl_name**\n- **name** [string] - The name of this VCL.\n- **main** [boolean] - Set to true when this is the main VCL, otherwise false.\n- **content** [string] - The VCL code to be included.\n\n[Documentation](https://docs.fastly.com/api/config#vcl_0971365908e17086751c5ef2a8053087)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/vcl/vcl_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/61/vcl/fastly_boilerplate",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nDelete the uploaded VCL for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **vcl_name**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_60e52db45083a0f2c9445ab188e3cab0)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Version",
+			"description": "A Version represents a specific instance of the configuration for a service. A Version can be cloned, locked, activated, or deactivated.\n\n[Version Documentation](https://docs.fastly.com/api/config#version)",
+			"item": [
+				{
+					"name": "/service/service_id/version",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nList the versions for a particular service.\n\n[Documentation](https://docs.fastly.com/api/config#version_dfde9093f4eb0aa2497bbfd1d9415987)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGet the version for a particular service.\n\n**Request Configuration**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#version_4f6d1d4f5d3ce983a4d156a700a2df58)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/validate",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/validate",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nValidate the version for a particular service and version.\n\n**Request Configuration**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#version_97f8cf7bfd5dc2e5ea1933d94dc5a9a6)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"testing\": false,\n\t\"locked\": false,\n\t\"active\": false,\n\t\"staging\": false,\n\t\"comment\": \"A comment\",\n\t\"deployed\": false\n}"
+						},
+						"description": "**Description:**\n\nCreate a version for a particular service.\n\n**Request Configuration:**\n\n- **testing** [boolean] - Whether or not this version is for testing.\n- **locked** [boolean] - Whether this version is locked or not.\n- **active** [boolean] - Whether this is the active version or not.\n- **staging** [boolean] - Whether or not this version is for staging.\n- **comment** [boolean] - A comment.\n- **deployed** [boolean] - Whether or not this version is deployed.\n\n[Documentation](https://docs.fastly.com/api/config#version_a33198389fa27dacbc5e5a9e4ff0ddf1)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/51",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"testing\": false,\n\t\"locked\": false,\n\t\"active\": false,\n\t\"staging\": false,\n\t\"comment\": \"A comment\",\n\t\"deployed\": false\n}"
+						},
+						"description": "**Description:**\n\nUpdate a particular version for a particular service.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **testing** [boolean] - Whether or not this version is for testing.\n- **locked** [boolean] - Whether this version is locked or not.\n- **active** [boolean] - Whether this is the active version or not.\n- **staging** [boolean] - Whether or not this version is for staging.\n- **comment** [boolean] - A comment.\n- **deployed** [boolean] - Whether or not this version is deployed.\n\n[Documentation](https://docs.fastly.com/api/config#version_17843bfa35e0a73c7ef0a93dfa30ee8e)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/activate",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/90/activate",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nActivate the current version.\n\n**Request Configuration**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#version_0b79ae1ba6aee61d64cc4d43fed1e0d5)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/deactivate",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/52/deactivate",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nDeactivate the current version.\n\n**Request Configuration**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#version_c744fe5f2fcde52ec5006c13d7118a2c)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/clone",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/52/clone",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nClone the current configuration into a new version.\n\n**Request Configuration**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#version_7f4937d0663a27fbb765820d4c76c709)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/lock",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/52/lock",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nLocks the specified version.\n\n**Request Configuration**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#version_537991120983d50d1bed8308ba237e46)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Wordpress",
+			"description": "The WordPress object applies configuration optimized for WordPress to a given path.\n\n[Wordpress Documentation](https://docs.fastly.com/api/config#wordpress)",
+			"item": [
+				{
+					"name": "/service/service_id/version/version_no/wordpress",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/wordpress",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGet all of the WordPress configurations for a specified service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#wordpress_6398f3a4b9511962c746254f7fe37aa7)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/wordpress/wordpress_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/wordpress/your_wordpress_name",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGet a specific WordPress configuration.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **wordpress_name**\n\n[Documentation](https://docs.fastly.com/api/config#wordpress_09dfcaf0f9dab304e5f52c2297e51298)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/wordpress",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/wordpress",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"comment\":\"A comment\",\n\t\"name\":\"your_wordpress_name\",\n\t\"path\":\"/blog\"\n}"
+						},
+						"description": "**Description:**\n\nCreate a WordPress configuration for the specified service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **comment** [string] - A comment.\n- **name** [string] - Name of the WordPress object.\n- **path** [string] - Requests to this path will use WordPress configuration.\n\n[Documentation](https://docs.fastly.com/api/config#wordpress_3719d163b1e6b80d4220d402df943073)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/wordpress/wordpress_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/wordpress/your_wordpress_name",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"comment\":\"A updated comment\",\n\t\"name\":\"your_updated_wordpress_name\",\n\t\"path\":\"/update\"\n}"
+						},
+						"description": "**Description:**\n\nUpdate a specified WordPress configuration.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **wordpress_name**\n- **comment** [string] - A comment.\n- **name** [string] - Name of the WordPress object.\n- **path** [string] - Requests to this path will use WordPress configuration.\n\n\n[Documentation](https://docs.fastly.com/api/config#wordpress_3f47a802ddb1c959c368aebe07009803)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/wordpress/wordpress_name",
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/wordpress/your_wordpress_name",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nDelete a specified WordPress configuration.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **wordpress_name**\n\n[Documentation](https://docs.fastly.com/api/config#wordpress_33925affa9f17494004ec78b89a782ad)"
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
