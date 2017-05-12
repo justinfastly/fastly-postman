@@ -2557,6 +2557,123 @@
 			]
 		},
 		{
+			"name": "Invitation",
+			"description": "The invitations are created by the customer in order to invite employees to create user accounts that operate under the main customer account.\n\n[Invitation Documentation](https://docs.fastly.com/api/account#invitation)",
+			"item": [
+				{
+					"name": "/invitation",
+					"request": {
+						"url": " {{url}}/invitation",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGet all open invitations created by the customer.\n\n[Documentation](https://docs.fastly.com/api/account#invitation_16709c86a9f50c6917b7d2ebe654d8fb)"
+					},
+					"response": []
+				},
+				{
+					"name": "/invitation",
+					"request": {
+						"url": " {{url}}/invitation",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"john.doe@gmail.com\",\n\t\"role\": \"engineer\"\n}"
+						},
+						"description": "**Description:**\n\nCreate a new invitation and email it to the recipient.\n\n**Request Configuration:**\n\n- **email** [string] - The email address of the invitee.\n- **role** [string] - The user-assigned permissions role. Can be user, billing, engineer, or superuser.\n\n[Documentation](https://docs.fastly.com/api/account#invitation_12f719e0157f4d73a919f7c4a044aa24)"
+					},
+					"response": []
+				},
+				{
+					"name": " /invitation/invitation_id/cancel",
+					"request": {
+						"url": " {{url}}/invitation/3KSb5USdgV8hr0IWyqMKmS/cancel",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nCancel an open invitation.\n\n**Request Configuration:**\n\n- Update URL with **invitation_id**\n\n[Documentation](https://docs.fastly.com/api/account#invitation_2b23b38a0e15a7012e976d013c7de7e1)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pricing Extras",
+			"description": "An object describing various extras that get added to your bill at the end of the month. This object is **deprecated**.\n\n[Pricing Extras Documentation](https://docs.fastly.com/api/account#pricing_extras)",
+			"item": [
+				{
+					"name": "/customer/customer_id/pricing_extra",
+					"request": {
+						"url": " {{url}}/customer/{{customer_id}}/pricing_extra",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGet all the pricing extras for a customer.\n\n[Documentation](https://docs.fastly.com/api/account#pricing_extras_39f6e22bccd765d9c4b6942786208c7e)"
+					},
+					"response": []
+				},
+				{
+					"name": "/customer/customer_id/pricing_extra/extra_name",
+					"request": {
+						"url": " {{url}}/customer/{{customer_id}}/pricing_extra/SSL",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGet an individual pricing extra for a customer.\n\n**Request Configuration:**\n\n- Update URL with **extra_name**\n\n[Documentation](https://docs.fastly.com/api/account#pricing_extras_8e4095c3bddef0bbe48bd06687fb5ba6)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Request Settings",
 			"description": "Settings used to customize Fastly's request handling. When used with Conditions the Request Settings object allows you to fine tune how specific types of requests are handled.\n\n[Request Settings Documentation](https://docs.fastly.com/api/config#request_settings)",
 			"item": [
@@ -3056,6 +3173,167 @@
 							"raw": ""
 						},
 						"description": "**Description:**\n\nGet the stats from a service for a block of time. This lists all stats by PoP location, starting with AMS.\n\n**Request Configuration:**\n\n- Update query string **timestamp** parameters in URL\n\n[Documentation](https://docs.fastly.com/api/config#stats_117f06732a0269b12562c62209f6a5dc)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"description": "A user of the Fastly API and web interface. A user is always associated with a customer.\n\n[User Documentation](https://docs.fastly.com/api/account#user)",
+			"item": [
+				{
+					"name": "/current_user",
+					"request": {
+						"url": " {{url}}/current_user",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGet the logged in user.\n\n[Documentation](https://docs.fastly.com/api/account#user_91db9d9178f3f4c7597899942bd3f941)"
+					},
+					"response": []
+				},
+				{
+					"name": "/user/user_id",
+					"request": {
+						"url": " {{url}}/user/x9KzsrACXZv8tPwlEDsKb6",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nGet a specific user.\n\n**Request Configuration:**\n\n- Update URL with **user_id**\n\n[Documentation](https://docs.fastly.com/api/account#user_15a6c72980b9434ebb8253c7e882c26c)"
+					},
+					"response": []
+				},
+				{
+					"name": "/user",
+					"request": {
+						"url": " {{url}}/user",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"login\": \"john.doe@gmail.com\",\n\t\"name\": \"John Doe\",\n\t\"require_new_password\": true,\n\t\"role\": \"engineer\"\t\n}"
+						},
+						"description": "**Description:**\n\nCreate a user.\n\n**Request Configuration:**\n\n- **login** [string] - The email address, which is the login name, of this user.\n- **name** [string] - The real life name of the user.\n- **require_new_password** [boolean] - Indicates if a new password is required at next login.\n- **role** [string] - The role of this user. Role can be billing, engineer, user, or superuser.\n\n[Documentation](https://docs.fastly.com/api/account#user_00b606002596bac1c652614de98bd260)"
+					},
+					"response": []
+				},
+				{
+					"name": "/current_user/password",
+					"request": {
+						"url": " {{url}}/current_user/password",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"old_password\": \"super_secure\",\n\t\"new_password\": \"super_mega_secure\"\n}"
+						},
+						"description": "**Description:**\n\nUpdate the user's password to a new one.\n\n**Request Configuration:**\n\n- **old_password** [string] - The old password.\n- **new_password** [string] - The new password.\n\n[Documentation](https://docs.fastly.com/api/account#user_711c16f29c73b9532eabbf332cc4ee1d)"
+					},
+					"response": []
+				},
+				{
+					"name": "/user/user_id/password/request_reset",
+					"request": {
+						"url": " {{url}}/user/x9KzsrACXZv8tPwlEDsKb6/password/request_reset",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nRequests a password reset for the specified user.\n\n**Request Configuration:**\n\n- Update URL with **user_id**\n\n[Documentation](https://docs.fastly.com/api/account#user_cee4dbb44c07d9ed078424cbbd353e1a)"
+					},
+					"response": []
+				},
+				{
+					"name": " /user/user_id",
+					"request": {
+						"url": " {{url}}/user/x9KzsrACXZv8tPwlEDsKb6",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"login\": \"john.doe@gmail.com\",\n\t\"name\": \"John Doe\",\n\t\"require_new_password\": false,\n\t\"role\": \"user\"\n}"
+						},
+						"description": "**Description:**\n\nUpdate a user.\n\n**Request Configuration:**\n\n- Update URL with **user_id**\n- **login** [string] - The email address, which is the login name, of this user.\n- **name** [string] - The real life name of the user.\n- **require_new_password** [boolean] - Indicates if a new password is required at next login.\n- **role** [string] - The role of this user. Role can be billing, engineer, user, or superuser.\n\n\n[Documentation](https://docs.fastly.com/api/account#user_8f189d86d4d92e792687cb2cfbfb7841)"
+					},
+					"response": []
+				},
+				{
+					"name": "/user/user_id",
+					"request": {
+						"url": " {{url}}/user/x9KzsrACXZv8tPwlEDsKb6",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nDelete a user.\n\n**Request Configuration:**\n\n- Update URL with **user_id**\n\n[Documentation](https://docs.fastly.com/api/account#user_7a284c40e1eafa3f8cd912a0dc1e6971)"
 					},
 					"response": []
 				}
