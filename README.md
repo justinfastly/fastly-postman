@@ -57,15 +57,18 @@ At the moment the collection contains **0** out of **166** (not including Real-t
 | Gzip             | 5                   | 5            | 100%     |
 | Header           | 5                   | 5            | 100%     |
 | Healthcheck      | 5                   | 5            | 100%     |
+| Invitation       | 3                   | 3            | 100%     |
+| Pricing Extras   | 2                   | 2            | 100%     |
 | Request Settings | 5                   | 5            | 100%     |
 | Response Object  | 5                   | 5            | 100%     |
 | Service          | 8                   | 8            | 100%     |
 | Settings         | 2                   | 2            | 100%     |
 | Stats            | 1                   | 1            | 100%     |
+| User             | 7                   | 7            | 100%     |
 | VCL              | 11                  | 11           | 100%     |
 | Version          | 9                   | 9            | 100%     |
 | Wordpress        | 5                   | 5            | 100%     |
-|                  | **129**             | **134**      | **96%**  |
+|                  | **141**             | **146**      | **96%**  |
 
 ## Usage
 
