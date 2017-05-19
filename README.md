@@ -31,9 +31,17 @@ fastly_postman_environment.json
 
 ## API Coverage
 
-At the moment the collection contains **0** out of **166** (not including Real-time analytics and Remote logging) requests. **More requests are coming soon!** Some API endpoints require session authentication. These endpoints are not included even if Postman’s native apps provide a Cookie Manager. Below is a list of all supported libraries of the [Fastly API](https://docs.fastly.com/api/):
+At the moment the collection contains **155** out of **160** requests.
 
-> Fastly announced that account-level API keys will be retired in favor of personal API tokens on May 15th, 2017. This collection and environment is only supporting API tokens! It's a piece of cake to create an API token with Postman if you don't have one yet!
+The following libraries are not included:
+
+- Real-time analytics
+- Remote logging
+- Utilities
+- Web Application Firewall
+- Dynamic Servers
+
+Some API endpoints require session authentication. These endpoints are not included even if Postman’s native apps provide a Cookie Manager. Below is a list of all supported libraries of the [Fastly API](https://docs.fastly.com/api/):
 
 | Category         | Collection Requests | API Requests | Coverage |
 | :--------------- | :------------------ | :----------- | :------- |
@@ -57,18 +65,21 @@ At the moment the collection contains **0** out of **166** (not including Real-t
 | Gzip             | 5                   | 5            | 100%     |
 | Header           | 5                   | 5            | 100%     |
 | Healthcheck      | 5                   | 5            | 100%     |
+| Historical Stats | 8                   | 8            | 100%     |
 | Invitation       | 3                   | 3            | 100%     |
 | Pricing Extras   | 2                   | 2            | 100%     |
+| Purging          | 4                   | 4            | 100%     |
 | Request Settings | 5                   | 5            | 100%     |
 | Response Object  | 5                   | 5            | 100%     |
 | Service          | 8                   | 8            | 100%     |
 | Settings         | 2                   | 2            | 100%     |
+| Soft Purging     | 2                   | 2            | 100%     |
 | Stats            | 1                   | 1            | 100%     |
 | User             | 7                   | 7            | 100%     |
 | VCL              | 11                  | 11           | 100%     |
 | Version          | 9                   | 9            | 100%     |
 | Wordpress        | 5                   | 5            | 100%     |
-|                  | **141**             | **146**      | **96%**  |
+|                  | **155**             | **160**      | **97%**  |
 
 ## Usage
 
