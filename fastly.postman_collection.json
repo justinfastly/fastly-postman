@@ -1784,7 +1784,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nChecks the status of all domains' DNS records for a Service Version. Returns an array of 3 items. The first is the details for the domain, the second is the current CNAME of the domain, and the third is a boolean indicating whether or not it has been properly setup to use Fastly.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#domain_e33a599694c3316f00b6b8d53a2db7d9)"
+						"description": "**Description:**\n\nChecks the status of all domains DNS records for a Service Version. Returns an array of 3 items. The first is the details for the domain, the second is the current CNAME of the domain, and the third is a boolean indicating whether or not it has been properly setup to use Fastly.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#domain_e33a599694c3316f00b6b8d53a2db7d9)"
 					},
 					"response": []
 				},
@@ -2557,6 +2557,862 @@
 			]
 		},
 		{
+			"name": "Historical Stats",
+			"description": "The Fastly Historical Stats API (i.e., the Stats API) is a RESTful API that allows Fastly customers to query historical caching stats such as number of requests, hit ratio, and number of errors. The Stats API provides an advanced querying interface that allows for fine grained time period, regional, and sampling control. This document provides a basic overview of Stats and documents all available endpoints.\n\n[Historical Stats Documentation](https://docs.fastly.com/api/stats#historical)",
+			"item": [
+				{
+					"name": "/stats",
+					"request": {
+						"url": "{{url}}/stats",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches historical stats for each of your Fastly services and groups the results by service ID.\n\n[Documentation](https://docs.fastly.com/api/stats#historical_0a4fe23e9386277695ad9966c38b0e47)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats?from=minutes+minutes+ago&to=minutes+minutes+ago&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats?from=46+minutes+ago&to=5+minutes+ago&by=minute&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches historical stats for each of your Fastly services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **minutes** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_0a4fe23e9386277695ad9966c38b0e47)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats?from=hours+hours+ago&to=hours+hours+ago&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches historical stats for each of your Fastly services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **hours** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_0a4fe23e9386277695ad9966c38b0e47)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats?from=days+days+ago&to=days+days+ago&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats?from=6+days+ago&to=3+days+ago&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches historical stats for each of your Fastly services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **days** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_0a4fe23e9386277695ad9966c38b0e47)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats?from=unix_timestamp&to=unix_timestamp&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats?from=1494374400&to=1494547200&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches historical stats for each of your Fastly services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **unix_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_0a4fe23e9386277695ad9966c38b0e47)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats?from=human_readable_timestamp_encoded&to=human_readable_timestamp_encoded&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches historical stats for each of your Fastly services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **human_readable_timestamp_encoded** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_0a4fe23e9386277695ad9966c38b0e47)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats?from=human_readable_timestamp&to=human_readable_timestamp&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats?from=5-10-2017&to=5-12-2017&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches historical stats for each of your Fastly services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **human_readable_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_0a4fe23e9386277695ad9966c38b0e47)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/field/stats_field",
+					"request": {
+						"url": "{{url}}/stats/field/hit_ratio",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches the specified field from the historical stats for each of your services and groups the results by service ID.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n\n[Documentation](https://docs.fastly.com/api/stats#historical_22aa35507f1f63d6f2110e891c2df5d0)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/field/stats_field?from=minutes+minutes+ago&to=minutes+minutes+ago&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/field/hit_ratio?from=56+minutes+ago&to=38+minutes+ago&by=minute&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches the specified field from the historical stats for each of your services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n- Update query string **minutes** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_22aa35507f1f63d6f2110e891c2df5d0)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/field/stats_field?from=hours+hours+ago&to=hours+hours+ago&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/field/hit_ratio?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches the specified field from the historical stats for each of your services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n- Update query string **hours** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_22aa35507f1f63d6f2110e891c2df5d0)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/field/stats_field?from=days+days+ago&to=days+days+ago&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/field/hit_ratio?from=6+days+ago&to=3+days+ago&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches the specified field from the historical stats for each of your services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n- Update query string **days** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_22aa35507f1f63d6f2110e891c2df5d0)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/field/stats_field?from=unix_timestamp&to=unix_timestamp&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/field/hit_ratio?from=1494374400&to=1494547200&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches the specified field from the historical stats for each of your services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n- Update query string **unix_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_22aa35507f1f63d6f2110e891c2df5d0)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/field/stats_field?from=human_readable_timestamp_encoded&to=human_readable_timestamp_encoded&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/field/hit_ratio?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches the specified field from the historical stats for each of your services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n- Update query string **human_readable_timestamp_encoded** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_22aa35507f1f63d6f2110e891c2df5d0)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/field/stats_field?from=human_readable_timestamp&to=human_readable_timestamp&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/field/hit_ratio?from=5-10-2017&to=5-12-2017&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches the specified field from the historical stats for each of your services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n- Update query string **human_readable_timestamp** parameter in URL\n- Update query string **by** parameter in URL- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n\n[Documentation](https://docs.fastly.com/api/stats#historical_22aa35507f1f63d6f2110e891c2df5d0)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/aggregate",
+					"request": {
+						"url": "{{url}}/stats/aggregate",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches historical stats information aggregated across all of your Fastly services.\n\n[Documentation](https://docs.fastly.com/api/stats#historical_80e95c97e20de0adae9bcf157b882c19)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/aggregate?from=minutes+minutes+ago&to=minutes+minutes+ago&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/aggregate?from=56+minutes+ago&to=23+minutes+ago&by=minute&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches historical stats information aggregated across all of your Fastly services.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **minutes** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_80e95c97e20de0adae9bcf157b882c19)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/aggregate?from=hours+hours+ago&to=hours+hours+ago&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/aggregate?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches historical stats information aggregated across all of your Fastly services.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **hours** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_80e95c97e20de0adae9bcf157b882c19)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/aggregate?from=days+days+ago&to=days+days+ago&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/aggregate?from=6+days+ago&to=3+days+ago&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches historical stats information aggregated across all of your Fastly services.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **days** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_80e95c97e20de0adae9bcf157b882c19)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/aggregate?from=unix_timestamp&to=unix_timestamp&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/aggregate?from=1494374400&to=1494547200&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches historical stats information aggregated across all of your Fastly services.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **unix_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_80e95c97e20de0adae9bcf157b882c19)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/aggregate?from=human_readable_timestamp_encoded&to=human_readable_timestamp_encoded&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/aggregate?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches historical stats information aggregated across all of your Fastly services.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **human_readable_timestamp_encoded** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_80e95c97e20de0adae9bcf157b882c19)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/aggregate?from=human_readable_timestamp&to=human_readable_timestamp&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/aggregate?from=5-10-2017&to=5-12-2017&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches historical stats information aggregated across all of your Fastly services.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **human_readable_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_80e95c97e20de0adae9bcf157b882c19)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/service/service_id",
+					"request": {
+						"url": "{{url}}/stats/service/{{service_id}}",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches historical stats for a given service.\n\n[Documentation](https://docs.fastly.com/api/stats#historical_67d3dd4fbe7c0e938cdda1bb3bc3bcde)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/service/service_id?from=minutes+minutes+ago&to=minutes+minutes+ago&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/service/{{service_id}}?from=56+minutes+ago&to=23+minutes+ago&by=minute&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **minutes** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_67d3dd4fbe7c0e938cdda1bb3bc3bcde)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/service/service_id?from=hours+hours+ago&to=hours+hours+ago&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/service/{{service_id}}?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **hours** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_67d3dd4fbe7c0e938cdda1bb3bc3bcde)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/service/service_id?from=days+days+ago&to=days+days+ago&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/service/{{service_id}}?from=6+days+ago&to=3+days+ago&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **days** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_67d3dd4fbe7c0e938cdda1bb3bc3bcde)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/service/service_id?from=unix_timestamp&to=unix_timestamp&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/service/{{service_id}}?from=1494374400&to=1494547200&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **unix_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_67d3dd4fbe7c0e938cdda1bb3bc3bcde)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/service/service_id?from=human_readable_timestamp_encoded&to=human_readable_timestamp_encoded&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/service/{{service_id}}?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **human_readable_timestamp_encoded** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_67d3dd4fbe7c0e938cdda1bb3bc3bcde)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/service/service_id?from=human_readable_timestamp&to=human_readable_timestamp&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/service/{{service_id}}?from=5-10-2017&to=5-12-2017&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **human_readable_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_67d3dd4fbe7c0e938cdda1bb3bc3bcde)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/service/service_id/field/stats_field",
+					"request": {
+						"url": "{{url}}/stats/service/{{service_id}}/field/bandwidth",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches the specified field from the historical stats for a given service.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n\n[Documentation](https://docs.fastly.com/api/stats#historical_9795cade0c03218021993891cf57e90d)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/service/service_id/field/stats_field?from=minutes+minutes+ago&to=minutes+minutes+ago&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=56+minutes+ago&to=23+minutes+ago&by=minute&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches the specified field from the historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n- Update query string **minutes** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_9795cade0c03218021993891cf57e90d)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/service/service_id/field/stats_field?from=hours+hours+ago&to=hours+hours+ago&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches the specified field from the historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration\n\n- Update URL with **stats_field**\n- Update query string **hours** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_9795cade0c03218021993891cf57e90d)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/service/service_id/field/stats_field?from=days+days+ago&to=days+days+ago&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=6+days+ago&to=3+days+ago&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches the specified field from the historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n- Update query string **days** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_9795cade0c03218021993891cf57e90d)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/service/service_id/field/stats_field?from=unix_timestamp&to=unix_timestamp&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=1494374400&to=1494547200&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches the specified field from the historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n- Update query string **unix_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_9795cade0c03218021993891cf57e90d)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/service/service_id/field/stats_field?from=human_readable_timestamp_encoded&to=human_readable_timestamp_encoded&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches the specified field from the historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n- Update query string **human_readable_timestamp_encoded** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_9795cade0c03218021993891cf57e90d)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/service/service_id/field/stats_field?from=human_readable_timestamp&to=human_readable_timestamp&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=5-10-2017&to=5-12-2017&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches the specified field from the historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n- Update query string **human_readable_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_9795cade0c03218021993891cf57e90d)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/usage",
+					"request": {
+						"url": "{{url}}/stats/usage",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nReturns usage information aggregated across all Fastly services and grouped by region.\n\n[Documentation](https://docs.fastly.com/api/stats#historical_3417fca9901cfd873f4b22de491e138f)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/usage?from=minutes+minutes+ago&to=minutes+minutes+ago&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/usage?from=56+minutes+ago&to=23+minutes+ago&by=minute&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nReturns usage information aggregated across all Fastly services and grouped by region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **minutes** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_3417fca9901cfd873f4b22de491e138f)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/usage?from=hours+hours+ago&to=hours+hours+ago&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/usage?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nReturns usage information aggregated across all Fastly services and grouped by region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **hours** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_3417fca9901cfd873f4b22de491e138f)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/usage?from=days+days+ago&to=days+days+ago&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/usage?from=6+days+ago&to=3+days+ago&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nReturns usage information aggregated across all Fastly services and grouped by region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **days** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_3417fca9901cfd873f4b22de491e138f)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/usage?from=unix_timestamp&to=unix_timestamp&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/usage?from=1494374400&to=1494547200&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nReturns usage information aggregated across all Fastly services and grouped by region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **unix_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_3417fca9901cfd873f4b22de491e138f)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/usage?from=human_readable_timestamp_encoded&to=human_readable_timestamp_encoded&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/usage?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nReturns usage information aggregated across all Fastly services and grouped by region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **human_readable_timestamp_encoded** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_3417fca9901cfd873f4b22de491e138f)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/usage?from=human_readable_timestamp&to=human_readable_timestamp&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/usage?from=5-10-2017&to=5-12-2017&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nReturns usage information aggregated across all Fastly services and grouped by region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **human_readable_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_3417fca9901cfd873f4b22de491e138f)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/usage_by_service",
+					"request": {
+						"url": "{{url}}/stats/usage_by_service",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nReturns usage information aggregated by service and grouped by service and region.\n\n[Documentation](https://docs.fastly.com/api/stats#historical_99369fb79ebecf90cc944d5dce49cc31)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/usage_by_service?from=minutes+minutes+ago&to=minutes+minutes+ago&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/usage_by_service?from=56+minutes+ago&to=23+minutes+ago&by=minute&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nReturns usage information aggregated by service and grouped by service and region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **minutes** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_99369fb79ebecf90cc944d5dce49cc31)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/usage_by_service?from=hours+hours+ago&to=hours+hours+ago&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/usage_by_service?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nReturns usage information aggregated by service and grouped by service and region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **hours** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_99369fb79ebecf90cc944d5dce49cc31)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/usage_by_service?from=days+days+ago&to=days+days+ago&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/usage_by_service?from=6+days+ago&to=3+days+ago&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nReturns usage information aggregated by service and grouped by service and region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **days** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_99369fb79ebecf90cc944d5dce49cc31)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/usage_by_service?from=unix_timestamp&to=unix_timestamp&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/usage_by_service?from=1494374400&to=1494547200&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nReturns usage information aggregated by service and grouped by service and region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **unix_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_99369fb79ebecf90cc944d5dce49cc31)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/usage_by_service?from=human_readable_timestamp_encoded&to=human_readable_timestamp_encoded&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/usage_by_service?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nReturns usage information aggregated by service and grouped by service and region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **human_readable_timestamp_encoded** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_99369fb79ebecf90cc944d5dce49cc31)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/usage_by_service?from=human_readable_timestamp&to=human_readable_timestamp&by=interval&region=region",
+					"request": {
+						"url": "{{url}}/stats/usage_by_service?from=5-10-2017&to=5-12-2017&by=day&region=usa",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nReturns usage information aggregated by service and grouped by service and region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **human_readable_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_99369fb79ebecf90cc944d5dce49cc31)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/regions",
+					"request": {
+						"url": "{{url}}/stats/regions",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nFetches the list of codes for regions that are covered by the Fastly CDN service.\n\n[Documentation](https://docs.fastly.com/api/stats#historical_dc06fafd90cb9e4b5378fdea2103987f)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Invitation",
 			"description": "The invitations are created by the customer in order to invite employees to create user accounts that operate under the main customer account.\n\n[Invitation Documentation](https://docs.fastly.com/api/account#invitation)",
 			"item": [
@@ -2668,6 +3524,80 @@
 							"raw": ""
 						},
 						"description": "**Description:**\n\nGet an individual pricing extra for a customer.\n\n**Request Configuration:**\n\n- Update URL with **extra_name**\n\n[Documentation](https://docs.fastly.com/api/account#pricing_extras_8e4095c3bddef0bbe48bd06687fb5ba6)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Purging",
+			"description": "Instant Purging removes content from Fastly immediately so it can be refreshed from your origin servers.\n\n[Purging Documentation](https://docs.fastly.com/api/purge#purge)",
+			"item": [
+				{
+					"name": "/individual_url",
+					"request": {
+						"url": "https://docs.fastly.com/api/",
+						"method": "PURGE",
+						"header": [],
+						"body": {},
+						"description": "**Description:**\n\nInstant Purge an individual URL. The main entry point https://api.fastly.com/ for the API is not needed for an individual URL Instant Purge.\n\nBy default, authentication is not required to purge a URL with the Fastly API, but you can enable API token authentication in the Fastly web interface by adding a header or by using custom VCL. Please review the Fastly [docs](https://docs.fastly.com/guides/purging/authenticating-api-purge-requests#purging-urls-with-an-api-token) for further information.\n\n**Request Configuration:**\n\n- Update URL with **individual_url**\n\n[Documentation](https://docs.fastly.com/api/purge#purge_3aa1d66ee81dbfed0b03deed0fa16a9a)"
+					},
+					"response": []
+				},
+				{
+					"name": "/purge/individual_url",
+					"request": {
+						"url": "{{url}}/purge/https://docs.fastly.com/api/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nInstant Purge an individual URL with an API token.\n\nIn order to secure individual URL purge requests you'll need to enable API token authentication in the Fastly web interface by adding a header or by using custom VCL. Please review the Fastly [docs](https://docs.fastly.com/guides/purging/authenticating-api-purge-requests#purging-urls-with-an-api-token) for further information.\n\n**Request Configuration:**\n\n- Update URL with **individual_url**\n\n[Documentation](https://docs.fastly.com/guides/purging/authenticating-api-purge-requests#purging-urls-with-an-api-token)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/purge_all",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/purge_all",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nInstant Purge everything from a service.\n\n[Documentation](https://docs.fastly.com/api/purge#purge_bee5ed1a0cfd541e8b9f970a44718546)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/purge/surrogate_key",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/purge/hTE5dRlSBICGPJxJwCH4M",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nInstant Purge a particular service of items tagged with a Surrogate Key. Only one surrogate key can be purged at a time. Multiple keys can be purged using multiple purge requests.\n\n**Request Configuration:**\n\n- Update URL with **surrogate_key**\n\n[Documentation](https://docs.fastly.com/api/purge#purge_d8b8e8be84c350dd92492453a3df3230)"
 					},
 					"response": []
 				}
@@ -3127,6 +4057,76 @@
 							"raw": "{\n\t\"general.default_host\": \"www.my-example.com\",\n\t\"general.default_ttl\": 3600\n}"
 						},
 						"description": "**Description:**\n\nUpdate the settings for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update **general.default_host** property in body\n- Update **general.default_ttl** property in body\n\n[Documentation](https://docs.fastly.com/api/config#settings_9740ff4ac0c1777f455274c4850ece23)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Soft Purging",
+			"description": "Soft Purging sets an object's TTL to 0s, forcing revalidation. For best results, Soft Purging should be used in conjuction with stale_while_revalidate and stale_if_error.\n\n[Soft Purging Documentation](https://docs.fastly.com/api/purge#soft_purge)",
+			"item": [
+				{
+					"name": "/individual_url",
+					"request": {
+						"url": "https://docs.fastly.com/api/",
+						"method": "PURGE",
+						"header": [
+							{
+								"key": "Fastly-Soft-Purge",
+								"value": "1",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nSoft Purge an individual URL. The main entry point https://api.fastly.com/ for the API is not needed for an individual URL Instant Purge.\n\nBy default, authentication is not required to purge a URL with the Fastly API, but you can enable API token authentication in the Fastly web interface by adding a header or by using custom VCL. Please review the Fastly [docs](https://docs.fastly.com/guides/purging/authenticating-api-purge-requests#purging-urls-with-an-api-token) for further information.\n\n**Request Configuration:**\n\n- Update URL with **individual_url**\n\n[Documentation](https://docs.fastly.com/api/purge#soft_purge_0c4f56f3d68e9bed44fb8b638b78ea36)"
+					},
+					"response": []
+				},
+				{
+					"name": "/purge/individual_url",
+					"request": {
+						"url": "{{url}}/purge/https://docs.fastly.com/api/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Fastly-Soft-Purge",
+								"value": "1",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nSoft Purge an individual URL with an API token.\n\nIn order to secure individual URL soft purge requests you'll need to enable API token authentication in the Fastly web interface by adding a header or by using custom VCL. Please review the Fastly [docs](https://docs.fastly.com/guides/purging/authenticating-api-purge-requests#purging-urls-with-an-api-token) for further information.\n\n**Request Configuration:**\n\n- Update URL with **individual_url**\n\n[Documentation](https://docs.fastly.com/guides/purging/authenticating-api-purge-requests#purging-urls-with-an-api-token)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/purge/surrogate_key",
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/purge/hTE5dRlSBICGPJxJwCH4M",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Fastly-Soft-Purge",
+								"value": "1",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nSoft Purge a particular service of items tagged with a key. Only one surrogate key can be purged at a time. Multiple keys can be purged using multiple purge requests.\n\n**Request Configuration:**\n\n- Update URL with **surrogate_key**\n\n[Documentation](https://docs.fastly.com/api/purge#soft_purge_2e4d29085640127739f8467f27a5b549)"
 					},
 					"response": []
 				}
