@@ -53,7 +53,7 @@ Some API endpoints require session authentication. These endpoints are not inclu
 | Billing Address  | 2                   | 4            | 50%      |
 | Cache Settings   | 5                   | 5            | 100%     |
 | Condition        | 5                   | 5            | 100%     |
-| Customer         | 2                   | 5            | 40%      |
+| Customer         | 5                   | 5            | 100%     |
 | Dictionary       | 5                   | 5            | 100%     |
 | Dictionary Item  | 7                   | 7            | 100%     |
 | Diff             | 1                   | 1            | 100%     |
@@ -79,7 +79,7 @@ Some API endpoints require session authentication. These endpoints are not inclu
 | VCL              | 11                  | 11           | 100%     |
 | Version          | 9                   | 9            | 100%     |
 | Wordpress        | 5                   | 5            | 100%     |
-|                  | **155**             | **160**      | **97%**  |
+|                  | **158**             | **160**      | **99%**  |
 
 ## Usage
 
