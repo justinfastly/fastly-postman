@@ -6481,6 +6481,235 @@
 			]
 		},
 		{
+			"name": "VCL Snippets",
+			"description": "VCL Snippets are blocks of VCL logic inserted into your service's configuration that don't require custom VCL.\n\n[VCL Snippets Documentation](https://docs.fastly.com/api/config#snippet)",
+			"item": [
+				{
+					"name": "/service/service_id/version/version_no/snippet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/102/snippet",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nList all snippets for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#snippet_e2ba7946be5a13ee64b7e7edb481b934)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/snippet",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/102/snippet",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"your_snippet\",\n\t\"priority\": \"10\",\n\t\"dynamic\": \"1\",\n\t\"content\": \"set beresp.http.Backend-Name = beresp.backend.name;\",\n\t\"type\": \"fetch\"\n}"
+						},
+						"description": "**Description:**\n\nCreate a snippet for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **name** [string] - The name for the snippet.\n- **priority** [integer] - Priority determines the ordering for multiple snippets. Lower numbers execute first.\n- **dynamic** [integer] - Sets the snippet version to regular (0) or dynamic (1).\n- **content** [string] - The VCL code that specifies exactly what the snippet does.\n- **type** [string] - The location in generated VCL where the snippet should be placed. Type can be either:\n\t- init - Place the snippet above all subroutines.\n\t- recv - Place the snippet within the vcl_recv subroutine but below the boilerplate VCL and above any objects.\n\t- hit - Place the snippet within the vcl_hit subroutine.\n\t- miss - Place the snippet within the vcl_miss subroutine.\n\t- pass - Place the snippet within the vcl_pass subroutine.\n\t- fetch - Place the snippet within the vcl_fetch subroutine.\n\t- error - Place the snippet within the vcl_error subroutine.\n\t- deliver - Place the snippet within the vcl_deliver subroutine.\n\t- log - Place the snippet within the vcl_log subroutine.\n\t- none - Don't render the snippet in VCL so it can be manually included in custom VCL.\n\n[Documentation](https://docs.fastly.com/api/config#snippet_41e0e11c662d4d56adada215e707f30d)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/snippet/snippet_id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/snippet/5BuPSiV3305syEdzY74F1E",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nGet a single dynamic snippet for a particular service.\n\n**Request Configuration:**\n\n- Update URL with **snippet_id**\n\n[Documentation](https://docs.fastly.com/api/config#snippet_abbda4e60ce93b7cb85bd6377623da0d)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/snippet/snippet_id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/snippet/4th3MOB33QYrRpcuYTeGWM",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"content\": \"set beresp.http.Backend-Status = beresp.status;\"\n}"
+						},
+						"description": "**Description:**\n\nUpdate a dynamic snippet for a particular service.\n\n**Request Configuration:**\n\n- Update URL with **snippet_id**\n- **content** [string] - The VCL code that specifies exactly what the snippet does.\n\n[Documentation](https://docs.fastly.com/api/config#snippet_31c1d5fa32accf180f5af28fa77cc138)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/snippet/snippet_name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/102/snippet/your_snippet",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "**Description:**\n\nGet a single snippet for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **snippet_name**\n\n[Documentation](https://docs.fastly.com/api/config#snippet_33b5e47ae6fe6511169591ef9f43a2f4)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/snippet/snippet_name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/102/snippet/your_snippet",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"your_snippet\"\n}"
+						},
+						"description": "**Description:**\n\nUpdate a specific snippet for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **snippet_name**\n- **name** [string] - The name for the snippet.\n\n[Documentation](https://docs.fastly.com/api/config#snippet_e74c500822f252e309a03e0d2727d7b3)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/version/version_no/snippet/snippet_name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/102/snippet/your_snippet",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nDelete a specific snippet for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **snippet_name**\n\n[Documentation](https://docs.fastly.com/api/config#snippet_169df47a3f93ba5e20277833014e68a7)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Version",
 			"description": "A Version represents a specific instance of the configuration for a service. A Version can be cloned, locked, activated, or deactivated.\n\n[Version Documentation](https://docs.fastly.com/api/config#version)",
 			"item": [
@@ -6775,6 +7004,17 @@
 			"item": [
 				{
 					"name": "/service/service_id/version/version_no/wordpress",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
 					"request": {
 						"url": " {{url}}/service/{{service_id}}/version/50/wordpress",
 						"method": "GET",
@@ -6794,7 +7034,54 @@
 					"response": []
 				},
 				{
+					"name": "/service/service_id/version/version_no/wordpress",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": " {{url}}/service/{{service_id}}/version/50/wordpress",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"comment\":\"your_comment\",\n\t\"name\":\"your_wordpress_name\",\n\t\"path\":\"/blog\"\n}"
+						},
+						"description": "**Description:**\n\nCreate a WordPress configuration for the specified service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **comment** [string] - A comment.\n- **name** [string] - Name of the WordPress object.\n- **path** [string] - Requests to this path will use WordPress configuration.\n\n[Documentation](https://docs.fastly.com/api/config#wordpress_3719d163b1e6b80d4220d402df943073)"
+					},
+					"response": []
+				},
+				{
 					"name": "/service/service_id/version/version_no/wordpress/wordpress_name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
 					"request": {
 						"url": " {{url}}/service/{{service_id}}/version/50/wordpress/your_wordpress_name",
 						"method": "GET",
@@ -6814,32 +7101,18 @@
 					"response": []
 				},
 				{
-					"name": "/service/service_id/version/version_no/wordpress",
-					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/wordpress",
-						"method": "POST",
-						"header": [
-							{
-								"key": "Fastly-Key",
-								"value": "{{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"comment\":\"A comment\",\n\t\"name\":\"your_wordpress_name\",\n\t\"path\":\"/blog\"\n}"
-						},
-						"description": "**Description:**\n\nCreate a WordPress configuration for the specified service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **comment** [string] - A comment.\n- **name** [string] - Name of the WordPress object.\n- **path** [string] - Requests to this path will use WordPress configuration.\n\n[Documentation](https://docs.fastly.com/api/config#wordpress_3719d163b1e6b80d4220d402df943073)"
-					},
-					"response": []
-				},
-				{
 					"name": "/service/service_id/version/version_no/wordpress/wordpress_name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
 					"request": {
 						"url": " {{url}}/service/{{service_id}}/version/50/wordpress/your_wordpress_name",
 						"method": "PUT",
@@ -6857,7 +7130,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"comment\":\"A updated comment\",\n\t\"name\":\"your_updated_wordpress_name\",\n\t\"path\":\"/update\"\n}"
+							"raw": "{\n\t\"comment\":\"your_comment\",\n\t\"name\":\"your_wordpress_name\",\n\t\"path\":\"/update\"\n}"
 						},
 						"description": "**Description:**\n\nUpdate a specified WordPress configuration.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **wordpress_name**\n- **comment** [string] - A comment.\n- **name** [string] - Name of the WordPress object.\n- **path** [string] - Requests to this path will use WordPress configuration.\n\n\n[Documentation](https://docs.fastly.com/api/config#wordpress_3f47a802ddb1c959c368aebe07009803)"
 					},
@@ -6865,6 +7138,17 @@
 				},
 				{
 					"name": "/service/service_id/version/version_no/wordpress/wordpress_name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
 					"request": {
 						"url": " {{url}}/service/{{service_id}}/version/50/wordpress/your_wordpress_name",
 						"method": "DELETE",

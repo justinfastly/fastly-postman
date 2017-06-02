@@ -31,7 +31,7 @@ fastly_postman_environment.json
 
 ## API Coverage
 
-At the moment the collection contains **155** out of **160** requests.
+At the moment the collection contains **165** out of **167** requests.
 
 The following libraries are not included:
 
@@ -77,9 +77,10 @@ Some API endpoints require session authentication. These endpoints are not inclu
 | Stats            | 1                   | 1            | 100%     |
 | User             | 7                   | 7            | 100%     |
 | VCL              | 11                  | 11           | 100%     |
+| VCL Snippets     | 7                   | 7            | 100%     |
 | Version          | 9                   | 9            | 100%     |
 | Wordpress        | 5                   | 5            | 100%     |
-|                  | **158**             | **160**      | **99%**  |
+|                  | **165**             | **167**      | **99%**  |
 
 ## Usage
 
