@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "Fastly",
-		"_postman_id": "0052a9bf-3cdb-0081-73c2-b289e5073e0b",
+		"_postman_id": "10aae39f-96f6-723f-df0a-3626879fb542",
 		"description": "The Fastly API is a RESTful API that supports all features available through the Fastly web interface. Use the libraries below to guide the development of your sites and applications.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -34,7 +34,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nList ACLs.\n\n[Documentation](https://docs.fastly.com/api/config#acl_5dfdb4b644ee42fcb71f3c3f139e3b0d)"
 					},
 					"response": []
@@ -102,7 +105,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nRetrieve a single ACL by name for the version and service.\n\n[Documentation](https://docs.fastly.com/api/config#acl_ea46be7e9fb009d231bdc47690cc1762)"
 					},
 					"response": []
@@ -172,7 +178,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nDelete an ACL for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#acl_62526fdbe826b794a6655fbb66f987a9)"
 					},
 					"response": []
@@ -273,7 +282,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nRetrieve a single ACL entry given service, ACL ID and entry ID.\n\n**Request Configuration:**\n\n- Update URL with **entry_id**\n\n[Documentation](https://docs.fastly.com/api/config#acl_entry_a637fad7f4c0014d2168d0a3b6f6a769)"
 					},
 					"response": []
@@ -373,7 +385,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nDelete ACL entry given service, ACL ID, and entry ID.\n\n**Request Configuration:**\n\n- Update URL with **entry_id**\n\n[Documentation](https://docs.fastly.com/api/config#acl_entry_8ab8e771a201b24bee9ee64c7a45f464)"
 					},
 					"response": []
@@ -407,7 +422,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nList all tokens belonging to the authenticated user.\n\n[Documentation](https://docs.fastly.com/api/auth#tokens_d59ff8612bae27a2317278abb048db0c)"
 					},
 					"response": []
@@ -435,7 +453,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nList all tokens belonging to a specific customer.\n\n[Documentation](https://docs.fastly.com/api/auth#tokens_bc1370f9b3432d4423d35aa25a889c5a)"
 					},
 					"response": []
@@ -597,7 +618,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nRevoke a specific token by its id.\n\n**Request Configuration:**\n\n- Update URL with **token_id**\n\n[Documentation](https://docs.fastly.com/api/auth#tokens_4a958ba69402500937f0d8570f7ce86f)"
 					},
 					"response": []
@@ -773,7 +797,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nDelete the backend for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#backend_a00ce4b7a448b63d26016837907e7bfa)"
 					},
 					"response": []
@@ -807,7 +834,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nGet the invoice for a given year and month.\n\n**Request Configuration:**\n\n- Update URL with **billing_year**\n- Update URL with **billing_month**\n\n[Documentation](https://docs.fastly.com/api/account#billing_bd3ea2cbea58ddbb82bbde0c1981fd8b)"
 					},
 					"response": []
@@ -909,7 +939,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nGet a list of all cache settings for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#cache_settings_0d6fb6b78afaa453ec69a5dbd4038322)"
 					},
 					"response": []
@@ -973,7 +1006,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nGet a specific cache settings object.\n\n**Request Configuration:**\n\n- Update URL with **cache_setting_name**\n\n[Documentation](https://docs.fastly.com/api/config#cache_settings_9e1fcc14944551fadf3da3f87ff338a9)"
 					},
 					"response": []
@@ -1037,7 +1073,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nDelete a specific cache settings object.\n\n**Request Configuration:**\n\n- Update URL with **cache_setting_name**\n\n[Documentation](https://docs.fastly.com/api/config#cache_settings_9adabaabeb01d84b2c02c2dbc5b4bbda)"
 					},
 					"response": []
@@ -1071,7 +1110,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nGet all conditions for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#condition_b61196c572f473c89863a81cc5912861)"
 					},
 					"response": []
@@ -1223,7 +1265,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nDeletes the specified condition.\n\n**Request Configuration:**\n\n- Update URL with **condition_name**\n\n[Documentation](https://docs.fastly.com/api/config#condition_2b902b7649c46b4541f00a920d06c94d)"
 					},
 					"response": []
@@ -2168,7 +2213,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nEstablishes a relationship between a Backend and a Director. The Backend is then considered a member of the Director and can be used to balance traffic onto.\n\n[Documentation](https://docs.fastly.com/api/config#director_backend_6926a1fc561d50ab8773e8c6c8382d38)"
 					},
 					"response": []
@@ -2227,7 +2275,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nDeletes the relationship between a Backend and a Director. The Backend is no longer considered a member of the Director and thus will not have traffic balanced onto it from this Director.\n\n[Documentation](https://docs.fastly.com/api/config#director_backend_92985fb9fc147d24a0c8a3720dafd5e1)"
 					},
 					"response": []
@@ -2502,7 +2553,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nGet the specified event log.\n\n[Documentation](https://docs.fastly.com/api/account#event_log_ec1aa4c6ee90ac79296b84fc3b0e5cfe)"
 					},
 					"response": []
@@ -2558,7 +2612,31 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/events?filter[customer_id]={{customer_id}}&page[number]=1&page[size]=1",
+						"url": {
+							"raw": "{{url}}/events?filter[customer_id]={{customer_id}}&page[number]=1&page[size]=1",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"events"
+							],
+							"query": [
+								{
+									"key": "filter[customer_id]",
+									"value": "{{customer_id}}"
+								},
+								{
+									"key": "page[number]",
+									"value": "1"
+								},
+								{
+									"key": "page[size]",
+									"value": "1"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -2589,7 +2667,31 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/events?filter[service_id]={{service_id}}&page[number]=1&page[size]=3",
+						"url": {
+							"raw": "{{url}}/events?filter[service_id]={{service_id}}&page[number]=1&page[size]=3",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"events"
+							],
+							"query": [
+								{
+									"key": "filter[service_id]",
+									"value": "{{service_id}}"
+								},
+								{
+									"key": "page[number]",
+									"value": "1"
+								},
+								{
+									"key": "page[size]",
+									"value": "3"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -2620,7 +2722,31 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/events?filter[user_id]={{user_id}}&page[number]=1&page[size]=3",
+						"url": {
+							"raw": "{{url}}/events?filter[user_id]={{user_id}}&page[number]=1&page[size]=3",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"events"
+							],
+							"query": [
+								{
+									"key": "filter[user_id]",
+									"value": "{{user_id}}"
+								},
+								{
+									"key": "page[number]",
+									"value": "1"
+								},
+								{
+									"key": "page[size]",
+									"value": "3"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3175,7 +3301,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nDelete the healthcheck for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **healthcheck_name**\n\n[Documentation](https://docs.fastly.com/api/config#healthcheck_a22900c40a2fd59db5028061dc5dfa36)"
 					},
 					"response": []
@@ -3209,7 +3338,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches historical stats for each of your Fastly services and groups the results by service ID.\n\n[Documentation](https://docs.fastly.com/api/stats#historical_0a4fe23e9386277695ad9966c38b0e47)"
 					},
 					"response": []
@@ -3228,7 +3360,35 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats?from=46+minutes+ago&to=5+minutes+ago&by=minute&region=usa",
+						"url": {
+							"raw": "{{url}}/stats?from=46+minutes+ago&to=5+minutes+ago&by=minute&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "46+minutes+ago"
+								},
+								{
+									"key": "to",
+									"value": "5+minutes+ago"
+								},
+								{
+									"key": "by",
+									"value": "minute"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3237,7 +3397,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches historical stats for each of your Fastly services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **minutes** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_0a4fe23e9386277695ad9966c38b0e47)"
 					},
 					"response": []
@@ -3256,7 +3419,35 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
+						"url": {
+							"raw": "{{url}}/stats?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "6+hours+ago"
+								},
+								{
+									"key": "to",
+									"value": "3+hours+ago"
+								},
+								{
+									"key": "by",
+									"value": "hour"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3265,7 +3456,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches historical stats for each of your Fastly services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **hours** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_0a4fe23e9386277695ad9966c38b0e47)"
 					},
 					"response": []
@@ -3284,7 +3478,35 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats?from=6+days+ago&to=3+days+ago&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats?from=6+days+ago&to=3+days+ago&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "6+days+ago"
+								},
+								{
+									"key": "to",
+									"value": "3+days+ago"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3293,7 +3515,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches historical stats for each of your Fastly services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **days** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_0a4fe23e9386277695ad9966c38b0e47)"
 					},
 					"response": []
@@ -3312,7 +3537,35 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats?from=1494374400&to=1494547200&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats?from=1494374400&to=1494547200&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "1494374400"
+								},
+								{
+									"key": "to",
+									"value": "1494547200"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3321,7 +3574,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches historical stats for each of your Fastly services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **unix_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_0a4fe23e9386277695ad9966c38b0e47)"
 					},
 					"response": []
@@ -3340,7 +3596,35 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "05%2F10%2F2017"
+								},
+								{
+									"key": "to",
+									"value": "05%2F12%2F2017"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3349,7 +3633,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches historical stats for each of your Fastly services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **human_readable_timestamp_encoded** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_0a4fe23e9386277695ad9966c38b0e47)"
 					},
 					"response": []
@@ -3368,7 +3655,35 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats?from=5-10-2017&to=5-12-2017&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats?from=5-10-2017&to=5-12-2017&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "5-10-2017"
+								},
+								{
+									"key": "to",
+									"value": "5-12-2017"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3377,7 +3692,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches historical stats for each of your Fastly services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **human_readable_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_0a4fe23e9386277695ad9966c38b0e47)"
 					},
 					"response": []
@@ -3405,7 +3723,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches the specified field from the historical stats for each of your services and groups the results by service ID.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n\n[Documentation](https://docs.fastly.com/api/stats#historical_22aa35507f1f63d6f2110e891c2df5d0)"
 					},
 					"response": []
@@ -3424,7 +3745,37 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/field/hit_ratio?from=56+minutes+ago&to=38+minutes+ago&by=minute&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/field/hit_ratio?from=56+minutes+ago&to=38+minutes+ago&by=minute&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"field",
+								"hit_ratio"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "56+minutes+ago"
+								},
+								{
+									"key": "to",
+									"value": "38+minutes+ago"
+								},
+								{
+									"key": "by",
+									"value": "minute"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3433,7 +3784,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches the specified field from the historical stats for each of your services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n- Update query string **minutes** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_22aa35507f1f63d6f2110e891c2df5d0)"
 					},
 					"response": []
@@ -3452,7 +3806,37 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/field/hit_ratio?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/field/hit_ratio?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"field",
+								"hit_ratio"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "6+hours+ago"
+								},
+								{
+									"key": "to",
+									"value": "3+hours+ago"
+								},
+								{
+									"key": "by",
+									"value": "hour"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3461,7 +3845,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches the specified field from the historical stats for each of your services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n- Update query string **hours** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_22aa35507f1f63d6f2110e891c2df5d0)"
 					},
 					"response": []
@@ -3480,7 +3867,37 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/field/hit_ratio?from=6+days+ago&to=3+days+ago&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/field/hit_ratio?from=6+days+ago&to=3+days+ago&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"field",
+								"hit_ratio"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "6+days+ago"
+								},
+								{
+									"key": "to",
+									"value": "3+days+ago"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3489,7 +3906,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches the specified field from the historical stats for each of your services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n- Update query string **days** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_22aa35507f1f63d6f2110e891c2df5d0)"
 					},
 					"response": []
@@ -3508,7 +3928,37 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/field/hit_ratio?from=1494374400&to=1494547200&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/field/hit_ratio?from=1494374400&to=1494547200&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"field",
+								"hit_ratio"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "1494374400"
+								},
+								{
+									"key": "to",
+									"value": "1494547200"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3517,7 +3967,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches the specified field from the historical stats for each of your services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n- Update query string **unix_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_22aa35507f1f63d6f2110e891c2df5d0)"
 					},
 					"response": []
@@ -3536,7 +3989,37 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/field/hit_ratio?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/field/hit_ratio?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"field",
+								"hit_ratio"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "05%2F10%2F2017"
+								},
+								{
+									"key": "to",
+									"value": "05%2F12%2F2017"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3545,7 +4028,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches the specified field from the historical stats for each of your services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n- Update query string **human_readable_timestamp_encoded** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_22aa35507f1f63d6f2110e891c2df5d0)"
 					},
 					"response": []
@@ -3564,7 +4050,37 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/field/hit_ratio?from=5-10-2017&to=5-12-2017&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/field/hit_ratio?from=5-10-2017&to=5-12-2017&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"field",
+								"hit_ratio"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "5-10-2017"
+								},
+								{
+									"key": "to",
+									"value": "5-12-2017"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3573,7 +4089,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches the specified field from the historical stats for each of your services and groups the results by service ID.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n- Update query string **human_readable_timestamp** parameter in URL\n- Update query string **by** parameter in URL- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n\n[Documentation](https://docs.fastly.com/api/stats#historical_22aa35507f1f63d6f2110e891c2df5d0)"
 					},
 					"response": []
@@ -3601,7 +4120,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches historical stats information aggregated across all of your Fastly services.\n\n[Documentation](https://docs.fastly.com/api/stats#historical_80e95c97e20de0adae9bcf157b882c19)"
 					},
 					"response": []
@@ -3620,7 +4142,36 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/aggregate?from=56+minutes+ago&to=23+minutes+ago&by=minute&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/aggregate?from=56+minutes+ago&to=23+minutes+ago&by=minute&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"aggregate"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "56+minutes+ago"
+								},
+								{
+									"key": "to",
+									"value": "23+minutes+ago"
+								},
+								{
+									"key": "by",
+									"value": "minute"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3629,7 +4180,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches historical stats information aggregated across all of your Fastly services.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **minutes** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_80e95c97e20de0adae9bcf157b882c19)"
 					},
 					"response": []
@@ -3648,7 +4202,36 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/aggregate?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/aggregate?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"aggregate"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "6+hours+ago"
+								},
+								{
+									"key": "to",
+									"value": "3+hours+ago"
+								},
+								{
+									"key": "by",
+									"value": "hour"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3657,7 +4240,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches historical stats information aggregated across all of your Fastly services.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **hours** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_80e95c97e20de0adae9bcf157b882c19)"
 					},
 					"response": []
@@ -3676,7 +4262,36 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/aggregate?from=6+days+ago&to=3+days+ago&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/aggregate?from=6+days+ago&to=3+days+ago&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"aggregate"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "6+days+ago"
+								},
+								{
+									"key": "to",
+									"value": "3+days+ago"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3685,7 +4300,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches historical stats information aggregated across all of your Fastly services.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **days** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_80e95c97e20de0adae9bcf157b882c19)"
 					},
 					"response": []
@@ -3704,7 +4322,36 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/aggregate?from=1494374400&to=1494547200&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/aggregate?from=1494374400&to=1494547200&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"aggregate"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "1494374400"
+								},
+								{
+									"key": "to",
+									"value": "1494547200"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3713,7 +4360,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches historical stats information aggregated across all of your Fastly services.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **unix_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_80e95c97e20de0adae9bcf157b882c19)"
 					},
 					"response": []
@@ -3732,7 +4382,36 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/aggregate?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/aggregate?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"aggregate"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "05%2F10%2F2017"
+								},
+								{
+									"key": "to",
+									"value": "05%2F12%2F2017"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3741,7 +4420,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches historical stats information aggregated across all of your Fastly services.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **human_readable_timestamp_encoded** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_80e95c97e20de0adae9bcf157b882c19)"
 					},
 					"response": []
@@ -3760,7 +4442,36 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/aggregate?from=5-10-2017&to=5-12-2017&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/aggregate?from=5-10-2017&to=5-12-2017&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"aggregate"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "5-10-2017"
+								},
+								{
+									"key": "to",
+									"value": "5-12-2017"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3769,7 +4480,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches historical stats information aggregated across all of your Fastly services.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **human_readable_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_80e95c97e20de0adae9bcf157b882c19)"
 					},
 					"response": []
@@ -3797,7 +4511,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches historical stats for a given service.\n\n[Documentation](https://docs.fastly.com/api/stats#historical_67d3dd4fbe7c0e938cdda1bb3bc3bcde)"
 					},
 					"response": []
@@ -3816,7 +4533,37 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/service/{{service_id}}?from=56+minutes+ago&to=23+minutes+ago&by=minute&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/service/{{service_id}}?from=56+minutes+ago&to=23+minutes+ago&by=minute&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"service",
+								"{{service_id}}"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "56+minutes+ago"
+								},
+								{
+									"key": "to",
+									"value": "23+minutes+ago"
+								},
+								{
+									"key": "by",
+									"value": "minute"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3825,7 +4572,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **minutes** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_67d3dd4fbe7c0e938cdda1bb3bc3bcde)"
 					},
 					"response": []
@@ -3844,7 +4594,37 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/service/{{service_id}}?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/service/{{service_id}}?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"service",
+								"{{service_id}}"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "6+hours+ago"
+								},
+								{
+									"key": "to",
+									"value": "3+hours+ago"
+								},
+								{
+									"key": "by",
+									"value": "hour"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3853,7 +4633,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **hours** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_67d3dd4fbe7c0e938cdda1bb3bc3bcde)"
 					},
 					"response": []
@@ -3872,7 +4655,37 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/service/{{service_id}}?from=6+days+ago&to=3+days+ago&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/service/{{service_id}}?from=6+days+ago&to=3+days+ago&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"service",
+								"{{service_id}}"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "6+days+ago"
+								},
+								{
+									"key": "to",
+									"value": "3+days+ago"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3881,7 +4694,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **days** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_67d3dd4fbe7c0e938cdda1bb3bc3bcde)"
 					},
 					"response": []
@@ -3900,7 +4716,37 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/service/{{service_id}}?from=1494374400&to=1494547200&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/service/{{service_id}}?from=1494374400&to=1494547200&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"service",
+								"{{service_id}}"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "1494374400"
+								},
+								{
+									"key": "to",
+									"value": "1494547200"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3909,7 +4755,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **unix_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_67d3dd4fbe7c0e938cdda1bb3bc3bcde)"
 					},
 					"response": []
@@ -3928,7 +4777,37 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/service/{{service_id}}?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/service/{{service_id}}?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"service",
+								"{{service_id}}"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "05%2F10%2F2017"
+								},
+								{
+									"key": "to",
+									"value": "05%2F12%2F2017"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3937,7 +4816,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **human_readable_timestamp_encoded** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_67d3dd4fbe7c0e938cdda1bb3bc3bcde)"
 					},
 					"response": []
@@ -3956,7 +4838,37 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/service/{{service_id}}?from=5-10-2017&to=5-12-2017&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/service/{{service_id}}?from=5-10-2017&to=5-12-2017&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"service",
+								"{{service_id}}"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "5-10-2017"
+								},
+								{
+									"key": "to",
+									"value": "5-12-2017"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -3965,7 +4877,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **human_readable_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_67d3dd4fbe7c0e938cdda1bb3bc3bcde)"
 					},
 					"response": []
@@ -3993,7 +4908,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches the specified field from the historical stats for a given service.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n\n[Documentation](https://docs.fastly.com/api/stats#historical_9795cade0c03218021993891cf57e90d)"
 					},
 					"response": []
@@ -4012,7 +4930,39 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=56+minutes+ago&to=23+minutes+ago&by=minute&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=56+minutes+ago&to=23+minutes+ago&by=minute&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"service",
+								"{{service_id}}",
+								"field",
+								"bandwidth"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "56+minutes+ago"
+								},
+								{
+									"key": "to",
+									"value": "23+minutes+ago"
+								},
+								{
+									"key": "by",
+									"value": "minute"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -4021,7 +4971,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches the specified field from the historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n- Update query string **minutes** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_9795cade0c03218021993891cf57e90d)"
 					},
 					"response": []
@@ -4040,7 +4993,39 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"service",
+								"{{service_id}}",
+								"field",
+								"bandwidth"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "6+hours+ago"
+								},
+								{
+									"key": "to",
+									"value": "3+hours+ago"
+								},
+								{
+									"key": "by",
+									"value": "hour"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -4049,7 +5034,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches the specified field from the historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration\n\n- Update URL with **stats_field**\n- Update query string **hours** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_9795cade0c03218021993891cf57e90d)"
 					},
 					"response": []
@@ -4068,7 +5056,39 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=6+days+ago&to=3+days+ago&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=6+days+ago&to=3+days+ago&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"service",
+								"{{service_id}}",
+								"field",
+								"bandwidth"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "6+days+ago"
+								},
+								{
+									"key": "to",
+									"value": "3+days+ago"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -4077,7 +5097,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches the specified field from the historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n- Update query string **days** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_9795cade0c03218021993891cf57e90d)"
 					},
 					"response": []
@@ -4096,7 +5119,39 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=1494374400&to=1494547200&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=1494374400&to=1494547200&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"service",
+								"{{service_id}}",
+								"field",
+								"bandwidth"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "1494374400"
+								},
+								{
+									"key": "to",
+									"value": "1494547200"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -4105,7 +5160,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches the specified field from the historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n- Update query string **unix_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_9795cade0c03218021993891cf57e90d)"
 					},
 					"response": []
@@ -4124,7 +5182,39 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"service",
+								"{{service_id}}",
+								"field",
+								"bandwidth"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "05%2F10%2F2017"
+								},
+								{
+									"key": "to",
+									"value": "05%2F12%2F2017"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -4133,7 +5223,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches the specified field from the historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n- Update query string **human_readable_timestamp_encoded** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_9795cade0c03218021993891cf57e90d)"
 					},
 					"response": []
@@ -4152,7 +5245,39 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=5-10-2017&to=5-12-2017&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=5-10-2017&to=5-12-2017&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"service",
+								"{{service_id}}",
+								"field",
+								"bandwidth"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "5-10-2017"
+								},
+								{
+									"key": "to",
+									"value": "5-12-2017"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -4161,7 +5286,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches the specified field from the historical stats for a given service.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update URL with **stats_field**\n- Update query string **human_readable_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_9795cade0c03218021993891cf57e90d)"
 					},
 					"response": []
@@ -4189,7 +5317,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nReturns usage information aggregated across all Fastly services and grouped by region.\n\n[Documentation](https://docs.fastly.com/api/stats#historical_3417fca9901cfd873f4b22de491e138f)"
 					},
 					"response": []
@@ -4208,7 +5339,36 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/usage?from=56+minutes+ago&to=23+minutes+ago&by=minute&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/usage?from=56+minutes+ago&to=23+minutes+ago&by=minute&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"usage"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "56+minutes+ago"
+								},
+								{
+									"key": "to",
+									"value": "23+minutes+ago"
+								},
+								{
+									"key": "by",
+									"value": "minute"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -4217,7 +5377,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nReturns usage information aggregated across all Fastly services and grouped by region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **minutes** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_3417fca9901cfd873f4b22de491e138f)"
 					},
 					"response": []
@@ -4236,7 +5399,36 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/usage?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/usage?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"usage"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "6+hours+ago"
+								},
+								{
+									"key": "to",
+									"value": "3+hours+ago"
+								},
+								{
+									"key": "by",
+									"value": "hour"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -4245,7 +5437,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nReturns usage information aggregated across all Fastly services and grouped by region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **hours** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_3417fca9901cfd873f4b22de491e138f)"
 					},
 					"response": []
@@ -4264,7 +5459,36 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/usage?from=6+days+ago&to=3+days+ago&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/usage?from=6+days+ago&to=3+days+ago&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"usage"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "6+days+ago"
+								},
+								{
+									"key": "to",
+									"value": "3+days+ago"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -4273,7 +5497,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nReturns usage information aggregated across all Fastly services and grouped by region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **days** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_3417fca9901cfd873f4b22de491e138f)"
 					},
 					"response": []
@@ -4292,7 +5519,36 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/usage?from=1494374400&to=1494547200&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/usage?from=1494374400&to=1494547200&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"usage"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "1494374400"
+								},
+								{
+									"key": "to",
+									"value": "1494547200"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -4301,7 +5557,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nReturns usage information aggregated across all Fastly services and grouped by region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **unix_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_3417fca9901cfd873f4b22de491e138f)"
 					},
 					"response": []
@@ -4320,7 +5579,36 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/usage?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/usage?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"usage"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "05%2F10%2F2017"
+								},
+								{
+									"key": "to",
+									"value": "05%2F12%2F2017"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -4329,7 +5617,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nReturns usage information aggregated across all Fastly services and grouped by region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **human_readable_timestamp_encoded** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_3417fca9901cfd873f4b22de491e138f)"
 					},
 					"response": []
@@ -4348,7 +5639,36 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/usage?from=5-10-2017&to=5-12-2017&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/usage?from=5-10-2017&to=5-12-2017&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"usage"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "5-10-2017"
+								},
+								{
+									"key": "to",
+									"value": "5-12-2017"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -4357,7 +5677,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nReturns usage information aggregated across all Fastly services and grouped by region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **human_readable_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_3417fca9901cfd873f4b22de491e138f)"
 					},
 					"response": []
@@ -4385,7 +5708,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nReturns usage information aggregated by service and grouped by service and region.\n\n[Documentation](https://docs.fastly.com/api/stats#historical_99369fb79ebecf90cc944d5dce49cc31)"
 					},
 					"response": []
@@ -4404,7 +5730,36 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/usage_by_service?from=56+minutes+ago&to=23+minutes+ago&by=minute&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/usage_by_service?from=56+minutes+ago&to=23+minutes+ago&by=minute&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"usage_by_service"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "56+minutes+ago"
+								},
+								{
+									"key": "to",
+									"value": "23+minutes+ago"
+								},
+								{
+									"key": "by",
+									"value": "minute"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -4413,7 +5768,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nReturns usage information aggregated by service and grouped by service and region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **minutes** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_99369fb79ebecf90cc944d5dce49cc31)"
 					},
 					"response": []
@@ -4432,7 +5790,36 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/usage_by_service?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/usage_by_service?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"usage_by_service"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "6+hours+ago"
+								},
+								{
+									"key": "to",
+									"value": "3+hours+ago"
+								},
+								{
+									"key": "by",
+									"value": "hour"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -4441,7 +5828,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nReturns usage information aggregated by service and grouped by service and region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **hours** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_99369fb79ebecf90cc944d5dce49cc31)"
 					},
 					"response": []
@@ -4460,7 +5850,36 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/usage_by_service?from=6+days+ago&to=3+days+ago&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/usage_by_service?from=6+days+ago&to=3+days+ago&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"usage_by_service"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "6+days+ago"
+								},
+								{
+									"key": "to",
+									"value": "3+days+ago"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -4469,7 +5888,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nReturns usage information aggregated by service and grouped by service and region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **days** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_99369fb79ebecf90cc944d5dce49cc31)"
 					},
 					"response": []
@@ -4488,7 +5910,36 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/usage_by_service?from=1494374400&to=1494547200&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/usage_by_service?from=1494374400&to=1494547200&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"usage_by_service"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "1494374400"
+								},
+								{
+									"key": "to",
+									"value": "1494547200"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -4497,7 +5948,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nReturns usage information aggregated by service and grouped by service and region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **unix_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_99369fb79ebecf90cc944d5dce49cc31)"
 					},
 					"response": []
@@ -4516,7 +5970,36 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/usage_by_service?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/usage_by_service?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"usage_by_service"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "05%2F10%2F2017"
+								},
+								{
+									"key": "to",
+									"value": "05%2F12%2F2017"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -4525,7 +6008,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nReturns usage information aggregated by service and grouped by service and region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **human_readable_timestamp_encoded** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_99369fb79ebecf90cc944d5dce49cc31)"
 					},
 					"response": []
@@ -4544,7 +6030,36 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/stats/usage_by_service?from=5-10-2017&to=5-12-2017&by=day&region=usa",
+						"url": {
+							"raw": "{{url}}/stats/usage_by_service?from=5-10-2017&to=5-12-2017&by=day&region=usa",
+							"auth": {},
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"usage_by_service"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "5-10-2017"
+								},
+								{
+									"key": "to",
+									"value": "5-12-2017"
+								},
+								{
+									"key": "by",
+									"value": "day"
+								},
+								{
+									"key": "region",
+									"value": "usa"
+								}
+							],
+							"variable": []
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -4553,7 +6068,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nReturns usage information aggregated by service and grouped by service and region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **human_readable_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_99369fb79ebecf90cc944d5dce49cc31)"
 					},
 					"response": []
@@ -4581,7 +6099,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nFetches the list of codes for regions that are covered by the Fastly CDN service.\n\n[Documentation](https://docs.fastly.com/api/stats#historical_dc06fafd90cb9e4b5378fdea2103987f)"
 					},
 					"response": []
@@ -4781,7 +6302,10 @@
 						"url": "https://docs.fastly.com/api/",
 						"method": "PURGE",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nInstant Purge an individual URL. The main entry point https://api.fastly.com/ for the API is not needed for an individual URL Instant Purge.\n\nBy default, authentication is not required to purge a URL with the Fastly API, but you can enable API token authentication in the Fastly web interface by adding a header or by using custom VCL. Please review the Fastly [docs](https://docs.fastly.com/guides/purging/authenticating-api-purge-requests#purging-urls-with-an-api-token) for further information.\n\n**Request Configuration:**\n\n- Update URL with **individual_url**\n\n[Documentation](https://docs.fastly.com/api/purge#purge_3aa1d66ee81dbfed0b03deed0fa16a9a)"
 					},
 					"response": []
@@ -4809,7 +6333,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nInstant Purge an individual URL with an API token.\n\nIn order to secure individual URL purge requests you'll need to enable API token authentication in the Fastly web interface by adding a header or by using custom VCL. Please review the Fastly [docs](https://docs.fastly.com/guides/purging/authenticating-api-purge-requests#purging-urls-with-an-api-token) for further information.\n\n**Request Configuration:**\n\n- Update URL with **individual_url**\n\n[Documentation](https://docs.fastly.com/guides/purging/authenticating-api-purge-requests#purging-urls-with-an-api-token)"
 					},
 					"response": []
@@ -5603,7 +7130,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nSoft Purge an individual URL. The main entry point https://api.fastly.com/ for the API is not needed for an individual URL Instant Purge.\n\nBy default, authentication is not required to purge a URL with the Fastly API, but you can enable API token authentication in the Fastly web interface by adding a header or by using custom VCL. Please review the Fastly [docs](https://docs.fastly.com/guides/purging/authenticating-api-purge-requests#purging-urls-with-an-api-token) for further information.\n\n**Request Configuration:**\n\n- Update URL with **individual_url**\n\n[Documentation](https://docs.fastly.com/api/purge#soft_purge_0c4f56f3d68e9bed44fb8b638b78ea36)"
 					},
 					"response": []
@@ -5636,7 +7166,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nSoft Purge an individual URL with an API token.\n\nIn order to secure individual URL soft purge requests you'll need to enable API token authentication in the Fastly web interface by adding a header or by using custom VCL. Please review the Fastly [docs](https://docs.fastly.com/guides/purging/authenticating-api-purge-requests#purging-urls-with-an-api-token) for further information.\n\n**Request Configuration:**\n\n- Update URL with **individual_url**\n\n[Documentation](https://docs.fastly.com/guides/purging/authenticating-api-purge-requests#purging-urls-with-an-api-token)"
 					},
 					"response": []
@@ -6124,7 +7657,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nList the uploaded VCLs for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#vcl_17eaf920acd6f04a7f4a997695a8a18a)"
 					},
 					"response": []
@@ -6152,7 +7688,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nReturn boilerplate VCL with the service's TTL from the settings.\n\n[Documentation](https://docs.fastly.com/api/config#vcl_ff97d3664dca35fca3e235b683825730)"
 					},
 					"response": []
@@ -6216,7 +7755,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nGet the uploaded VCL for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **vcl_name**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_621f303da373d60854e6d2d45dc2de75)"
 					},
 					"response": []
@@ -6268,7 +7810,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nGet the uploaded VCL for a particular service and version with HTML syntax highlighting Include line numbers by sending **lineno=true** as a request parameter.\n\n**Request Configuration:**\n\n- Update URL with **vcl_name**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_438f27abcd1c9203c8315a54cbcfde1a)"
 					},
 					"response": []
@@ -6296,7 +7841,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nDownload the specified VCL.\n\n**Request Configuration:**\n\n- Update URL with **vcl_name**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_86deff673cc0dfdcb938a780dd328fcd)"
 					},
 					"response": []
@@ -6324,7 +7872,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nDisplay the generated VCL for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#vcl_ad9da3d303580a36d0c1be5e10728e81)"
 					},
 					"response": []
@@ -6375,7 +7926,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nDisplay the content of generated VCL with HTML syntax highlighting Include line numbers by sending **lineno=true** as a request parameter.\n\n[Documentation](https://docs.fastly.com/api/config#vcl_d7c0ba46e90676f4bcdd804fb3d417a3)"
 					},
 					"response": []
@@ -6507,7 +8061,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nList all snippets for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#snippet_e2ba7946be5a13ee64b7e7edb481b934)"
 					},
 					"response": []
@@ -6571,7 +8128,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nGet a single dynamic snippet for a particular service.\n\n**Request Configuration:**\n\n- Update URL with **snippet_id**\n\n[Documentation](https://docs.fastly.com/api/config#snippet_abbda4e60ce93b7cb85bd6377623da0d)"
 					},
 					"response": []
@@ -6635,7 +8195,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nGet a single snippet for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **snippet_name**\n\n[Documentation](https://docs.fastly.com/api/config#snippet_33b5e47ae6fe6511169591ef9f43a2f4)"
 					},
 					"response": []
@@ -6963,7 +8526,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nClone the current configuration into a new version.\n\n[Documentation](https://docs.fastly.com/api/config#version_7f4937d0663a27fbb765820d4c76c709)"
 					},
 					"response": []
@@ -6991,179 +8557,11 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "**Description:**\n\nLocks the specified version.\n\n[Documentation](https://docs.fastly.com/api/config#version_537991120983d50d1bed8308ba237e46)"
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Wordpress",
-			"description": "The WordPress object applies configuration optimized for WordPress to a given path.\n\n[Wordpress Documentation](https://docs.fastly.com/api/config#wordpress)",
-			"item": [
-				{
-					"name": "/service/service_id/version/version_no/wordpress",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									"tests[\"Status code is 200\"] = responseCode.code === 200;"
-								]
-							}
-						}
-					],
-					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/wordpress",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Fastly-Key",
-								"value": "{{token}}",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"description": "**Description:**\n\nGet all of the WordPress configurations for a specified service and version.\n\n[Documentation](https://docs.fastly.com/api/config#wordpress_6398f3a4b9511962c746254f7fe37aa7)"
-					},
-					"response": []
-				},
-				{
-					"name": "/service/service_id/version/version_no/wordpress",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									"tests[\"Status code is 200\"] = responseCode.code === 200;"
-								]
-							}
-						}
-					],
-					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/wordpress",
-						"method": "POST",
-						"header": [
-							{
-								"key": "Fastly-Key",
-								"value": "{{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"comment\":\"your_comment\",\n\t\"name\":\"your_wordpress_name\",\n\t\"path\":\"/blog\"\n}"
-						},
-						"description": "**Description:**\n\nCreate a WordPress configuration for the specified service and version.\n\n**Request Configuration:**\n\n- **comment** [string] - A comment.\n- **name** [string] - Name of the WordPress object.\n- **path** [string] - Requests to this path will use WordPress configuration.\n\n[Documentation](https://docs.fastly.com/api/config#wordpress_3719d163b1e6b80d4220d402df943073)"
-					},
-					"response": []
-				},
-				{
-					"name": "/service/service_id/version/version_no/wordpress/wordpress_name",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									"tests[\"Status code is 200\"] = responseCode.code === 200;"
-								]
-							}
-						}
-					],
-					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/wordpress/your_wordpress_name",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Fastly-Key",
-								"value": "{{token}}",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"description": "**Description:**\n\nGet a specific WordPress configuration.\n\n**Request Configuration:**\n\n- Update URL with **wordpress_name**\n\n[Documentation](https://docs.fastly.com/api/config#wordpress_09dfcaf0f9dab304e5f52c2297e51298)"
-					},
-					"response": []
-				},
-				{
-					"name": "/service/service_id/version/version_no/wordpress/wordpress_name",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									"tests[\"Status code is 200\"] = responseCode.code === 200;"
-								]
-							}
-						}
-					],
-					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/wordpress/your_wordpress_name",
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Fastly-Key",
-								"value": "{{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"comment\":\"your_comment\",\n\t\"name\":\"your_wordpress_name\",\n\t\"path\":\"/update\"\n}"
-						},
-						"description": "**Description:**\n\nUpdate a specified WordPress configuration.\n\n**Request Configuration:**\n\n- Update URL with **wordpress_name**\n- **comment** [string] - A comment.\n- **name** [string] - Name of the WordPress object.\n- **path** [string] - Requests to this path will use WordPress configuration.\n\n\n[Documentation](https://docs.fastly.com/api/config#wordpress_3f47a802ddb1c959c368aebe07009803)"
-					},
-					"response": []
-				},
-				{
-					"name": "/service/service_id/version/version_no/wordpress/wordpress_name",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									"tests[\"Status code is 200\"] = responseCode.code === 200;"
-								]
-							}
-						}
-					],
-					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/wordpress/your_wordpress_name",
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Fastly-Key",
-								"value": "{{token}}",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"description": "**Description:**\n\nDelete a specified WordPress configuration.\n\n**Request Configuration:**\n\n- Update URL with **wordpress_name**\n\n[Documentation](https://docs.fastly.com/api/config#wordpress_33925affa9f17494004ec78b89a782ad)"
 					},
 					"response": []
 				}

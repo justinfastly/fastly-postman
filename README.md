@@ -79,8 +79,7 @@ Some API endpoints require session authentication. These endpoints are not inclu
 | VCL              | 11                  | 11           | 100%     |
 | VCL Snippets     | 7                   | 7            | 100%     |
 | Version          | 9                   | 9            | 100%     |
-| Wordpress        | 5                   | 5            | 100%     |
-|                  | **165**             | **167**      | **99%**  |
+|                  | **160**             | **162**      | **99%**  |
 
 ## Usage
 
