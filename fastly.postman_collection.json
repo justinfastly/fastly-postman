@@ -25,7 +25,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/acl",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/acl",
 						"method": "GET",
 						"header": [
 							{
@@ -35,7 +35,7 @@
 							}
 						],
 						"body": {},
-						"description": "**Description:**\n\nList ACLs.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#acl_5dfdb4b644ee42fcb71f3c3f139e3b0d)"
+						"description": "**Description:**\n\nList ACLs.\n\n[Documentation](https://docs.fastly.com/api/config#acl_5dfdb4b644ee42fcb71f3c3f139e3b0d)"
 					},
 					"response": []
 				},
@@ -57,7 +57,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/acl",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/acl",
 						"method": "POST",
 						"header": [
 							{
@@ -75,7 +75,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"name\": \"your_acl\"\n}"
 						},
-						"description": "**Description:**\n\nCreate a new ACL for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **name** [string] - Name for the ACL. Must start with alphanumeric and contain only alphanumeric, underscore, and whitespace.\n\n[Documentation](https://docs.fastly.com/api/config#acl_c2e66498f77f346e715deedb616f2dcd)"
+						"description": "**Description:**\n\nCreate a new ACL for a particular service and version.\n\n**Request Configuration:**\n\n- **name** [string] - Name for the ACL. Must start with alphanumeric and contain only alphanumeric, underscore, and whitespace.\n\n[Documentation](https://docs.fastly.com/api/config#acl_c2e66498f77f346e715deedb616f2dcd)"
 					},
 					"response": []
 				},
@@ -93,7 +93,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/acl/{{acl_name}}",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/acl/{{acl_name}}",
 						"method": "GET",
 						"header": [
 							{
@@ -103,7 +103,7 @@
 							}
 						],
 						"body": {},
-						"description": "**Description:**\n\nRetrieve a single ACL by name for the version and service.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#acl_ea46be7e9fb009d231bdc47690cc1762)"
+						"description": "**Description:**\n\nRetrieve a single ACL by name for the version and service.\n\n[Documentation](https://docs.fastly.com/api/config#acl_ea46be7e9fb009d231bdc47690cc1762)"
 					},
 					"response": []
 				},
@@ -124,7 +124,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/acl/{{acl_name}}",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/acl/{{acl_name}}",
 						"method": "PUT",
 						"header": [
 							{
@@ -142,7 +142,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"name\": \"your_updated_acl\"\n}"
 						},
-						"description": "**Description:**\n\nUpdate ACL for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **name** [string] - Name for the ACL. Must start with alphanumeric and contain only alphanumeric, underscore, and whitespace.\n\n[Documentation](https://docs.fastly.com/api/config#acl_a07615df96bab601c4889062fa5869a0)"
+						"description": "**Description:**\n\nUpdate ACL for a particular service and version.\n\n**Request Configuration:**\n\n- **name** [string] - Name for the ACL. Must start with alphanumeric and contain only alphanumeric, underscore, and whitespace.\n\n[Documentation](https://docs.fastly.com/api/config#acl_a07615df96bab601c4889062fa5869a0)"
 					},
 					"response": []
 				},
@@ -163,7 +163,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/acl/{{acl_name}}",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/acl/{{acl_name}}",
 						"method": "DELETE",
 						"header": [
 							{
@@ -173,7 +173,7 @@
 							}
 						],
 						"body": {},
-						"description": "**Description:**\n\nDelete an ACL for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#acl_62526fdbe826b794a6655fbb66f987a9)"
+						"description": "**Description:**\n\nDelete an ACL for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#acl_62526fdbe826b794a6655fbb66f987a9)"
 					},
 					"response": []
 				}
@@ -622,7 +622,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/backend",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/backend",
 						"method": "GET",
 						"header": [
 							{
@@ -635,7 +635,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nList all backends for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#backend_fb0e875c9a7669f071cbf89ca32c7f69)"
+						"description": "**Description:**\n\nList all backends for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#backend_fb0e875c9a7669f071cbf89ca32c7f69)"
 					},
 					"response": []
 				},
@@ -656,7 +656,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/backend",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/backend",
 						"method": "POST",
 						"header": [
 							{
@@ -674,7 +674,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"auto_loadbalance\": false,\n\t\"between_bytes_timeout\": 10000,\n\t\"comment\": \"your_comment\",\n\t\"connect_timeout\": 1000,\n\t\"error_threshold\": 0,\n\t\"first_byte_timeout\": 15000,\n\t\"healthcheck\": null,\n\t\"hostname\": null,\n\t\"ipv4\": \"127.0.0.1\",\n\t\"ipv6\": null,\n\t\"max_conn\": 200,\n\t\"max_tls_version\": null,\n\t\"min_tls_version\": null,\n\t\"name\": \"your_backend\",\n\t\"port\": 80,\n\t\"request_condition\": null,\n\t\"shield\": null,\n\t\"ssl_ca_cert\": null,\n\t\"ssl_cert_hostname\": null,\n\t\"ssl_check_cert\": true,\n\t\"ssl_ciphers\": null,\n\t\"ssl_client_cert\": null,\n\t\"ssl_client_key\": null,\n\t\"ssl_sni_hostname\": null,\n\t\"use_ssl\": false,\n\t\"weight\": 100\n}"
 						},
-						"description": "**Description:**\n\nCreate a backend for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **auto_loadbalance** [boolean] - Whether or not this backend should be automatically load balanced.\n- **between_bytes_timeout** [integer] - How long to wait between bytes in milliseconds.\n- **comment** [string] - A comment.\n- **connect_timeout** [integer] - How long to wait for a timeout in milliseconds.\n- **error_threshold** [integer] - Number of errors to allow before the backend is marked as down.\n- **first_byte_timeout** [integer] - How long to wait for the first bytes in milliseconds.\n- **healthcheck** [string] - The name of the healthcheck to use with this backend. Can be empty.\n- **hostname** [string] - The hostname of the backend.\n- **ipv4** [string] - IPv4 address of the host.\n- **ipv6** [string] - IPv6 address of the host.\n- **max_conn** [integer] - Maximum number of connections.\n- **max_tls_version** [integer] - Maximum allowed TLS version on SSL connections to this backend.\n- **min_tls_version** [integer] - Minimum allowed TLS version on SSL connections to this backend.\n- **name** [string] - Name of the token.\n- **port** [integer] - The port number.\n- **request_condition** [string] - Condition, which if met, will select this backend during a request.\n- **shield** [string] - The shield POP designated to reduce inbound load on this origin by serving the cached data to the rest of the network.\n- **ssl_ca_cert** [string] - CA certificate attached to origin.\n- **ssl_cert_hostname** [string] - Overrides ssl_hostname, but only for cert verification. Does not affect SNI at all.\n- **ssl_check_cert** [boolean] - Be strict on checking SSL certs. Setting to null will use the system default value (true).\n- **ssl_ciphers** [string] - List of OpenSSL ciphers (see https://www.openssl.org/docs/manmaster/apps/ciphers.html for details).\n- **ssl_client_cert** [string] - Client certificate attached to origin.\n- **ssl_client_key** [string] - Client key attached to origin.\n- **ssl_sni_hostname** [string] - Overrides ssl_hostname, but only for SNI in the handshake. Does not affect cert validation at all.\n- **use_ssl** [boolean] - Name of the token.\n- **weight** [integer] - Weight used to load balance this backend against others.\n\n[Documentation](https://docs.fastly.com/api/config#backend_85c170418ee71191dbb3b5046aeb6c2c)"
+						"description": "**Description:**\n\nCreate a backend for a particular service and version.\n\n**Request Configuration:**\n\n- **auto_loadbalance** [boolean] - Whether or not this backend should be automatically load balanced.\n- **between_bytes_timeout** [integer] - How long to wait between bytes in milliseconds.\n- **comment** [string] - A comment.\n- **connect_timeout** [integer] - How long to wait for a timeout in milliseconds.\n- **error_threshold** [integer] - Number of errors to allow before the backend is marked as down.\n- **first_byte_timeout** [integer] - How long to wait for the first bytes in milliseconds.\n- **healthcheck** [string] - The name of the healthcheck to use with this backend. Can be empty.\n- **hostname** [string] - The hostname of the backend.\n- **ipv4** [string] - IPv4 address of the host.\n- **ipv6** [string] - IPv6 address of the host.\n- **max_conn** [integer] - Maximum number of connections.\n- **max_tls_version** [integer] - Maximum allowed TLS version on SSL connections to this backend.\n- **min_tls_version** [integer] - Minimum allowed TLS version on SSL connections to this backend.\n- **name** [string] - Name of the token.\n- **port** [integer] - The port number.\n- **request_condition** [string] - Condition, which if met, will select this backend during a request.\n- **shield** [string] - The shield POP designated to reduce inbound load on this origin by serving the cached data to the rest of the network.\n- **ssl_ca_cert** [string] - CA certificate attached to origin.\n- **ssl_cert_hostname** [string] - Overrides ssl_hostname, but only for cert verification. Does not affect SNI at all.\n- **ssl_check_cert** [boolean] - Be strict on checking SSL certs. Setting to null will use the system default value (true).\n- **ssl_ciphers** [string] - List of OpenSSL ciphers (see https://www.openssl.org/docs/manmaster/apps/ciphers.html for details).\n- **ssl_client_cert** [string] - Client certificate attached to origin.\n- **ssl_client_key** [string] - Client key attached to origin.\n- **ssl_sni_hostname** [string] - Overrides ssl_hostname, but only for SNI in the handshake. Does not affect cert validation at all.\n- **use_ssl** [boolean] - Name of the token.\n- **weight** [integer] - Weight used to load balance this backend against others.\n\n[Documentation](https://docs.fastly.com/api/config#backend_85c170418ee71191dbb3b5046aeb6c2c)"
 					},
 					"response": []
 				},
@@ -692,7 +692,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/backend/{{backend_name}}",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/backend/{{backend_name}}",
 						"method": "GET",
 						"header": [
 							{
@@ -705,7 +705,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nGet the backend for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no** \n\n[Documentation](https://docs.fastly.com/api/config#backend_5c0b2bcd6144eadbb6570ddf3c454b8b)"
+						"description": "**Description:**\n\nGet the backend for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#backend_5c0b2bcd6144eadbb6570ddf3c454b8b)"
 					},
 					"response": []
 				},
@@ -726,7 +726,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/backend/{{backend_name}}",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/backend/{{backend_name}}",
 						"method": "PUT",
 						"header": [
 							{
@@ -744,7 +744,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"auto_loadbalance\": true,\n\t\"between_bytes_timeout\": 10000,\n\t\"comment\": \"your_updated_comment\",\n\t\"connect_timeout\": 1000,\n\t\"error_threshold\": 0,\n\t\"first_byte_timeout\": 15000,\n\t\"healthcheck\": null,\n\t\"hostname\": null,\n\t\"ipv4\": \"127.0.0.10\",\n\t\"ipv6\": null,\n\t\"max_conn\": 200,\n\t\"max_tls_version\": null,\n\t\"min_tls_version\": null,\n\t\"name\": \"your_backend\",\n\t\"port\": 80,\n\t\"request_condition\": null,\n\t\"shield\": null,\n\t\"ssl_ca_cert\": null,\n\t\"ssl_cert_hostname\": null,\n\t\"ssl_check_cert\": true,\n\t\"ssl_ciphers\": null,\n\t\"ssl_client_cert\": null,\n\t\"ssl_client_key\": null,\n\t\"ssl_sni_hostname\": null,\n\t\"use_ssl\": false,\n\t\"weight\": 50\n}"
 						},
-						"description": "**Description:**\n\nUpdate the backend for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **auto_loadbalance** [boolean] - Whether or not this backend should be automatically load balanced.\n- **between_bytes_timeout** [integer] - How long to wait between bytes in milliseconds.\n- **comment** [string] - A comment.\n- **connect_timeout** [integer] - How long to wait for a timeout in milliseconds.\n- **error_threshold** [integer] - Number of errors to allow before the backend is marked as down.\n- **first_byte_timeout** [integer] - How long to wait for the first bytes in milliseconds.\n- **healthcheck** [string] - The name of the healthcheck to use with this backend. Can be empty.\n- **hostname** [string] - The hostname of the backend.\n- **ipv4** [string] - IPv4 address of the host.\n- **ipv6** [string] - IPv6 address of the host.\n- **max_conn** [integer] - Maximum number of connections.\n- **max_tls_version** [integer] - Maximum allowed TLS version on SSL connections to this backend.\n- **min_tls_version** [integer] - Minimum allowed TLS version on SSL connections to this backend.\n- **name** [string] - Name of the token.\n- **port** [integer] - The port number.\n- **request_condition** [string] - Condition, which if met, will select this backend during a request.\n- **shield** [string] - The shield POP designated to reduce inbound load on this origin by serving the cached data to the rest of the network.\n- **ssl_ca_cert** [string] - CA certificate attached to origin.\n- **ssl_cert_hostname** [string] - Overrides ssl_hostname, but only for cert verification. Does not affect SNI at all.\n- **ssl_check_cert** [boolean] - Be strict on checking SSL certs. Setting to null will use the system default value (true).\n- **ssl_ciphers** [string] - List of OpenSSL ciphers (see https://www.openssl.org/docs/manmaster/apps/ciphers.html for details).\n- **ssl_client_cert** [string] - Client certificate attached to origin.\n- **ssl_client_key** [string] - Client key attached to origin.\n- **ssl_sni_hostname** [string] - Overrides ssl_hostname, but only for SNI in the handshake. Does not affect cert validation at all.\n- **use_ssl** [boolean] - Name of the token.\n- **weight** [integer] - Weight used to load balance this backend against others.\n\n[Documentation](https://docs.fastly.com/api/config#backend_fb3b3529417c70f57458644f7aec652e)"
+						"description": "**Description:**\n\nUpdate the backend for a particular service and version.\n\n**Request Configuration:**\n\n- **auto_loadbalance** [boolean] - Whether or not this backend should be automatically load balanced.\n- **between_bytes_timeout** [integer] - How long to wait between bytes in milliseconds.\n- **comment** [string] - A comment.\n- **connect_timeout** [integer] - How long to wait for a timeout in milliseconds.\n- **error_threshold** [integer] - Number of errors to allow before the backend is marked as down.\n- **first_byte_timeout** [integer] - How long to wait for the first bytes in milliseconds.\n- **healthcheck** [string] - The name of the healthcheck to use with this backend. Can be empty.\n- **hostname** [string] - The hostname of the backend.\n- **ipv4** [string] - IPv4 address of the host.\n- **ipv6** [string] - IPv6 address of the host.\n- **max_conn** [integer] - Maximum number of connections.\n- **max_tls_version** [integer] - Maximum allowed TLS version on SSL connections to this backend.\n- **min_tls_version** [integer] - Minimum allowed TLS version on SSL connections to this backend.\n- **name** [string] - Name of the token.\n- **port** [integer] - The port number.\n- **request_condition** [string] - Condition, which if met, will select this backend during a request.\n- **shield** [string] - The shield POP designated to reduce inbound load on this origin by serving the cached data to the rest of the network.\n- **ssl_ca_cert** [string] - CA certificate attached to origin.\n- **ssl_cert_hostname** [string] - Overrides ssl_hostname, but only for cert verification. Does not affect SNI at all.\n- **ssl_check_cert** [boolean] - Be strict on checking SSL certs. Setting to null will use the system default value (true).\n- **ssl_ciphers** [string] - List of OpenSSL ciphers (see https://www.openssl.org/docs/manmaster/apps/ciphers.html for details).\n- **ssl_client_cert** [string] - Client certificate attached to origin.\n- **ssl_client_key** [string] - Client key attached to origin.\n- **ssl_sni_hostname** [string] - Overrides ssl_hostname, but only for SNI in the handshake. Does not affect cert validation at all.\n- **use_ssl** [boolean] - Name of the token.\n- **weight** [integer] - Weight used to load balance this backend against others.\n\n[Documentation](https://docs.fastly.com/api/config#backend_fb3b3529417c70f57458644f7aec652e)"
 					},
 					"response": []
 				},
@@ -764,7 +764,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/backend/{{backend_name}}",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/backend/{{backend_name}}",
 						"method": "DELETE",
 						"header": [
 							{
@@ -774,7 +774,7 @@
 							}
 						],
 						"body": {},
-						"description": "**Description:**\n\nDelete the backend for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#backend_a00ce4b7a448b63d26016837907e7bfa)"
+						"description": "**Description:**\n\nDelete the backend for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#backend_a00ce4b7a448b63d26016837907e7bfa)"
 					},
 					"response": []
 				}
@@ -900,7 +900,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/cache_settings",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/cache_settings",
 						"method": "GET",
 						"header": [
 							{
@@ -910,7 +910,7 @@
 							}
 						],
 						"body": {},
-						"description": "**Description:**\n\nGet a list of all cache settings for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#cache_settings_0d6fb6b78afaa453ec69a5dbd4038322)"
+						"description": "**Description:**\n\nGet a list of all cache settings for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#cache_settings_0d6fb6b78afaa453ec69a5dbd4038322)"
 					},
 					"response": []
 				},
@@ -928,7 +928,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/cache_settings",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/cache_settings",
 						"method": "POST",
 						"header": [
 							{
@@ -946,7 +946,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"action\": \"cache\",\n\t\"cache_condition\": null,\n\t\"name\": \"your_cache_setting\",\n\t\"stale_ttl\": \"1200\",\n\t\"ttl\": \"3600\"\n}"
 						},
-						"description": "**Description:**\n\nCreate a cache settings object.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **action** [string] - Allows for termination of execution and either cache, pass, or restart.\n- **cache_condition** [string] - Name of the condition used to test whether this settings object should be used.\n- **name** [string] - Name for the cache settings object.\n- **stale_ttl** [integer] - Sets the max \"Time To Live\" for stale (unreachable) objects.\n- **ttl** [integer] - Sets the \"Time To Live\".\n\n[Documentation](https://docs.fastly.com/api/config#cache_settings_015578a5dee074dd7fa45c4962b2c867)"
+						"description": "**Description:**\n\nCreate a cache settings object.\n\n**Request Configuration:**\n\n- **action** [string] - Allows for termination of execution and either cache, pass, or restart.\n- **cache_condition** [string] - Name of the condition used to test whether this settings object should be used.\n- **name** [string] - Name for the cache settings object.\n- **stale_ttl** [integer] - Sets the max \"Time To Live\" for stale (unreachable) objects.\n- **ttl** [integer] - Sets the \"Time To Live\".\n\n[Documentation](https://docs.fastly.com/api/config#cache_settings_015578a5dee074dd7fa45c4962b2c867)"
 					},
 					"response": []
 				},
@@ -964,7 +964,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/cache_settings/your_cache_setting",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/cache_settings/your_cache_setting",
 						"method": "GET",
 						"header": [
 							{
@@ -974,7 +974,7 @@
 							}
 						],
 						"body": {},
-						"description": "**Description:**\n\nGet a specific cache settings object.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n- Update URL with **cache_setting_name**\n\n[Documentation](https://docs.fastly.com/api/config#cache_settings_9e1fcc14944551fadf3da3f87ff338a9)"
+						"description": "**Description:**\n\nGet a specific cache settings object.\n\n**Request Configuration:**\n\n- Update URL with **cache_setting_name**\n\n[Documentation](https://docs.fastly.com/api/config#cache_settings_9e1fcc14944551fadf3da3f87ff338a9)"
 					},
 					"response": []
 				},
@@ -992,7 +992,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/cache_settings/your_cache_setting",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/cache_settings/your_cache_setting",
 						"method": "PUT",
 						"header": [
 							{
@@ -1010,7 +1010,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"action\": \"cache\",\n\t\"cache_condition\": null,\n\t\"name\": \"your_cache_setting\",\n\t\"stale_ttl\": \"1200\",\n\t\"ttl\": \"900\"\n}"
 						},
-						"description": "**Description:**\n\nUpdate a specific cache settings object.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **cache_setting_name**\n- **action** [string] - Allows for termination of execution and either cache, pass, or restart.\n- **cache_condition** [string] - Name of the condition used to test whether this settings object should be used.\n- **name** [string] - Name for the cache settings object.\n- **stale_ttl** [integer] - Sets the max \"Time To Live\" for stale (unreachable) objects.\n- **ttl** [integer] - Sets the \"Time To Live\".\n\n[Documentation](https://docs.fastly.com/api/config#cache_settings_3416e629201894d017dc69fd07500eda)"
+						"description": "**Description:**\n\nUpdate a specific cache settings object.\n\n**Request Configuration:**\n\n- Update URL with **cache_setting_name**\n- **action** [string] - Allows for termination of execution and either cache, pass, or restart.\n- **cache_condition** [string] - Name of the condition used to test whether this settings object should be used.\n- **name** [string] - Name for the cache settings object.\n- **stale_ttl** [integer] - Sets the max \"Time To Live\" for stale (unreachable) objects.\n- **ttl** [integer] - Sets the \"Time To Live\".\n\n[Documentation](https://docs.fastly.com/api/config#cache_settings_3416e629201894d017dc69fd07500eda)"
 					},
 					"response": []
 				},
@@ -1028,7 +1028,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/cache_settings/your_cache_setting",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/cache_settings/your_cache_setting",
 						"method": "DELETE",
 						"header": [
 							{
@@ -1038,7 +1038,7 @@
 							}
 						],
 						"body": {},
-						"description": "**Description:**\n\nDelete a specific cache settings object.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **cache_setting_name**\n\n[Documentation](https://docs.fastly.com/api/config#cache_settings_9adabaabeb01d84b2c02c2dbc5b4bbda)"
+						"description": "**Description:**\n\nDelete a specific cache settings object.\n\n**Request Configuration:**\n\n- Update URL with **cache_setting_name**\n\n[Documentation](https://docs.fastly.com/api/config#cache_settings_9adabaabeb01d84b2c02c2dbc5b4bbda)"
 					},
 					"response": []
 				}
@@ -1062,7 +1062,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/condition",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/condition",
 						"method": "GET",
 						"header": [
 							{
@@ -1072,7 +1072,7 @@
 							}
 						],
 						"body": {},
-						"description": "**Description:**\n\nGet all conditions for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#condition_b61196c572f473c89863a81cc5912861)"
+						"description": "**Description:**\n\nGet all conditions for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#condition_b61196c572f473c89863a81cc5912861)"
 					},
 					"response": []
 				},
@@ -1090,7 +1090,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/condition",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/condition",
 						"method": "POST",
 						"header": [
 							{
@@ -1108,7 +1108,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"comment\": \"your_comment\",\n\t\"name\": \"your_condition\",\n\t\"priority\": \"10\",\n\t\"statement\": \"req.url~ \\\"index.html\\\"\",\n\t\"type\": \"CACHE\"\n}"
 						},
-						"description": "**Description:**\n\nCreates a new condition.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **comment** [string] - A comment.\n- **name** [string] - Name of the condition.\n- **priority** [integer] - Priority assigned to condition. Order executes from 1 to 10, with 1 being first and 10 being last.\n- **statement** [string] - The statement used to determine if the condition is met.\n- **type** [string] - Type of the condition, either \"REQUEST\" (req), \"RESPONSE\" (req, resp), or \"CACHE\" (req, beresp).\n\n[Documentation](https://docs.fastly.com/api/config#condition_551199dbec2271195319b675d8659226)"
+						"description": "**Description:**\n\nCreates a new condition.\n\n**Request Configuration:**\n\n- **comment** [string] - A comment.\n- **name** [string] - Name of the condition.\n- **priority** [integer] - Priority assigned to condition. Order executes from 1 to 10, with 1 being first and 10 being last.\n- **statement** [string] - The statement used to determine if the condition is met.\n- **type** [string] - Type of the condition, either \"REQUEST\" (req), \"RESPONSE\" (req, resp), or \"CACHE\" (req, beresp).\n\n[Documentation](https://docs.fastly.com/api/config#condition_551199dbec2271195319b675d8659226)"
 					},
 					"response": []
 				},
@@ -1126,7 +1126,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/condition/your_condition",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/condition/your_condition",
 						"method": "GET",
 						"header": [
 							{
@@ -1160,7 +1160,7 @@
 								}
 							]
 						},
-						"description": "**Description:**\n\nGet the specified condition.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **condition_name**\n\n[Documentation](https://docs.fastly.com/api/config#condition_149a2f48485ceb335f70504e5269b77e)"
+						"description": "**Description:**\n\nGet the specified condition.\n\n**Request Configuration:**\n\n- Update URL with **condition_name**\n\n[Documentation](https://docs.fastly.com/api/config#condition_149a2f48485ceb335f70504e5269b77e)"
 					},
 					"response": []
 				},
@@ -1178,7 +1178,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/condition/your_condition",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/condition/your_condition",
 						"method": "PUT",
 						"header": [
 							{
@@ -1196,7 +1196,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"comment\": \"your_comment\",\n\t\"name\": \"your_condition\",\n\t\"priority\": \"1\",\n\t\"statement\": \"req.url~ \\\"index.html\\\"\",\n\t\"type\": \"CACHE\"\n}"
 						},
-						"description": "**Description:**\n\nUpdates the specified condition.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **condition_name**\n- **comment** [string] - A comment.\n- **name** [string] - Name of the condition.\n- **priority** [integer] - Priority assigned to condition. Order executes from 1 to 10, with 1 being first and 10 being last.\n- **statement** [string] - The statement used to determine if the condition is met.\n- **type** [string] - Type of the condition, either \"REQUEST\" (req), \"RESPONSE\" (req, resp), or \"CACHE\" (req, beresp).\n\n\n[Documentation](https://docs.fastly.com/api/config#condition_01a2c4e4b44943b541e001013b665deb)"
+						"description": "**Description:**\n\nUpdates the specified condition.\n\n**Request Configuration:**\n\n- Update URL with **condition_name**\n- **comment** [string] - A comment.\n- **name** [string] - Name of the condition.\n- **priority** [integer] - Priority assigned to condition. Order executes from 1 to 10, with 1 being first and 10 being last.\n- **statement** [string] - The statement used to determine if the condition is met.\n- **type** [string] - Type of the condition, either \"REQUEST\" (req), \"RESPONSE\" (req, resp), or \"CACHE\" (req, beresp).\n\n\n[Documentation](https://docs.fastly.com/api/config#condition_01a2c4e4b44943b541e001013b665deb)"
 					},
 					"response": []
 				},
@@ -1214,7 +1214,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/condition/your_condition",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/condition/your_condition",
 						"method": "DELETE",
 						"header": [
 							{
@@ -1224,7 +1224,7 @@
 							}
 						],
 						"body": {},
-						"description": "**Description:**\n\nDeletes the specified condition.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **condition_name**\n\n[Documentation](https://docs.fastly.com/api/config#condition_2b902b7649c46b4541f00a920d06c94d)"
+						"description": "**Description:**\n\nDeletes the specified condition.\n\n**Request Configuration:**\n\n- Update URL with **condition_name**\n\n[Documentation](https://docs.fastly.com/api/config#condition_2b902b7649c46b4541f00a920d06c94d)"
 					},
 					"response": []
 				}
@@ -1414,7 +1414,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/dictionary",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/dictionary",
 						"method": "GET",
 						"header": [
 							{
@@ -1448,7 +1448,7 @@
 								}
 							]
 						},
-						"description": "**Description:**\n\nList all dictionaries for the version of the service.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#dictionary_6d2cc293b994eb8c16d93e92e91f3915)"
+						"description": "**Description:**\n\nList all dictionaries for the version of the service.\n\n[Documentation](https://docs.fastly.com/api/config#dictionary_6d2cc293b994eb8c16d93e92e91f3915)"
 					},
 					"response": []
 				},
@@ -1470,7 +1470,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/dictionary",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/dictionary",
 						"method": "POST",
 						"header": [
 							{
@@ -1488,7 +1488,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"name\": \"your_dictionary\"\n}"
 						},
-						"description": "**Description:**\n\nCreate named dictionary for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **name** [string] - Name for the Dictionary.\n\n[Documentation](https://docs.fastly.com/api/config#dictionary_7d48b87bf82433162a3b209292722125)"
+						"description": "**Description:**\n\nCreate named dictionary for a particular service and version.\n\n**Request Configuration:**\n\n- **name** [string] - Name for the Dictionary.\n\n[Documentation](https://docs.fastly.com/api/config#dictionary_7d48b87bf82433162a3b209292722125)"
 					},
 					"response": []
 				},
@@ -1506,7 +1506,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/dictionary/{{dictionary_name}}",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/dictionary/{{dictionary_name}}",
 						"method": "GET",
 						"header": [
 							{
@@ -1540,7 +1540,7 @@
 								}
 							]
 						},
-						"description": "**Description:**\n\nRetrieve a single dictionary by name for the version and service.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#dictionary_0e16df083830ed3b6c30b73dcef64014)"
+						"description": "**Description:**\n\nRetrieve a single dictionary by name for the version and service.\n\n[Documentation](https://docs.fastly.com/api/config#dictionary_0e16df083830ed3b6c30b73dcef64014)"
 					},
 					"response": []
 				},
@@ -1561,7 +1561,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/dictionary/{{dictionary_name}}",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/dictionary/{{dictionary_name}}",
 						"method": "PUT",
 						"header": [
 							{
@@ -1579,7 +1579,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"name\": \"your_updated_dictionary\"\n}"
 						},
-						"description": "**Description:**\n\nUpdate named dictionary for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **name** [string] - Name for the Dictionary.\n\n[Documentation](https://docs.fastly.com/api/config#dictionary_8c9da370b1591d99e5389143a5589a32)"
+						"description": "**Description:**\n\nUpdate named dictionary for a particular service and version.\n\n**Request Configuration:**\n\n- **name** [string] - Name for the Dictionary.\n\n[Documentation](https://docs.fastly.com/api/config#dictionary_8c9da370b1591d99e5389143a5589a32)"
 					},
 					"response": []
 				},
@@ -1600,7 +1600,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/service/{{service_id}}/version/50/dictionary/{{dictionary_name}}",
+						"url": "{{url}}/service/{{service_id}}/version/{{version_no}}/dictionary/{{dictionary_name}}",
 						"method": "DELETE",
 						"header": [
 							{
@@ -1613,7 +1613,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nDelete named dictionary for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#dictionary_9a447790d8a0788896cac0679a0350f8)"
+						"description": "**Description:**\n\nDelete named dictionary for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#dictionary_9a447790d8a0788896cac0679a0350f8)"
 					},
 					"response": []
 				}
@@ -1980,7 +1980,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/13/director",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/director",
 						"method": "GET",
 						"header": [
 							{
@@ -1993,7 +1993,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nList the directors for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#director_a0bd94075a81102f3ca4ff1f498a48ef)"
+						"description": "**Description:**\n\nList the directors for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#director_a0bd94075a81102f3ca4ff1f498a48ef)"
 					},
 					"response": []
 				},
@@ -2014,7 +2014,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/13/director",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/director",
 						"method": "POST",
 						"header": [
 							{
@@ -2032,7 +2032,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"backends\": [],\n\t\"capacity\": 100,\n\t\"comment\": \"your_comment\",\n\t\"name\": \"your_director\",\n\t\"quorum\": 75,\n\t\"retries\": 5,\n\t\"shield\": null,\n\t\"type\": 1\n}"
 						},
-						"description": "**Description:**\n\nCreate a director for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **backends** [array] - List of backend associated with this director.\n- **capacity** [integer] - Load balancing weight for the backends.\n- **comment** [string] - A comment.\n- **name** [string] - Name for the Director.\n- **quorum** [integer] - The percentage of capacity that needs to be up for a director to be considered up. Integer, 0 to 100 (default: 75).\n- **retries** [integer] - How many backends to search if it fails (default: 5).\n- **shield** [string] - Selected POP to serve as a \"shield\" for origin servers.\n- **type** [integer] - What type of load balance group to use. Integer, 1 to 4. Values: 1=random, 2=round-robin, 3=hash, 4=client (default: 1).\n\n\n[Documentation](https://docs.fastly.com/api/config#director_c533bd0e9feb118959406c540b085ce1)"
+						"description": "**Description:**\n\nCreate a director for a particular service and version.\n\n**Request Configuration:**\n\n- **backends** [array] - List of backend associated with this director.\n- **capacity** [integer] - Load balancing weight for the backends.\n- **comment** [string] - A comment.\n- **name** [string] - Name for the Director.\n- **quorum** [integer] - The percentage of capacity that needs to be up for a director to be considered up. Integer, 0 to 100 (default: 75).\n- **retries** [integer] - How many backends to search if it fails (default: 5).\n- **shield** [string] - Selected POP to serve as a \"shield\" for origin servers.\n- **type** [integer] - What type of load balance group to use. Integer, 1 to 4. Values: 1=random, 2=round-robin, 3=hash, 4=client (default: 1).\n\n\n[Documentation](https://docs.fastly.com/api/config#director_c533bd0e9feb118959406c540b085ce1)"
 					},
 					"response": []
 				},
@@ -2050,7 +2050,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/13/director/{{director_name}}",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/director/{{director_name}}",
 						"method": "GET",
 						"header": [
 							{
@@ -2063,7 +2063,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nGet the director for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#director_98da5c0617843d547c33a47d214eeb26)"
+						"description": "**Description:**\n\nGet the director for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#director_98da5c0617843d547c33a47d214eeb26)"
 					},
 					"response": []
 				},
@@ -2084,7 +2084,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/13/director/{{director_name}}",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/director/{{director_name}}",
 						"method": "PUT",
 						"header": [
 							{
@@ -2102,7 +2102,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"backends\": [],\n\t\"capacity\": 100,\n\t\"comment\": \"your_comment\",\n\t\"name\": \"your_director\",\n\t\"quorum\": 75,\n\t\"retries\": 5,\n\t\"shield\": null,\n\t\"type\": 1\n}"
 						},
-						"description": "**Description:**\n\nUpdate the director for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **backends** [array] - List of backend associated with this director.\n- **capacity** [integer] - Load balancing weight for the backends.\n- **comment** [string] - A comment.\n- **name** [string] - Name for the Director.\n- **quorum** [integer] - The percentage of capacity that needs to be up for a director to be considered up. Integer, 0 to 100 (default: 75).\n- **retries** [integer] - How many backends to search if it fails (default: 5).\n- **shield** [string] - Selected POP to serve as a \"shield\" for origin servers.\n- **type** [integer] - What type of load balance group to use. Integer, 1 to 4. Values: 1=random, 2=round-robin, 3=hash, 4=client (default: 1).\n\n\n[Documentation](https://docs.fastly.com/api/config#director_96a02b07eb58711a94d585ea228e62c3)"
+						"description": "**Description:**\n\nUpdate the director for a particular service and version.\n\n**Request Configuration:**\n\n- **backends** [array] - List of backend associated with this director.\n- **capacity** [integer] - Load balancing weight for the backends.\n- **comment** [string] - A comment.\n- **name** [string] - Name for the Director.\n- **quorum** [integer] - The percentage of capacity that needs to be up for a director to be considered up. Integer, 0 to 100 (default: 75).\n- **retries** [integer] - How many backends to search if it fails (default: 5).\n- **shield** [string] - Selected POP to serve as a \"shield\" for origin servers.\n- **type** [integer] - What type of load balance group to use. Integer, 1 to 4. Values: 1=random, 2=round-robin, 3=hash, 4=client (default: 1).\n\n\n[Documentation](https://docs.fastly.com/api/config#director_96a02b07eb58711a94d585ea228e62c3)"
 					},
 					"response": []
 				},
@@ -2122,7 +2122,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/13/director/{{director_name}}",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/director/{{director_name}}",
 						"method": "DELETE",
 						"header": [
 							{
@@ -2135,7 +2135,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nDelete the director for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#director_a0279c85ea20c315855e393ab63e2524)"
+						"description": "**Description:**\n\nDelete the director for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#director_a0279c85ea20c315855e393ab63e2524)"
 					},
 					"response": []
 				}
@@ -2159,7 +2159,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/director/{{director_name}}/backend/{{backend_name}}",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/director/{{director_name}}/backend/{{backend_name}}",
 						"method": "POST",
 						"header": [
 							{
@@ -2169,7 +2169,7 @@
 							}
 						],
 						"body": {},
-						"description": "**Description:**\n\nEstablishes a relationship between a Backend and a Director. The Backend is then considered a member of the Director and can be used to balance traffic onto.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#director_backend_6926a1fc561d50ab8773e8c6c8382d38)"
+						"description": "**Description:**\n\nEstablishes a relationship between a Backend and a Director. The Backend is then considered a member of the Director and can be used to balance traffic onto.\n\n[Documentation](https://docs.fastly.com/api/config#director_backend_6926a1fc561d50ab8773e8c6c8382d38)"
 					},
 					"response": []
 				},
@@ -2187,7 +2187,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/director/{{director_name}}/backend/{{backend_name}}",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/director/{{director_name}}/backend/{{backend_name}}",
 						"method": "GET",
 						"header": [
 							{
@@ -2200,7 +2200,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nReturns the relationship between a Backend and a Director. If the Backend has been associated with the Director, it returns a simple record indicating this. Otherwise, returns a 404.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#director_backend_80bd8da752936527f466566783c10733)"
+						"description": "**Description:**\n\nReturns the relationship between a Backend and a Director. If the Backend has been associated with the Director, it returns a simple record indicating this. Otherwise, returns a 404.\n\n[Documentation](https://docs.fastly.com/api/config#director_backend_80bd8da752936527f466566783c10733)"
 					},
 					"response": []
 				},
@@ -2218,7 +2218,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/director/{{director_name}}/backend/{{backend_name}}",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/director/{{director_name}}/backend/{{backend_name}}",
 						"method": "DELETE",
 						"header": [
 							{
@@ -2228,7 +2228,7 @@
 							}
 						],
 						"body": {},
-						"description": "**Description:**\n\nDeletes the relationship between a Backend and a Director. The Backend is no longer considered a member of the Director and thus will not have traffic balanced onto it from this Director.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#director_backend_92985fb9fc147d24a0c8a3720dafd5e1)"
+						"description": "**Description:**\n\nDeletes the relationship between a Backend and a Director. The Backend is no longer considered a member of the Director and thus will not have traffic balanced onto it from this Director.\n\n[Documentation](https://docs.fastly.com/api/config#director_backend_92985fb9fc147d24a0c8a3720dafd5e1)"
 					},
 					"response": []
 				}
@@ -2252,7 +2252,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/domain/check_all",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/domain/check_all",
 						"method": "GET",
 						"header": [
 							{
@@ -2265,7 +2265,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nChecks the status of all domains DNS records for a Service Version. Returns an array of 3 items. The first is the details for the domain, the second is the current CNAME of the domain, and the third is a boolean indicating whether or not it has been properly setup to use Fastly.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#domain_e33a599694c3316f00b6b8d53a2db7d9)"
+						"description": "**Description:**\n\nChecks the status of all domains DNS records for a Service Version. Returns an array of 3 items. The first is the details for the domain, the second is the current CNAME of the domain, and the third is a boolean indicating whether or not it has been properly setup to use Fastly.\n\n[Documentation](https://docs.fastly.com/api/config#domain_e33a599694c3316f00b6b8d53a2db7d9)"
 					},
 					"response": []
 				},
@@ -2283,7 +2283,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/domain",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/domain",
 						"method": "GET",
 						"header": [
 							{
@@ -2296,7 +2296,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nList all the domains for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#domain_6d340186666771f022ca20f81609d03d)"
+						"description": "**Description:**\n\nList all the domains for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#domain_6d340186666771f022ca20f81609d03d)"
 					},
 					"response": []
 				},
@@ -2317,7 +2317,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/domain",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/domain",
 						"method": "POST",
 						"header": [
 							{
@@ -2335,7 +2335,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"comment\": \"your_comment\",\n\t\"name\": \"www.your-amazing-domain.com\"\n}"
 						},
-						"description": "**Description:**\n\nCreate a domain for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **comment** [string] - A comment.\n- **name** [string] - The name of the domain.\n\n[Documentation](https://docs.fastly.com/api/config#domain_90345101274774ff1b84f0a7dd010b01)"
+						"description": "**Description:**\n\nCreate a domain for a particular service and version.\n\n**Request Configuration:**\n\n- **comment** [string] - A comment.\n- **name** [string] - The name of the domain.\n\n[Documentation](https://docs.fastly.com/api/config#domain_90345101274774ff1b84f0a7dd010b01)"
 					},
 					"response": []
 				},
@@ -2353,7 +2353,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/domain/{{domain_name}}/check",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/domain/{{domain_name}}/check",
 						"method": "GET",
 						"header": [
 							{
@@ -2366,7 +2366,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nChecks the status of a specific domain's DNS record for a Service Version. Returns an array in the same format as domain/check_all.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#domain_30a3f14c9a0ce5730757d39983ab7dc6)"
+						"description": "**Description:**\n\nChecks the status of a specific domain's DNS record for a Service Version. Returns an array in the same format as domain/check_all.\n\n[Documentation](https://docs.fastly.com/api/config#domain_30a3f14c9a0ce5730757d39983ab7dc6)"
 					},
 					"response": []
 				},
@@ -2384,7 +2384,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/domain/{{domain_name}}",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/domain/{{domain_name}}",
 						"method": "GET",
 						"header": [
 							{
@@ -2397,7 +2397,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nGet the domain for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#domain_f1b5fab17a0729daeeaf7594b47759c5)"
+						"description": "**Description:**\n\nGet the domain for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#domain_f1b5fab17a0729daeeaf7594b47759c5)"
 					},
 					"response": []
 				},
@@ -2418,7 +2418,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/domain/{{domain_name}}",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/domain/{{domain_name}}",
 						"method": "PUT",
 						"header": [
 							{
@@ -2436,7 +2436,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"comment\": \"your_comment\",\n\t\"name\": \"www.your-updated-amazing-domain.com\"\n}"
 						},
-						"description": "**Description:**\n\nUpdate the domain for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **comment** [string] - A comment.\n- **name** [string] - The name of the domain.\n\n[Documentation](https://docs.fastly.com/api/config#domain_2ef42bd9b4c56c86b46dc0e36096ab10)"
+						"description": "**Description:**\n\nUpdate the domain for a particular service and version.\n\n**Request Configuration:**\n\n- **comment** [string] - A comment.\n- **name** [string] - The name of the domain.\n\n[Documentation](https://docs.fastly.com/api/config#domain_2ef42bd9b4c56c86b46dc0e36096ab10)"
 					},
 					"response": []
 				},
@@ -2456,7 +2456,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/domain/{{domain_name}}",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/domain/{{domain_name}}",
 						"method": "DELETE",
 						"header": [
 							{
@@ -2469,7 +2469,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nDelete the domain for a particular service and versions.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#domain_aab5a322f58df2b1db8dc276e8594a70)"
+						"description": "**Description:**\n\nDelete the domain for a particular service and versions.\n\n[Documentation](https://docs.fastly.com/api/config#domain_aab5a322f58df2b1db8dc276e8594a70)"
 					},
 					"response": []
 				}
@@ -2688,7 +2688,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/gzip",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/gzip",
 						"method": "GET",
 						"header": [
 							{
@@ -2701,7 +2701,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nList all gzip configurations for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#gzip_48db6845448669e5b59928ed821efe25)"
+						"description": "**Description:**\n\nList all gzip configurations for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#gzip_48db6845448669e5b59928ed821efe25)"
 					},
 					"response": []
 				},
@@ -2719,7 +2719,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/gzip",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/gzip",
 						"method": "POST",
 						"header": [
 							{
@@ -2737,7 +2737,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"cache_condition\": \"\",\n\t\"content_types\": \"text/html text/css application/javascript\",\n\t\"extensions\": \"html css js\",\n\t\"name\": \"your_gzip\"\n}"
 						},
-						"description": "**Description:**\n\nCreate a named gzip configuration on a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **cache_condition** [string] - The CACHE condition controlling when this gzip configuration applies. This field is optional.\n- **content_types** [string] - Space-separated list of content types to compress. If you omit this field a default list will be used.\n- **extensions** [string] - Space-separated list of file extensions to compress. If you omit this field a default list will be used.\n- **name** [string] - The name of the gzip configuration.\n\n[Documentation](https://docs.fastly.com/api/config#gzip_79873f2776db6de57dafef8fe8bf3632)"
+						"description": "**Description:**\n\nCreate a named gzip configuration on a particular service and version.\n\n**Request Configuration:**\n\n- **cache_condition** [string] - The CACHE condition controlling when this gzip configuration applies. This field is optional.\n- **content_types** [string] - Space-separated list of content types to compress. If you omit this field a default list will be used.\n- **extensions** [string] - Space-separated list of file extensions to compress. If you omit this field a default list will be used.\n- **name** [string] - The name of the gzip configuration.\n\n[Documentation](https://docs.fastly.com/api/config#gzip_79873f2776db6de57dafef8fe8bf3632)"
 					},
 					"response": []
 				},
@@ -2755,7 +2755,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/gzip/your_gzip",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/gzip/your_gzip",
 						"method": "GET",
 						"header": [
 							{
@@ -2768,7 +2768,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nGet the gzip configuration for a particular service, version, and name.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **gzip_name**\n\n[Documentation](https://docs.fastly.com/api/config#gzip_bf53ccf18e903955cdf96acf4e10d397)"
+						"description": "**Description:**\n\nGet the gzip configuration for a particular service, version, and name.\n\n**Request Configuration:**\n\n- Update URL with **gzip_name**\n\n[Documentation](https://docs.fastly.com/api/config#gzip_bf53ccf18e903955cdf96acf4e10d397)"
 					},
 					"response": []
 				},
@@ -2786,7 +2786,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/gzip/your_gzip",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/gzip/your_gzip",
 						"method": "PUT",
 						"header": [
 							{
@@ -2804,7 +2804,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"cache_condition\": \"\",\n\t\"content_types\": \"text/html text/css application/javascript application/json\",\n\t\"extensions\": \"html css js json\",\n\t\"name\": \"your_gzip\"\n}"
 						},
-						"description": "**Description:**\n\nUpdate a named gzip configuration on a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **gzip_name**\n- **cache_condition** [string] - The CACHE condition controlling when this gzip configuration applies. This field is optional.\n- **content_types** [string] - Space-separated list of content types to compress. If you omit this field a default list will be used.\n- **extensions** [string] - Space-separated list of file extensions to compress. If you omit this field a default list will be used.\n- **name** [string] - The name of the gzip configuration.\n\n[Documentation](https://docs.fastly.com/api/config#gzip_3c85d35aa907dc9f85ba314ddac441e0)"
+						"description": "**Description:**\n\nUpdate a named gzip configuration on a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **gzip_name**\n- **cache_condition** [string] - The CACHE condition controlling when this gzip configuration applies. This field is optional.\n- **content_types** [string] - Space-separated list of content types to compress. If you omit this field a default list will be used.\n- **extensions** [string] - Space-separated list of file extensions to compress. If you omit this field a default list will be used.\n- **name** [string] - The name of the gzip configuration.\n\n[Documentation](https://docs.fastly.com/api/config#gzip_3c85d35aa907dc9f85ba314ddac441e0)"
 					},
 					"response": []
 				},
@@ -2822,7 +2822,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/gzip/your_gzip",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/gzip/your_gzip",
 						"method": "DELETE",
 						"header": [
 							{
@@ -2837,7 +2837,7 @@
 								"src": ""
 							}
 						},
-						"description": "**Description:**\n\nDelete a named gzip configuration on a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **gzip_name**\n\n[Documentation](https://docs.fastly.com/api/config#gzip_6e6755b376c892af11b8fd1343f8c6ff)"
+						"description": "**Description:**\n\nDelete a named gzip configuration on a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **gzip_name**\n\n[Documentation](https://docs.fastly.com/api/config#gzip_6e6755b376c892af11b8fd1343f8c6ff)"
 					},
 					"response": []
 				}
@@ -2861,7 +2861,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/header",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/header",
 						"method": "GET",
 						"header": [
 							{
@@ -2874,7 +2874,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nRetrieves all Header objects for a particular Version of a Service.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#header_dd9da0592b2f1ff8ef0a4c1943f8abff)"
+						"description": "**Description:**\n\nRetrieves all Header objects for a particular Version of a Service.\n\n[Documentation](https://docs.fastly.com/api/config#header_dd9da0592b2f1ff8ef0a4c1943f8abff)"
 					},
 					"response": []
 				},
@@ -2892,7 +2892,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/header",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/header",
 						"method": "POST",
 						"header": [
 							{
@@ -2910,7 +2910,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"action\": \"set\",\n\t\"cache_condition\": null,\n\t\"dst\": \"http.Location\",\n\t\"ignore_if_set\": 0,\n\t\"name\": \"your_header\",\n\t\"priority\": 10,\n\t\"regex\": null,\n\t\"request_condition\": null,\n\t\"response_condition\": null,\n\t\"src\": \"https://www.fastly.com/\",\n\t\"substitution\": null,\n\t\"type\": \"response\"\n}"
 						},
-						"description": "**Description:**\n\nCreates a new Header object.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **action** [string] - Accepts a string value, one of:\n\t- set - Sets (or resets) a header\n\t- append - Appends to an existing header\n\t- delete - Delete a header\n\t- regex - Perform a single regex replacement on a header\n\t- regex_repeat - Perform a global regex replacement on a header\n- **cache_condition** [string] - Optional name of a CacheCondition to apply.\n- **dst** [string] - Header to set.\n- **ignore_if_set** [integer] - Don't add the header if it is added already (Only applies to 'set' action).\n- **name** [string] - A handle to refer to this Header object.\n- **priority** [integer] - Lower priorities execute first (Default: 100).\n- **regex** [string] - Regular expression to use (Only applies to 'regex' and 'regex_repeat' actions).\n- **request_condition** [string] - Optional name of a RequestCondition to apply.\n- **response_condition** [string] - Optional name of a ResponseCondition to apply.\n- **src** [string] - Variable to be used as a source for the header content (Does not apply to 'delete' action).\n- **substitution** [string] - Value to substitute in place of regular expression (Only applies to 'regex' and 'regex_repeat').\n- **type** [string] - Accepts a string value, one of:\n\t- request - Performs on the request before lookup occurs\n\t- fetch - Performs on the request to the origin server\n\t- cache - Performs on the response before it's stored in the cache\n\t- response - Performs on the response before delivering to the client\n\n[Documentation](https://docs.fastly.com/api/config#header_151df4ce647a8e222e730b260287cb39)"
+						"description": "**Description:**\n\nCreates a new Header object.\n\n**Request Configuration:**\n\n- **action** [string] - Accepts a string value, one of:\n\t- set - Sets (or resets) a header\n\t- append - Appends to an existing header\n\t- delete - Delete a header\n\t- regex - Perform a single regex replacement on a header\n\t- regex_repeat - Perform a global regex replacement on a header\n- **cache_condition** [string] - Optional name of a CacheCondition to apply.\n- **dst** [string] - Header to set.\n- **ignore_if_set** [integer] - Don't add the header if it is added already (Only applies to 'set' action).\n- **name** [string] - A handle to refer to this Header object.\n- **priority** [integer] - Lower priorities execute first (Default: 100).\n- **regex** [string] - Regular expression to use (Only applies to 'regex' and 'regex_repeat' actions).\n- **request_condition** [string] - Optional name of a RequestCondition to apply.\n- **response_condition** [string] - Optional name of a ResponseCondition to apply.\n- **src** [string] - Variable to be used as a source for the header content (Does not apply to 'delete' action).\n- **substitution** [string] - Value to substitute in place of regular expression (Only applies to 'regex' and 'regex_repeat').\n- **type** [string] - Accepts a string value, one of:\n\t- request - Performs on the request before lookup occurs\n\t- fetch - Performs on the request to the origin server\n\t- cache - Performs on the response before it's stored in the cache\n\t- response - Performs on the response before delivering to the client\n\n[Documentation](https://docs.fastly.com/api/config#header_151df4ce647a8e222e730b260287cb39)"
 					},
 					"response": []
 				},
@@ -2928,7 +2928,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/header/your_header",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/header/your_header",
 						"method": "GET",
 						"header": [
 							{
@@ -2941,7 +2941,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nRetrieves a Header object by name.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **header_name**\n\n[Documentation](https://docs.fastly.com/api/config#header_86469e5eba4e5d6b1463e81f82a847e0)"
+						"description": "**Description:**\n\nRetrieves a Header object by name.\n\n**Request Configuration:**\n\n- Update URL with **header_name**\n\n[Documentation](https://docs.fastly.com/api/config#header_86469e5eba4e5d6b1463e81f82a847e0)"
 					},
 					"response": []
 				},
@@ -2959,7 +2959,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/header/your_header",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/header/your_header",
 						"method": "PUT",
 						"header": [
 							{
@@ -2977,7 +2977,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"action\": \"set\",\n\t\"cache_condition\": null,\n\t\"dst\": \"http.Host\",\n\t\"ignore_if_set\": 0,\n\t\"name\": \"your_header\",\n\t\"priority\": 20,\n\t\"regex\": null,\n\t\"request_condition\": null,\n\t\"response_condition\": null,\n\t\"src\": \"awesome-bucket.s3-eu-west-1.amazonaws.com\",\n\t\"substitution\": null,\n\t\"type\": \"request\"\n}"
 						},
-						"description": "**Description:**\n\nModifies an existing Header object by name.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **header_name**\n- **action** [string] - Accepts a string value, one of:\n\t- set - Sets (or resets) a header\n\t- append - Appends to an existing header\n\t- delete - Delete a header\n\t- regex - Perform a single regex replacement on a header\n\t- regex_repeat - Perform a global regex replacement on a header\n- **cache_condition** [string] - Optional name of a CacheCondition to apply.\n- **dst** [string] - Header to set.\n- **ignore_if_set** [integer] - Don't add the header if it is added already (Only applies to 'set' action).\n- **name** [string] - A handle to refer to this Header object.\n- **priority** [integer] - Lower priorities execute first (Default: 100).\n- **regex** [string] - Regular expression to use (Only applies to 'regex' and 'regex_repeat' actions).\n- **request_condition** [string] - Optional name of a RequestCondition to apply.\n- **response_condition** [string] - Optional name of a ResponseCondition to apply.\n- **src** [string] - Variable to be used as a source for the header content (Does not apply to 'delete' action).\n- **substitution** [string] - Value to substitute in place of regular expression (Only applies to 'regex' and 'regex_repeat').\n- **type** [string] - Accepts a string value, one of:\n\t- request - Performs on the request before lookup occurs\n\t- fetch - Performs on the request to the origin server\n\t- cache - Performs on the response before it's stored in the cache\n\t- response - Performs on the response before delivering to the client\n\n[Documentation](https://docs.fastly.com/api/config#header_c4257a0fd0eb017ea47b1fbb318fd61c)"
+						"description": "**Description:**\n\nModifies an existing Header object by name.\n\n**Request Configuration:**\n\n- Update URL with **header_name**\n- **action** [string] - Accepts a string value, one of:\n\t- set - Sets (or resets) a header\n\t- append - Appends to an existing header\n\t- delete - Delete a header\n\t- regex - Perform a single regex replacement on a header\n\t- regex_repeat - Perform a global regex replacement on a header\n- **cache_condition** [string] - Optional name of a CacheCondition to apply.\n- **dst** [string] - Header to set.\n- **ignore_if_set** [integer] - Don't add the header if it is added already (Only applies to 'set' action).\n- **name** [string] - A handle to refer to this Header object.\n- **priority** [integer] - Lower priorities execute first (Default: 100).\n- **regex** [string] - Regular expression to use (Only applies to 'regex' and 'regex_repeat' actions).\n- **request_condition** [string] - Optional name of a RequestCondition to apply.\n- **response_condition** [string] - Optional name of a ResponseCondition to apply.\n- **src** [string] - Variable to be used as a source for the header content (Does not apply to 'delete' action).\n- **substitution** [string] - Value to substitute in place of regular expression (Only applies to 'regex' and 'regex_repeat').\n- **type** [string] - Accepts a string value, one of:\n\t- request - Performs on the request before lookup occurs\n\t- fetch - Performs on the request to the origin server\n\t- cache - Performs on the response before it's stored in the cache\n\t- response - Performs on the response before delivering to the client\n\n[Documentation](https://docs.fastly.com/api/config#header_c4257a0fd0eb017ea47b1fbb318fd61c)"
 					},
 					"response": []
 				},
@@ -2995,7 +2995,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/header/your_header",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/header/your_header",
 						"method": "DELETE",
 						"header": [
 							{
@@ -3008,7 +3008,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nDeletes a Header object by name.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **header_name**\n\n[Documentation](https://docs.fastly.com/api/config#header_4bbb73fffda4d189bf5a19b474399a83)"
+						"description": "**Description:**\n\nDeletes a Header object by name.\n\n**Request Configuration:**\n\n- Update URL with **header_name**\n\n[Documentation](https://docs.fastly.com/api/config#header_4bbb73fffda4d189bf5a19b474399a83)"
 					},
 					"response": []
 				}
@@ -3032,7 +3032,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/healthcheck",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/healthcheck",
 						"method": "GET",
 						"header": [
 							{
@@ -3045,7 +3045,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nList all of the healthchecks for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#healthcheck_126cb37382d68583269420ba772ded36)"
+						"description": "**Description:**\n\nList all of the healthchecks for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#healthcheck_126cb37382d68583269420ba772ded36)"
 					},
 					"response": []
 				},
@@ -3063,7 +3063,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/healthcheck",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/healthcheck",
 						"method": "POST",
 						"header": [
 							{
@@ -3081,7 +3081,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"check_interval\": 5000,\n\t\"comment\": \"your_comment\",\n\t\"expected_response\": 200,\n\t\"host\": \"example.com\",\n\t\"http_version\": 1.1,\n\t\"initial\": 2,\n\t\"method\": \"HEAD\",\n\t\"name\": \"your_healthcheck\",\n\t\"path\": \"/test.txt\",\n\t\"threshold\": 3,\n\t\"timeout\": 500,\n\t\"window\": 5\n}"
 						},
-						"description": "**Description:**\n\nCreate a healthcheck for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **check_interval** [integer] - How often to run the healthcheck in milliseconds.\n- **comment** [string] - A comment.\n- **expected_response** [integer] - The status code expected from the host.\n- **host** [string] - Which host to check.\n- **http_version** [integer] - Whether to use version 1.0 or 1.1 HTTP.\n- **initial** [integer] - When loading a config, the initial number of probes to be seen as OK.\n- **method** [string] - Which HTTP method to use.\n- **name** [string] - The name of the healthcheck.\n- **path** [string] - The path to check.\n- **threshold** [integer] - How many healthchecks must succeed to be considered healthy.\n- **timeout** [integer] - Timeout in milliseconds.\n- **window** [integer] - The number of most recent healthcheck queries to keep for this healthcheck.\n\n[Documentation](https://docs.fastly.com/api/config#healthcheck_8712be8923dd419c54393da3ac31f6d3)"
+						"description": "**Description:**\n\nCreate a healthcheck for a particular service and version.\n\n**Request Configuration:**\n\n- **check_interval** [integer] - How often to run the healthcheck in milliseconds.\n- **comment** [string] - A comment.\n- **expected_response** [integer] - The status code expected from the host.\n- **host** [string] - Which host to check.\n- **http_version** [integer] - Whether to use version 1.0 or 1.1 HTTP.\n- **initial** [integer] - When loading a config, the initial number of probes to be seen as OK.\n- **method** [string] - Which HTTP method to use.\n- **name** [string] - The name of the healthcheck.\n- **path** [string] - The path to check.\n- **threshold** [integer] - How many healthchecks must succeed to be considered healthy.\n- **timeout** [integer] - Timeout in milliseconds.\n- **window** [integer] - The number of most recent healthcheck queries to keep for this healthcheck.\n\n[Documentation](https://docs.fastly.com/api/config#healthcheck_8712be8923dd419c54393da3ac31f6d3)"
 					},
 					"response": []
 				},
@@ -3099,7 +3099,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/healthcheck/your_healthcheck",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/healthcheck/your_healthcheck",
 						"method": "GET",
 						"header": [
 							{
@@ -3112,7 +3112,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nGet the healthcheck for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **healthcheck_name**\n\n[Documentation](https://docs.fastly.com/api/config#healthcheck_b54ea357a2377e62ae7649e609b94966)"
+						"description": "**Description:**\n\nGet the healthcheck for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **healthcheck_name**\n\n[Documentation](https://docs.fastly.com/api/config#healthcheck_b54ea357a2377e62ae7649e609b94966)"
 					},
 					"response": []
 				},
@@ -3130,7 +3130,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/healthcheck/your_healthcheck",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/healthcheck/your_healthcheck",
 						"method": "PUT",
 						"header": [
 							{
@@ -3148,7 +3148,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"check_interval\": 3000,\n\t\"comment\": \"your_comment\",\n\t\"expected_response\": 200,\n\t\"host\": \"example.com\",\n\t\"http_version\": 1.1,\n\t\"initial\": 2,\n\t\"method\": \"GET\",\n\t\"name\": \"your_healthcheck\",\n\t\"path\": \"/blog\",\n\t\"threshold\": 2,\n\t\"timeout\": 1000,\n\t\"window\": 3\n}"
 						},
-						"description": "**Description:**\n\nUpdate the healthcheck for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **healthcheck_name**\n- **check_interval** [integer] - How often to run the healthcheck in milliseconds.\n- **comment** [string] - A comment.\n- **expected_response** [integer] - The status code expected from the host.\n- **host** [string] - Which host to check.\n- **http_version** [integer] - Whether to use version 1.0 or 1.1 HTTP.\n- **initial** [integer] - When loading a config, the initial number of probes to be seen as OK.\n- **method** [string] - Which HTTP method to use.\n- **name** [string] - The name of the healthcheck.\n- **path** [string] - The path to check.\n- **threshold** [integer] - How many healthchecks must succeed to be considered healthy.\n- **timeout** [integer] - Timeout in milliseconds.\n- **window** [integer] - The number of most recent healthcheck queries to keep for this healthcheck.\n\n[Documentation](https://docs.fastly.com/api/config#healthcheck_9a60b6005125c4afeaa80111e69d7586)"
+						"description": "**Description:**\n\nUpdate the healthcheck for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **healthcheck_name**\n- **check_interval** [integer] - How often to run the healthcheck in milliseconds.\n- **comment** [string] - A comment.\n- **expected_response** [integer] - The status code expected from the host.\n- **host** [string] - Which host to check.\n- **http_version** [integer] - Whether to use version 1.0 or 1.1 HTTP.\n- **initial** [integer] - When loading a config, the initial number of probes to be seen as OK.\n- **method** [string] - Which HTTP method to use.\n- **name** [string] - The name of the healthcheck.\n- **path** [string] - The path to check.\n- **threshold** [integer] - How many healthchecks must succeed to be considered healthy.\n- **timeout** [integer] - Timeout in milliseconds.\n- **window** [integer] - The number of most recent healthcheck queries to keep for this healthcheck.\n\n[Documentation](https://docs.fastly.com/api/config#healthcheck_9a60b6005125c4afeaa80111e69d7586)"
 					},
 					"response": []
 				},
@@ -3166,7 +3166,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/healthcheck/your_healthcheck",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/healthcheck/your_healthcheck",
 						"method": "DELETE",
 						"header": [
 							{
@@ -3176,7 +3176,7 @@
 							}
 						],
 						"body": {},
-						"description": "**Description:**\n\nDelete the healthcheck for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **healthcheck_name**\n\n[Documentation](https://docs.fastly.com/api/config#healthcheck_a22900c40a2fd59db5028061dc5dfa36)"
+						"description": "**Description:**\n\nDelete the healthcheck for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **healthcheck_name**\n\n[Documentation](https://docs.fastly.com/api/config#healthcheck_a22900c40a2fd59db5028061dc5dfa36)"
 					},
 					"response": []
 				}
@@ -4896,7 +4896,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/request_settings",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/request_settings",
 						"method": "GET",
 						"header": [
 							{
@@ -4909,7 +4909,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nReturns a list of all Request Settings objects for the given service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#request_settings_c98bc45765ce2b1ffd414402ed46746a)"
+						"description": "**Description:**\n\nReturns a list of all Request Settings objects for the given service and version.\n\n[Documentation](https://docs.fastly.com/api/config#request_settings_c98bc45765ce2b1ffd414402ed46746a)"
 					},
 					"response": []
 				},
@@ -4927,7 +4927,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/request_settings",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/request_settings",
 						"method": "POST",
 						"header": [
 							{
@@ -4945,7 +4945,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"action\": \"lookup\",\n\t\"bypass_busy_wait\": false,\n\t\"default_host\": null,\n\t\"force_miss\": false,\n\t\"force_ssl\": false,\n\t\"geo_headers\": true,\n\t\"hash_keys\": null,\n\t\"max_stale_age\": 60,\n\t\"name\": \"your_request_settings\",\n\t\"request_condition\": null,\n\t\"timer_support\": false,\n\t\"xff\": \"append\"\n}"
 						},
-						"description": "**Description:**\n\nCreates a new Request Settings object.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **action** [string] - Allows you to terminate request handling and immediately perform an action. When set it can be lookup or pass (ignore the cache completely).\n- **bypass_busy_wait** [boolean] - Disable collapsed forwarding, so you don't wait for other objects to origin.\n- **default_host** [string] - Sets the host header.\n- **force_miss** [boolean] - Allows you to force a cache miss for the request. Replaces the item in the cache if the content is cacheable.\n- **force_ssl** [boolean] - Forces the request use SSL (redirects a non-SSL to SSL).\n- **geo_headers** [boolean] - Injects Fastly-Geo-Country, Fastly-Geo-City, and Fastly-Geo-Region into the request headers.\n- **hash_keys** [string] - Comma separated list of varnish request object fields that should be in the hash key.\n- **max_stale_age** [integer] - How old an object is allowed to be to serve stale-if-error or stale-while-revalidate.\n- **name** [string] - Name for the request settings.\n- **request_condition** [string] - Name of condition object used to test whether or not these settings should be used.\n- **timer_support** [boolean] - Injects the X-Timer info into the request for viewing origin fetch durations.\n- **xff** [string] - Short for X-Forwarded-For, should be:\n\t- clear\n\t- leave\n\t- append\n\t- append_all\n\t- overwrite\n\n[Documentation](https://docs.fastly.com/api/config#request_settings_9d998e8a3ab30f9e01d1025b82d2d798)"
+						"description": "**Description:**\n\nCreates a new Request Settings object.\n\n**Request Configuration:**\n\n- **action** [string] - Allows you to terminate request handling and immediately perform an action. When set it can be lookup or pass (ignore the cache completely).\n- **bypass_busy_wait** [boolean] - Disable collapsed forwarding, so you don't wait for other objects to origin.\n- **default_host** [string] - Sets the host header.\n- **force_miss** [boolean] - Allows you to force a cache miss for the request. Replaces the item in the cache if the content is cacheable.\n- **force_ssl** [boolean] - Forces the request use SSL (redirects a non-SSL to SSL).\n- **geo_headers** [boolean] - Injects Fastly-Geo-Country, Fastly-Geo-City, and Fastly-Geo-Region into the request headers.\n- **hash_keys** [string] - Comma separated list of varnish request object fields that should be in the hash key.\n- **max_stale_age** [integer] - How old an object is allowed to be to serve stale-if-error or stale-while-revalidate.\n- **name** [string] - Name for the request settings.\n- **request_condition** [string] - Name of condition object used to test whether or not these settings should be used.\n- **timer_support** [boolean] - Injects the X-Timer info into the request for viewing origin fetch durations.\n- **xff** [string] - Short for X-Forwarded-For, should be:\n\t- clear\n\t- leave\n\t- append\n\t- append_all\n\t- overwrite\n\n[Documentation](https://docs.fastly.com/api/config#request_settings_9d998e8a3ab30f9e01d1025b82d2d798)"
 					},
 					"response": []
 				},
@@ -4963,7 +4963,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/request_settings/your_request_settings",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/request_settings/your_request_settings",
 						"method": "GET",
 						"header": [
 							{
@@ -4976,7 +4976,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nGets the specified Request Settings object.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **request_settings_name**\n\n[Documentation](https://docs.fastly.com/api/config#request_settings_db0338e03fa36787e13f4e4026f73753)"
+						"description": "**Description:**\n\nGets the specified Request Settings object.\n\n**Request Configuration:**\n\n- Update URL with **request_settings_name**\n\n[Documentation](https://docs.fastly.com/api/config#request_settings_db0338e03fa36787e13f4e4026f73753)"
 					},
 					"response": []
 				},
@@ -4994,7 +4994,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/request_settings/your_request_settings",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/request_settings/your_request_settings",
 						"method": "PUT",
 						"header": [
 							{
@@ -5012,7 +5012,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"action\": \"lookup\",\n\t\"bypass_busy_wait\": false,\n\t\"default_host\": null,\n\t\"force_miss\": false,\n\t\"force_ssl\": false,\n\t\"geo_headers\": true,\n\t\"hash_keys\": null,\n\t\"max_stale_age\": 60,\n\t\"name\": \"your_request_settings\",\n\t\"request_condition\": null,\n\t\"timer_support\": false,\n\t\"xff\": \"append\"\n}"
 						},
-						"description": "**Description:**\n\nUpdates the specified Request Settings object.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **request_settings_name**\n- **action** [string] - Allows you to terminate request handling and immediately perform an action. When set it can be lookup or pass (ignore the cache completely).\n- **bypass_busy_wait** [boolean] - Disable collapsed forwarding, so you don't wait for other objects to origin.\n- **default_host** [string] - Sets the host header.\n- **force_miss** [boolean] - Allows you to force a cache miss for the request. Replaces the item in the cache if the content is cacheable.\n- **force_ssl** [boolean] - Forces the request use SSL (redirects a non-SSL to SSL).\n- **geo_headers** [boolean] - Injects Fastly-Geo-Country, Fastly-Geo-City, and Fastly-Geo-Region into the request headers.\n- **hash_keys** [string] - Comma separated list of varnish request object fields that should be in the hash key.\n- **max_stale_age** [integer] - How old an object is allowed to be to serve stale-if-error or stale-while-revalidate.\n- **name** [string] - Name for the request settings.\n- **request_condition** [string] - Name of condition object used to test whether or not these settings should be used.\n- **timer_support** [boolean] - Injects the X-Timer info into the request for viewing origin fetch durations.\n- **xff** [string] - Short for X-Forwarded-For, should be:\n\t- clear\n\t- leave\n\t- append\n\t- append_all\n\t- overwrite\n\n[Documentation](https://docs.fastly.com/api/config#request_settings_daff48a5aee7dfa22d9d8a7d9dbc8803)"
+						"description": "**Description:**\n\nUpdates the specified Request Settings object.\n\n**Request Configuration:**\n\n- Update URL with **request_settings_name**\n- **action** [string] - Allows you to terminate request handling and immediately perform an action. When set it can be lookup or pass (ignore the cache completely).\n- **bypass_busy_wait** [boolean] - Disable collapsed forwarding, so you don't wait for other objects to origin.\n- **default_host** [string] - Sets the host header.\n- **force_miss** [boolean] - Allows you to force a cache miss for the request. Replaces the item in the cache if the content is cacheable.\n- **force_ssl** [boolean] - Forces the request use SSL (redirects a non-SSL to SSL).\n- **geo_headers** [boolean] - Injects Fastly-Geo-Country, Fastly-Geo-City, and Fastly-Geo-Region into the request headers.\n- **hash_keys** [string] - Comma separated list of varnish request object fields that should be in the hash key.\n- **max_stale_age** [integer] - How old an object is allowed to be to serve stale-if-error or stale-while-revalidate.\n- **name** [string] - Name for the request settings.\n- **request_condition** [string] - Name of condition object used to test whether or not these settings should be used.\n- **timer_support** [boolean] - Injects the X-Timer info into the request for viewing origin fetch durations.\n- **xff** [string] - Short for X-Forwarded-For, should be:\n\t- clear\n\t- leave\n\t- append\n\t- append_all\n\t- overwrite\n\n[Documentation](https://docs.fastly.com/api/config#request_settings_daff48a5aee7dfa22d9d8a7d9dbc8803)"
 					},
 					"response": []
 				},
@@ -5030,7 +5030,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/request_settings/your_request_settings",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/request_settings/your_request_settings",
 						"method": "DELETE",
 						"header": [
 							{
@@ -5043,7 +5043,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nRemoves the specified Request Settings object.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **request_settings_name**\n\n[Documentation](https://docs.fastly.com/api/config#request_settings_f5840761113247566338f97d7e26d20e)"
+						"description": "**Description:**\n\nRemoves the specified Request Settings object.\n\n**Request Configuration:**\n\n- Update URL with **request_settings_name**\n\n[Documentation](https://docs.fastly.com/api/config#request_settings_f5840761113247566338f97d7e26d20e)"
 					},
 					"response": []
 				}
@@ -5067,7 +5067,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/response_object",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/response_object",
 						"method": "GET",
 						"header": [
 							{
@@ -5080,7 +5080,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nReturns all Response Objects for the specified service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#response_object_23a204e8990ec3c07556f31e48bf6394)"
+						"description": "**Description:**\n\nReturns all Response Objects for the specified service and version.\n\n[Documentation](https://docs.fastly.com/api/config#response_object_23a204e8990ec3c07556f31e48bf6394)"
 					},
 					"response": []
 				},
@@ -5098,7 +5098,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/response_object",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/response_object",
 						"method": "POST",
 						"header": [
 							{
@@ -5116,7 +5116,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"cache_condition\": \"\",\n\t\"content\": \"This message means all is okay\",\n\t\"content_type\": \"text/html\",\n\t\"name\": \"your_response_object\",\n\t\"request_condition\": \"\",\n\t\"response\": \"OK\",\n\t\"status\": \"200\"\n}"
 						},
-						"description": "**Description:**\n\nCreates a new Response Object.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **cache_condition** [string] - Name of the condition checked after we have retrieved an object. If the condition passes then deliver this Request Object instead.\n- **content** [string] - The content to deliver for the response object, can be empty.\n- **content_type** [string] - The MIME type of the content, can be empty.\n- **name** [string] - Name that identifies the Response Object.\n- **request_condition** [string] - Name of the condition to be checked during the request phase. If the condition passes then this object will be delivered.\n- **response** [string] - The HTTP Response, defaults to \"Ok\"\n- **status** [string] - The HTTP Status Code, defaults to 200.\n\n[Documentation](https://docs.fastly.com/api/config#response_object_69864bff7d00bf4c82dbb44be8ee45f4)"
+						"description": "**Description:**\n\nCreates a new Response Object.\n\n**Request Configuration:**\n\n- **cache_condition** [string] - Name of the condition checked after we have retrieved an object. If the condition passes then deliver this Request Object instead.\n- **content** [string] - The content to deliver for the response object, can be empty.\n- **content_type** [string] - The MIME type of the content, can be empty.\n- **name** [string] - Name that identifies the Response Object.\n- **request_condition** [string] - Name of the condition to be checked during the request phase. If the condition passes then this object will be delivered.\n- **response** [string] - The HTTP Response, defaults to \"Ok\"\n- **status** [string] - The HTTP Status Code, defaults to 200.\n\n[Documentation](https://docs.fastly.com/api/config#response_object_69864bff7d00bf4c82dbb44be8ee45f4)"
 					},
 					"response": []
 				},
@@ -5134,7 +5134,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/response_object/your_response_object",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/response_object/your_response_object",
 						"method": "GET",
 						"header": [
 							{
@@ -5147,7 +5147,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nGets the specified Response Object.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **response_object_name**\n\n[Documentation](https://docs.fastly.com/api/config#response_object_86eee1a775e72abb37f1ee364862a6b6)"
+						"description": "**Description:**\n\nGets the specified Response Object.\n\n**Request Configuration:**\n\n- Update URL with **response_object_name**\n\n[Documentation](https://docs.fastly.com/api/config#response_object_86eee1a775e72abb37f1ee364862a6b6)"
 					},
 					"response": []
 				},
@@ -5165,7 +5165,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/response_object/your_response_object",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/response_object/your_response_object",
 						"method": "PUT",
 						"header": [
 							{
@@ -5183,7 +5183,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"cache_condition\": \"\",\n\t\"content\": \"Page not found\",\n\t\"content_type\": \"text/html\",\n\t\"name\": \"your_response_object\",\n\t\"request_condition\": \"\",\n\t\"response\": \"Page not found\",\n\t\"status\": \"404\"\n}"
 						},
-						"description": "**Description:**\n\nUpdates the specified Response Object.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **response_object_name**\n- **cache_condition** [string] - Name of the condition checked after we have retrieved an object. If the condition passes then deliver this Request Object instead.\n- **content** [string] - The content to deliver for the response object, can be empty.\n- **content_type** [string] - The MIME type of the content, can be empty.\n- **name** [string] - Name that identifies the Response Object.\n- **request_condition** [string] - Name of the condition to be checked during the request phase. If the condition passes then this object will be delivered.\n- **response** [string] - The HTTP Response, defaults to \"Ok\"\n- **status** [string] - The HTTP Status Code, defaults to 200.\n\n[Documentation](https://docs.fastly.com/api/config#response_object_60ca76a86f3427d7f85a00ec8eb25b3e)"
+						"description": "**Description:**\n\nUpdates the specified Response Object.\n\n**Request Configuration:**\n\n- Update URL with **response_object_name**\n- **cache_condition** [string] - Name of the condition checked after we have retrieved an object. If the condition passes then deliver this Request Object instead.\n- **content** [string] - The content to deliver for the response object, can be empty.\n- **content_type** [string] - The MIME type of the content, can be empty.\n- **name** [string] - Name that identifies the Response Object.\n- **request_condition** [string] - Name of the condition to be checked during the request phase. If the condition passes then this object will be delivered.\n- **response** [string] - The HTTP Response, defaults to \"Ok\"\n- **status** [string] - The HTTP Status Code, defaults to 200.\n\n[Documentation](https://docs.fastly.com/api/config#response_object_60ca76a86f3427d7f85a00ec8eb25b3e)"
 					},
 					"response": []
 				},
@@ -5201,7 +5201,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/response_object/your_response_object",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/response_object/your_response_object",
 						"method": "DELETE",
 						"header": [
 							{
@@ -5214,7 +5214,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nDeletes the specified Response Object.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **response_object_name**\n\n[Documentation](https://docs.fastly.com/api/config#response_object_50fb3ca925978a9c56e97906ed09ea48)"
+						"description": "**Description:**\n\nDeletes the specified Response Object.\n\n**Request Configuration:**\n\n- Update URL with **response_object_name**\n\n[Documentation](https://docs.fastly.com/api/config#response_object_50fb3ca925978a9c56e97906ed09ea48)"
 					},
 					"response": []
 				}
@@ -5521,7 +5521,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/settings",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/settings",
 						"method": "GET",
 						"header": [
 							{
@@ -5534,7 +5534,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nGet the settings for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#settings_a0d1a4ac4a9b4ca72f16fa32d2f58e55)"
+						"description": "**Description:**\n\nGet the settings for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#settings_a0d1a4ac4a9b4ca72f16fa32d2f58e55)"
 					},
 					"response": []
 				},
@@ -5552,7 +5552,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/settings",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/settings",
 						"method": "PUT",
 						"header": [
 							{
@@ -5570,7 +5570,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"general.default_host\": \"www.your-awesome-app.com\",\n\t\"general.default_ttl\": 900\n}"
 						},
-						"description": "**Description:**\n\nUpdate the settings for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **general.default_host** [string] - The default host name for the version.\n- **general.default_ttl** [integer] - The default Time-to-live (TTL) for the version.\n\n[Documentation](https://docs.fastly.com/api/config#settings_9740ff4ac0c1777f455274c4850ece23)"
+						"description": "**Description:**\n\nUpdate the settings for a particular service and version.\n\n**Request Configuration:**\n\n- **general.default_host** [string] - The default host name for the version.\n- **general.default_ttl** [integer] - The default Time-to-live (TTL) for the version.\n\n[Documentation](https://docs.fastly.com/api/config#settings_9740ff4ac0c1777f455274c4850ece23)"
 					},
 					"response": []
 				}
@@ -6115,7 +6115,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/61/vcl",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/vcl",
 						"method": "GET",
 						"header": [
 							{
@@ -6125,7 +6125,7 @@
 							}
 						],
 						"body": {},
-						"description": "**Description:**\n\nList the uploaded VCLs for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_17eaf920acd6f04a7f4a997695a8a18a)"
+						"description": "**Description:**\n\nList the uploaded VCLs for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#vcl_17eaf920acd6f04a7f4a997695a8a18a)"
 					},
 					"response": []
 				},
@@ -6143,7 +6143,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/60/boilerplate",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/boilerplate",
 						"method": "GET",
 						"header": [
 							{
@@ -6153,7 +6153,7 @@
 							}
 						],
 						"body": {},
-						"description": "**Description:**\n\nReturn boilerplate VCL with the service's TTL from the settings.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_ff97d3664dca35fca3e235b683825730)"
+						"description": "**Description:**\n\nReturn boilerplate VCL with the service's TTL from the settings.\n\n[Documentation](https://docs.fastly.com/api/config#vcl_ff97d3664dca35fca3e235b683825730)"
 					},
 					"response": []
 				},
@@ -6171,7 +6171,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/61/vcl",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/vcl",
 						"method": "POST",
 						"header": [
 							{
@@ -6189,7 +6189,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"name\": \"your_vcl\",\n\t\"main\": false,\n\t\"content\": \"sub vcl_recv {\\n#FASTLY recv\\n\\n  if (req.request != \\\"HEAD\\\" && req.request != \\\"GET\\\" && req.request != \\\"FASTLYPURGE\\\") {\\n    return(pass);\\n  }\\n\\n  return(lookup);\\n}\\n\\nsub vcl_fetch {\\n#FASTLY fetch\\n\\n  if ((beresp.status == 500 || beresp.status == 503) && req.restarts < 1 && (req.request == \\\"GET\\\" || req.request == \\\"HEAD\\\")) {\\n    restart;\\n  }\\n\\n  if (req.restarts > 0) {\\n    set beresp.http.Fastly-Restarts = req.restarts;\\n  }\\n\\n  if (beresp.http.Set-Cookie) {\\n    set req.http.Fastly-Cachetype = \\\"SETCOOKIE\\\";\\n    return(pass);\\n  }\\n\\n  if (beresp.http.Cache-Control ~ \\\"private\\\") {\\n    set req.http.Fastly-Cachetype = \\\"PRIVATE\\\";\\n    return(pass);\\n  }\\n\\n  if (beresp.status == 500 || beresp.status == 503) {\\n    set req.http.Fastly-Cachetype = \\\"ERROR\\\";\\n    set beresp.ttl = 1s;\\n    set beresp.grace = 5s;\\n    return(deliver);\\n  }\\n\\n  if (beresp.http.Expires || beresp.http.Surrogate-Control ~ \\\"max-age\\\" || beresp.http.Cache-Control ~ \\\"(s-maxage|max-age)\\\") {\\n    # keep the ttl here\\n  } else {\\n    # apply the default ttl\\n    set beresp.ttl = 3600s;\\n  }\\n\\n  return(deliver);\\n}\\n\\nsub vcl_hit {\\n#FASTLY hit\\n\\n  if (!obj.cacheable) {\\n    return(pass);\\n  }\\n  return(deliver);\\n}\\n\\nsub vcl_miss {\\n#FASTLY miss\\n  return(fetch);\\n}\\n\\nsub vcl_deliver {\\n#FASTLY deliver\\n  return(deliver);\\n}\\n\\nsub vcl_error {\\n#FASTLY error\\n}\\n\\nsub vcl_pass {\\n#FASTLY pass\\n}\\n\\nsub vcl_log {\\n#FASTLY log\\n}\\n\"\n}"
 						},
-						"description": "**Description:**\n\nUpload a VCL for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **name** [string] - The name of this VCL.\n- **main** [boolean] - Set to true when this is the main VCL, otherwise false.\n- **content** [string] - The VCL code to be included.\n\n[Documentation](https://docs.fastly.com/api/config#vcl_7ade6ab5926b903b6acf3335a85060cc)"
+						"description": "**Description:**\n\nUpload a VCL for a particular service and version.\n\n**Request Configuration:**\n\n- **name** [string] - The name of this VCL.\n- **main** [boolean] - Set to true when this is the main VCL, otherwise false.\n- **content** [string] - The VCL code to be included.\n\n[Documentation](https://docs.fastly.com/api/config#vcl_7ade6ab5926b903b6acf3335a85060cc)"
 					},
 					"response": []
 				},
@@ -6207,7 +6207,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/61/vcl/your_vcl",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/vcl/your_vcl",
 						"method": "GET",
 						"header": [
 							{
@@ -6217,7 +6217,7 @@
 							}
 						],
 						"body": {},
-						"description": "**Description:**\n\nGet the uploaded VCL for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **vcl_name**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_621f303da373d60854e6d2d45dc2de75)"
+						"description": "**Description:**\n\nGet the uploaded VCL for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **vcl_name**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_621f303da373d60854e6d2d45dc2de75)"
 					},
 					"response": []
 				},
@@ -6236,7 +6236,7 @@
 					],
 					"request": {
 						"url": {
-							"raw": "{{url}}/service/{{service_id}}/version/61/vcl/your_vcl/content?lineno=true",
+							"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/vcl/your_vcl/content?lineno=true",
 							"auth": {},
 							"host": [
 								"{{url}}"
@@ -6245,7 +6245,7 @@
 								"service",
 								"{{service_id}}",
 								"version",
-								"61",
+								"{{version_no}}",
 								"vcl",
 								"your_vcl",
 								"content"
@@ -6269,7 +6269,7 @@
 							}
 						],
 						"body": {},
-						"description": "**Description:**\n\nGet the uploaded VCL for a particular service and version with HTML syntax highlighting Include line numbers by sending **lineno=true** as a request parameter.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **vcl_name**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_438f27abcd1c9203c8315a54cbcfde1a)"
+						"description": "**Description:**\n\nGet the uploaded VCL for a particular service and version with HTML syntax highlighting Include line numbers by sending **lineno=true** as a request parameter.\n\n**Request Configuration:**\n\n- Update URL with **vcl_name**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_438f27abcd1c9203c8315a54cbcfde1a)"
 					},
 					"response": []
 				},
@@ -6287,7 +6287,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/61/vcl/your_vcl/download",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/vcl/your_vcl/download",
 						"method": "GET",
 						"header": [
 							{
@@ -6297,7 +6297,7 @@
 							}
 						],
 						"body": {},
-						"description": "**Description:**\n\nDownload the specified VCL.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **vcl_name**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_86deff673cc0dfdcb938a780dd328fcd)"
+						"description": "**Description:**\n\nDownload the specified VCL.\n\n**Request Configuration:**\n\n- Update URL with **vcl_name**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_86deff673cc0dfdcb938a780dd328fcd)"
 					},
 					"response": []
 				},
@@ -6315,7 +6315,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/60/generated_vcl",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/generated_vcl",
 						"method": "GET",
 						"header": [
 							{
@@ -6325,7 +6325,7 @@
 							}
 						],
 						"body": {},
-						"description": "**Description:**\n\nDisplay the generated VCL for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_ad9da3d303580a36d0c1be5e10728e81)"
+						"description": "**Description:**\n\nDisplay the generated VCL for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#vcl_ad9da3d303580a36d0c1be5e10728e81)"
 					},
 					"response": []
 				},
@@ -6344,7 +6344,7 @@
 					],
 					"request": {
 						"url": {
-							"raw": "{{url}}/service/{{service_id}}/version/60/generated_vcl/content?lineno=true",
+							"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/generated_vcl/content?lineno=true",
 							"auth": {},
 							"host": [
 								"{{url}}"
@@ -6353,7 +6353,7 @@
 								"service",
 								"{{service_id}}",
 								"version",
-								"60",
+								"{{version_no}}",
 								"generated_vcl",
 								"content"
 							],
@@ -6376,7 +6376,7 @@
 							}
 						],
 						"body": {},
-						"description": "**Description:**\n\nDisplay the content of generated VCL with HTML syntax highlighting Include line numbers by sending **lineno=true** as a request parameter.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_d7c0ba46e90676f4bcdd804fb3d417a3)"
+						"description": "**Description:**\n\nDisplay the content of generated VCL with HTML syntax highlighting Include line numbers by sending **lineno=true** as a request parameter.\n\n[Documentation](https://docs.fastly.com/api/config#vcl_d7c0ba46e90676f4bcdd804fb3d417a3)"
 					},
 					"response": []
 				},
@@ -6394,7 +6394,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/61/vcl/your_vcl/main",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/vcl/your_vcl/main",
 						"method": "PUT",
 						"header": [
 							{
@@ -6407,7 +6407,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nSet the specified VCL as the main.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **vcl_name**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_5576c38e7652f5a7261bfcad41c0faf1)"
+						"description": "**Description:**\n\nSet the specified VCL as the main.\n\n**Request Configuration:**\n\n- Update URL with **vcl_name**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_5576c38e7652f5a7261bfcad41c0faf1)"
 					},
 					"response": []
 				},
@@ -6425,7 +6425,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/61/vcl/your_vcl",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/vcl/your_vcl",
 						"method": "PUT",
 						"header": [
 							{
@@ -6443,7 +6443,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"name\": \"your_vcl\",\n\t\"main\": true,\n\t\"content\": \"sub vcl_recv {\\n#FASTLY recv\\n\\n  if (req.request != \\\"HEAD\\\" && req.request != \\\"GET\\\" && req.request != \\\"FASTLYPURGE\\\") {\\n    return(pass);\\n  }\\n\\n  return(lookup);\\n}\\n\\nsub vcl_fetch {\\n#FASTLY fetch\\n\\n  if ((beresp.status == 500 || beresp.status == 503) && req.restarts < 1 && (req.request == \\\"GET\\\" || req.request == \\\"HEAD\\\")) {\\n    restart;\\n  }\\n\\n  if (req.restarts > 0) {\\n    set beresp.http.Fastly-Restarts = req.restarts;\\n  }\\n\\n  if (beresp.http.Set-Cookie) {\\n    set req.http.Fastly-Cachetype = \\\"SETCOOKIE\\\";\\n    return(pass);\\n  }\\n\\n  if (beresp.http.Cache-Control ~ \\\"private\\\") {\\n    set req.http.Fastly-Cachetype = \\\"PRIVATE\\\";\\n    return(pass);\\n  }\\n\\n  if (beresp.status == 500 || beresp.status == 503) {\\n    set req.http.Fastly-Cachetype = \\\"ERROR\\\";\\n    set beresp.ttl = 1s;\\n    set beresp.grace = 5s;\\n    return(deliver);\\n  }\\n\\n  if (beresp.http.Expires || beresp.http.Surrogate-Control ~ \\\"max-age\\\" || beresp.http.Cache-Control ~ \\\"(s-maxage|max-age)\\\") {\\n    # keep the ttl here\\n  } else {\\n    # apply the default ttl\\n    set beresp.ttl = 3600s;\\n  }\\n\\n  return(deliver);\\n}\\n\\nsub vcl_hit {\\n#FASTLY hit\\n\\n  if (!obj.cacheable) {\\n    return(pass);\\n  }\\n  return(deliver);\\n}\\n\\nsub vcl_miss {\\n#FASTLY miss\\n  return(fetch);\\n}\\n\\nsub vcl_deliver {\\n#FASTLY deliver\\n  return(deliver);\\n}\\n\\nsub vcl_error {\\n#FASTLY error\\n}\\n\\nsub vcl_pass {\\n#FASTLY pass\\n}\\n\\nsub vcl_log {\\n#FASTLY log\\n}\\n\"\n}"
 						},
-						"description": "**Description:**\n\nUpdate the uploaded VCL for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **vcl_name**\n- **name** [string] - The name of this VCL.\n- **main** [boolean] - Set to true when this is the main VCL, otherwise false.\n- **content** [string] - The VCL code to be included.\n\n[Documentation](https://docs.fastly.com/api/config#vcl_0971365908e17086751c5ef2a8053087)"
+						"description": "**Description:**\n\nUpdate the uploaded VCL for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **vcl_name**\n- **name** [string] - The name of this VCL.\n- **main** [boolean] - Set to true when this is the main VCL, otherwise false.\n- **content** [string] - The VCL code to be included.\n\n[Documentation](https://docs.fastly.com/api/config#vcl_0971365908e17086751c5ef2a8053087)"
 					},
 					"response": []
 				},
@@ -6461,7 +6461,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/61/vcl/your_vcl",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/vcl/your_vcl",
 						"method": "DELETE",
 						"header": [
 							{
@@ -6474,7 +6474,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nDelete the uploaded VCL for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **vcl_name**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_60e52db45083a0f2c9445ab188e3cab0)"
+						"description": "**Description:**\n\nDelete the uploaded VCL for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **vcl_name**\n\n[Documentation](https://docs.fastly.com/api/config#vcl_60e52db45083a0f2c9445ab188e3cab0)"
 					},
 					"response": []
 				}
@@ -6498,7 +6498,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/102/snippet",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/snippet",
 						"method": "GET",
 						"header": [
 							{
@@ -6508,7 +6508,7 @@
 							}
 						],
 						"body": {},
-						"description": "**Description:**\n\nList all snippets for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#snippet_e2ba7946be5a13ee64b7e7edb481b934)"
+						"description": "**Description:**\n\nList all snippets for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#snippet_e2ba7946be5a13ee64b7e7edb481b934)"
 					},
 					"response": []
 				},
@@ -6526,7 +6526,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/102/snippet",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/snippet",
 						"method": "POST",
 						"header": [
 							{
@@ -6544,7 +6544,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"name\": \"your_snippet\",\n\t\"priority\": \"10\",\n\t\"dynamic\": \"1\",\n\t\"content\": \"set beresp.http.Backend-Name = beresp.backend.name;\",\n\t\"type\": \"fetch\"\n}"
 						},
-						"description": "**Description:**\n\nCreate a snippet for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **name** [string] - The name for the snippet.\n- **priority** [integer] - Priority determines the ordering for multiple snippets. Lower numbers execute first.\n- **dynamic** [integer] - Sets the snippet version to regular (0) or dynamic (1).\n- **content** [string] - The VCL code that specifies exactly what the snippet does.\n- **type** [string] - The location in generated VCL where the snippet should be placed. Type can be either:\n\t- init - Place the snippet above all subroutines.\n\t- recv - Place the snippet within the vcl_recv subroutine but below the boilerplate VCL and above any objects.\n\t- hit - Place the snippet within the vcl_hit subroutine.\n\t- miss - Place the snippet within the vcl_miss subroutine.\n\t- pass - Place the snippet within the vcl_pass subroutine.\n\t- fetch - Place the snippet within the vcl_fetch subroutine.\n\t- error - Place the snippet within the vcl_error subroutine.\n\t- deliver - Place the snippet within the vcl_deliver subroutine.\n\t- log - Place the snippet within the vcl_log subroutine.\n\t- none - Don't render the snippet in VCL so it can be manually included in custom VCL.\n\n[Documentation](https://docs.fastly.com/api/config#snippet_41e0e11c662d4d56adada215e707f30d)"
+						"description": "**Description:**\n\nCreate a snippet for a particular service and version.\n\n**Request Configuration:**\n\n- **name** [string] - The name for the snippet.\n- **priority** [integer] - Priority determines the ordering for multiple snippets. Lower numbers execute first.\n- **dynamic** [integer] - Sets the snippet version to regular (0) or dynamic (1).\n- **content** [string] - The VCL code that specifies exactly what the snippet does.\n- **type** [string] - The location in generated VCL where the snippet should be placed. Type can be either:\n\t- init - Place the snippet above all subroutines.\n\t- recv - Place the snippet within the vcl_recv subroutine but below the boilerplate VCL and above any objects.\n\t- hit - Place the snippet within the vcl_hit subroutine.\n\t- miss - Place the snippet within the vcl_miss subroutine.\n\t- pass - Place the snippet within the vcl_pass subroutine.\n\t- fetch - Place the snippet within the vcl_fetch subroutine.\n\t- error - Place the snippet within the vcl_error subroutine.\n\t- deliver - Place the snippet within the vcl_deliver subroutine.\n\t- log - Place the snippet within the vcl_log subroutine.\n\t- none - Don't render the snippet in VCL so it can be manually included in custom VCL.\n\n[Documentation](https://docs.fastly.com/api/config#snippet_41e0e11c662d4d56adada215e707f30d)"
 					},
 					"response": []
 				},
@@ -6626,7 +6626,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/102/snippet/your_snippet",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/snippet/your_snippet",
 						"method": "GET",
 						"header": [
 							{
@@ -6636,7 +6636,7 @@
 							}
 						],
 						"body": {},
-						"description": "**Description:**\n\nGet a single snippet for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **snippet_name**\n\n[Documentation](https://docs.fastly.com/api/config#snippet_33b5e47ae6fe6511169591ef9f43a2f4)"
+						"description": "**Description:**\n\nGet a single snippet for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **snippet_name**\n\n[Documentation](https://docs.fastly.com/api/config#snippet_33b5e47ae6fe6511169591ef9f43a2f4)"
 					},
 					"response": []
 				},
@@ -6654,7 +6654,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/102/snippet/your_snippet",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/snippet/your_snippet",
 						"method": "PUT",
 						"header": [
 							{
@@ -6672,7 +6672,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"name\": \"your_snippet\"\n}"
 						},
-						"description": "**Description:**\n\nUpdate a specific snippet for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **snippet_name**\n- **name** [string] - The name for the snippet.\n\n[Documentation](https://docs.fastly.com/api/config#snippet_e74c500822f252e309a03e0d2727d7b3)"
+						"description": "**Description:**\n\nUpdate a specific snippet for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **snippet_name**\n- **name** [string] - The name for the snippet.\n\n[Documentation](https://docs.fastly.com/api/config#snippet_e74c500822f252e309a03e0d2727d7b3)"
 					},
 					"response": []
 				},
@@ -6690,7 +6690,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/102/snippet/your_snippet",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/snippet/your_snippet",
 						"method": "DELETE",
 						"header": [
 							{
@@ -6703,7 +6703,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nDelete a specific snippet for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **snippet_name**\n\n[Documentation](https://docs.fastly.com/api/config#snippet_169df47a3f93ba5e20277833014e68a7)"
+						"description": "**Description:**\n\nDelete a specific snippet for a particular service and version.\n\n**Request Configuration:**\n\n- Update URL with **snippet_name**\n\n[Documentation](https://docs.fastly.com/api/config#snippet_169df47a3f93ba5e20277833014e68a7)"
 					},
 					"response": []
 				}
@@ -6758,7 +6758,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}",
 						"method": "GET",
 						"header": [
 							{
@@ -6771,7 +6771,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nGet the version for a particular service.\n\n**Request Configuration**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#version_4f6d1d4f5d3ce983a4d156a700a2df58)"
+						"description": "**Description:**\n\nGet the version for a particular service.\n\n[Documentation](https://docs.fastly.com/api/config#version_4f6d1d4f5d3ce983a4d156a700a2df58)"
 					},
 					"response": []
 				},
@@ -6789,7 +6789,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/validate",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/validate",
 						"method": "GET",
 						"header": [
 							{
@@ -6802,7 +6802,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nValidate the version for a particular service and version.\n\n**Request Configuration**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#version_97f8cf7bfd5dc2e5ea1933d94dc5a9a6)"
+						"description": "**Description:**\n\nValidate the version for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/config#version_97f8cf7bfd5dc2e5ea1933d94dc5a9a6)"
 					},
 					"response": []
 				},
@@ -6856,7 +6856,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/102",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}",
 						"method": "PUT",
 						"header": [
 							{
@@ -6874,7 +6874,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"testing\": false,\n\t\"locked\": false,\n\t\"active\": false,\n\t\"staging\": false,\n\t\"comment\": \"your_comment\",\n\t\"deployed\": false\n}"
 						},
-						"description": "**Description:**\n\nUpdate a particular version for a particular service.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **testing** [boolean] - Whether or not this version is for testing.\n- **locked** [boolean] - Whether this version is locked or not.\n- **active** [boolean] - Whether this is the active version or not.\n- **staging** [boolean] - Whether or not this version is for staging.\n- **comment** [string] - A comment.\n- **deployed** [boolean] - Whether or not this version is deployed.\n\n[Documentation](https://docs.fastly.com/api/config#version_17843bfa35e0a73c7ef0a93dfa30ee8e)"
+						"description": "**Description:**\n\nUpdate a particular version for a particular service.\n\n**Request Configuration:**\n\n- **testing** [boolean] - Whether or not this version is for testing.\n- **locked** [boolean] - Whether this version is locked or not.\n- **active** [boolean] - Whether this is the active version or not.\n- **staging** [boolean] - Whether or not this version is for staging.\n- **comment** [string] - A comment.\n- **deployed** [boolean] - Whether or not this version is deployed.\n\n[Documentation](https://docs.fastly.com/api/config#version_17843bfa35e0a73c7ef0a93dfa30ee8e)"
 					},
 					"response": []
 				},
@@ -6892,7 +6892,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/90/activate",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/activate",
 						"method": "PUT",
 						"header": [
 							{
@@ -6905,7 +6905,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nActivate the current version.\n\n**Request Configuration**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#version_0b79ae1ba6aee61d64cc4d43fed1e0d5)"
+						"description": "**Description:**\n\nActivate the current version.\n\n[Documentation](https://docs.fastly.com/api/config#version_0b79ae1ba6aee61d64cc4d43fed1e0d5)"
 					},
 					"response": []
 				},
@@ -6923,7 +6923,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/52/deactivate",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/deactivate",
 						"method": "PUT",
 						"header": [
 							{
@@ -6936,7 +6936,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nDeactivate the current version.\n\n**Request Configuration**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#version_c744fe5f2fcde52ec5006c13d7118a2c)"
+						"description": "**Description:**\n\nDeactivate the current version.\n\n[Documentation](https://docs.fastly.com/api/config#version_c744fe5f2fcde52ec5006c13d7118a2c)"
 					},
 					"response": []
 				},
@@ -6954,7 +6954,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/52/clone",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/clone",
 						"method": "PUT",
 						"header": [
 							{
@@ -6964,7 +6964,7 @@
 							}
 						],
 						"body": {},
-						"description": "**Description:**\n\nClone the current configuration into a new version.\n\n**Request Configuration**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#version_7f4937d0663a27fbb765820d4c76c709)"
+						"description": "**Description:**\n\nClone the current configuration into a new version.\n\n[Documentation](https://docs.fastly.com/api/config#version_7f4937d0663a27fbb765820d4c76c709)"
 					},
 					"response": []
 				},
@@ -6982,7 +6982,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/52/lock",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/lock",
 						"method": "PUT",
 						"header": [
 							{
@@ -6992,7 +6992,7 @@
 							}
 						],
 						"body": {},
-						"description": "**Description:**\n\nLocks the specified version.\n\n**Request Configuration**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#version_537991120983d50d1bed8308ba237e46)"
+						"description": "**Description:**\n\nLocks the specified version.\n\n[Documentation](https://docs.fastly.com/api/config#version_537991120983d50d1bed8308ba237e46)"
 					},
 					"response": []
 				}
@@ -7016,7 +7016,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/wordpress",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/wordpress",
 						"method": "GET",
 						"header": [
 							{
@@ -7029,7 +7029,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nGet all of the WordPress configurations for a specified service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n\n[Documentation](https://docs.fastly.com/api/config#wordpress_6398f3a4b9511962c746254f7fe37aa7)"
+						"description": "**Description:**\n\nGet all of the WordPress configurations for a specified service and version.\n\n[Documentation](https://docs.fastly.com/api/config#wordpress_6398f3a4b9511962c746254f7fe37aa7)"
 					},
 					"response": []
 				},
@@ -7047,7 +7047,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/wordpress",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/wordpress",
 						"method": "POST",
 						"header": [
 							{
@@ -7065,7 +7065,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"comment\":\"your_comment\",\n\t\"name\":\"your_wordpress_name\",\n\t\"path\":\"/blog\"\n}"
 						},
-						"description": "**Description:**\n\nCreate a WordPress configuration for the specified service and version.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- **comment** [string] - A comment.\n- **name** [string] - Name of the WordPress object.\n- **path** [string] - Requests to this path will use WordPress configuration.\n\n[Documentation](https://docs.fastly.com/api/config#wordpress_3719d163b1e6b80d4220d402df943073)"
+						"description": "**Description:**\n\nCreate a WordPress configuration for the specified service and version.\n\n**Request Configuration:**\n\n- **comment** [string] - A comment.\n- **name** [string] - Name of the WordPress object.\n- **path** [string] - Requests to this path will use WordPress configuration.\n\n[Documentation](https://docs.fastly.com/api/config#wordpress_3719d163b1e6b80d4220d402df943073)"
 					},
 					"response": []
 				},
@@ -7083,7 +7083,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/wordpress/your_wordpress_name",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/wordpress/your_wordpress_name",
 						"method": "GET",
 						"header": [
 							{
@@ -7096,7 +7096,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nGet a specific WordPress configuration.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **wordpress_name**\n\n[Documentation](https://docs.fastly.com/api/config#wordpress_09dfcaf0f9dab304e5f52c2297e51298)"
+						"description": "**Description:**\n\nGet a specific WordPress configuration.\n\n**Request Configuration:**\n\n- Update URL with **wordpress_name**\n\n[Documentation](https://docs.fastly.com/api/config#wordpress_09dfcaf0f9dab304e5f52c2297e51298)"
 					},
 					"response": []
 				},
@@ -7114,7 +7114,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/wordpress/your_wordpress_name",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/wordpress/your_wordpress_name",
 						"method": "PUT",
 						"header": [
 							{
@@ -7132,7 +7132,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"comment\":\"your_comment\",\n\t\"name\":\"your_wordpress_name\",\n\t\"path\":\"/update\"\n}"
 						},
-						"description": "**Description:**\n\nUpdate a specified WordPress configuration.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **wordpress_name**\n- **comment** [string] - A comment.\n- **name** [string] - Name of the WordPress object.\n- **path** [string] - Requests to this path will use WordPress configuration.\n\n\n[Documentation](https://docs.fastly.com/api/config#wordpress_3f47a802ddb1c959c368aebe07009803)"
+						"description": "**Description:**\n\nUpdate a specified WordPress configuration.\n\n**Request Configuration:**\n\n- Update URL with **wordpress_name**\n- **comment** [string] - A comment.\n- **name** [string] - Name of the WordPress object.\n- **path** [string] - Requests to this path will use WordPress configuration.\n\n\n[Documentation](https://docs.fastly.com/api/config#wordpress_3f47a802ddb1c959c368aebe07009803)"
 					},
 					"response": []
 				},
@@ -7150,7 +7150,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/service/{{service_id}}/version/50/wordpress/your_wordpress_name",
+						"url": " {{url}}/service/{{service_id}}/version/{{version_no}}/wordpress/your_wordpress_name",
 						"method": "DELETE",
 						"header": [
 							{
@@ -7163,7 +7163,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nDelete a specified WordPress configuration.\n\n**Request Configuration:**\n\n- Update URL with **version_no**\n- Update URL with **wordpress_name**\n\n[Documentation](https://docs.fastly.com/api/config#wordpress_33925affa9f17494004ec78b89a782ad)"
+						"description": "**Description:**\n\nDelete a specified WordPress configuration.\n\n**Request Configuration:**\n\n- Update URL with **wordpress_name**\n\n[Documentation](https://docs.fastly.com/api/config#wordpress_33925affa9f17494004ec78b89a782ad)"
 					},
 					"response": []
 				}
