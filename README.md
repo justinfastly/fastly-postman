@@ -19,16 +19,9 @@ You'll need [Postman](https://www.getpostman.com/) in order to get started. Post
 
 ## Install
 
-Clone or download this repository and open [Postman](https://www.getpostman.com/). You need to import the collection and environment `json` file. The repository provides the Postman collection format `v2`. The `v2` format is compared to `v1` more versatile and the most-used choice! Please read [this](http://blog.getpostman.com/2015/06/05/travelogue-of-postman-collection-format-v2/) article if you want to learn more about the different collection formats.
+Just click the button below to import the collection and environment:
 
-Click on the [Import](#usage) button on the top bar, and drag and drop:
-
-```
-fastly_postman_collection.json
-fastly_postman_environment.json
-```
-
-**You can delete the `fastlyApiCollection` folder after you have imported the collection and environment!**
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/6dd0e19fd9ee8f887442#?env%5BFastly%5D=W3siZW5hYmxlZCI6dHJ1ZSwia2V5IjoidXJsIiwidmFsdWUiOiJodHRwczovL2FwaS5mYXN0bHkuY29tIiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6InVzZXJuYW1lIiwidmFsdWUiOiJZT1VSX0ZBU1RMWV9VU0VSTkFNRSIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJwYXNzd29yZCIsInZhbHVlIjoiWU9VUl9GQVNUTFlfUEFTU1dPUkQiLCJ0eXBlIjoidGV4dCJ9LHsiZW5hYmxlZCI6dHJ1ZSwia2V5IjoidG9rZW4iLCJ2YWx1ZSI6IllPVVJfRkFTVExZX1RPS0VOIiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6ImN1c3RvbWVyX2lkIiwidmFsdWUiOiJZT1VSX0ZBU1RMWV9DVVNUT01FUl9JRCIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJ1c2VyX2lkIiwidmFsdWUiOiJZT1VSX1VTRVJfSUQiLCJ0eXBlIjoidGV4dCJ9LHsiZW5hYmxlZCI6dHJ1ZSwia2V5Ijoic2VydmljZV9pZCIsInZhbHVlIjoiWU9VUl9GQVNUTFlfU0VSVklDRV9JRCIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJzZXJ2aWNlX25hbWUiLCJ2YWx1ZSI6IllPVVJfRkFTVExZX1NFUlZJQ0VfTkFNRSIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJ2ZXJzaW9uX25vIiwidmFsdWUiOiJZT1VSX1ZFUlNJT05fTlVNQkVSIiwidHlwZSI6InRleHQifV0=)
 
 ## API Coverage
 
@@ -106,7 +99,7 @@ Some API endpoints require session authentication. These endpoints are not inclu
 
 ![Documentation](/screenshots/usage_6.png?raw=true "Documentation")
 
-Keep in mind that you can always extend the collection and environment functionality by adding more requests and variables. You can customize it for your needs. Don't forget to hit the `Save` button whenever you make changes you want to persist. Fastly is constantly updating their API. Please [contribute](#contribute) if you find any requests which are not covered, incomplete, or outdated.
+**Keep in mind that you can always extend the collection and environment functionality by adding more requests and variables. You can customize it for your needs. Don't forget to hit the `Save` button whenever you make changes you want to persist. Fastly is constantly updating their API. Please [contribute](#contribute) if you find any requests which are not covered, incomplete, or outdated.**
 
 ## Tests
 
@@ -121,13 +114,13 @@ Results are displayed in a `Tests` tab under the response viewer. The tab header
 
 ![Postman Sandbox](/screenshots/usage_7.png?raw=true "Postman Sandbox")
 
-The [Postman Collection Runner](https://www.getpostman.com/docs/postman/collection_runs/starting_a_collection_run) allows you to run either the entire collection or a single library against a corresponding environment. Don't forget to select an environment before you run your tests!
+The [Postman Collection Runner](https://www.getpostman.com/docs/postman/collection_runs/starting_a_collection_run) allows you to run either the entire collection or a single library against a corresponding environment. **Don't forget to select an environment before you run your tests!**
 
 ![Postman Collection Runner](/screenshots/usage_8.png?raw=true "Postman Collection Runner")
 
 I know that a lot of Fastly users build their own scripts to automate requests to the Fastly API. [Postman’s Newman Tool](https://www.getpostman.com/docs/postman/collection_runs/command_line_integration_with_newman) allows you to run and test a Postman Collection directly from the command line. It is built with extensibility in mind so that you can easily integrate it with your continuous integration servers and build systems.
 
-![Postman’s Newman Tool](/screenshots/usage_8.png?raw=true "Postman’s Newman Tool")
+![Postman’s Newman Tool](/screenshots/usage_9.png?raw=true "Postman’s Newman Tool")
 
 **I have added to each request at least one assertion to test the status code. I wanted to keep the collection as simple as possible. Feel free to add as many assertions to the collection as you like and as necessary for your needs!**
 
