@@ -1,6 +1,6 @@
 # Fastly API Collection for Postman
 
-This repository contains a [Postman](https://www.getpostman.com/) collection and an environment for the [Fastly API](https://docs.fastly.com/api/). The goal is to make the interaction with the API as easy as possible without running and modifying curl commands every time from scratch. You just have to update the environment variables with your account credentials to get started. Once setup is complete, you have another handy option to control your [Fastly](https://www.fastly.com/) account and services!
+This repository contains a [Postman](https://www.getpostman.com/) collection and an environment for the [Fastly API](https://docs.fastly.com/api/). The goal is to make the interaction with the API as easy as possible without running and modifying cURL commands every time from scratch. You just have to update the environment variables with your account credentials to get started. Once setup is complete, you have another handy option to control your [Fastly](https://www.fastly.com/) account and services!
 
 ![Banner](/screenshots/banner.png?raw=true "Fastly API Collection for Postman")
 
@@ -10,6 +10,7 @@ This repository contains a [Postman](https://www.getpostman.com/) collection and
 - [Install](#install)
 - [API Coverage](#api-coverage)
 - [Usage](#usage)
+- [Tests](#tests)
 - [Contribute](#contribute)
 
 ## Prerequisites
@@ -31,15 +32,12 @@ fastly_postman_environment.json
 
 ## API Coverage
 
-At the moment the collection contains **165** out of **167** requests.
+The following libraries are not part of this collection yet:
 
-The following libraries are not included:
-
-- Real-time analytics
-- Remote logging
-- Utilities
-- Web Application Firewall
-- Dynamic Servers
+- [Remote logging](https://docs.fastly.com/api/logging)
+- [Utilities](https://docs.fastly.com/api/tools)
+- [Web Application Firewall](https://docs.fastly.com/api/waf)
+- [Dynamic Servers](https://docs.fastly.com/api/dynamicservers)
 
 Some API endpoints require session authentication. These endpoints are not included even if Postman’s native apps provide a Cookie Manager. Below is a list of all supported libraries of the [Fastly API](https://docs.fastly.com/api/):
 
@@ -79,35 +77,59 @@ Some API endpoints require session authentication. These endpoints are not inclu
 | VCL              | 11                  | 11           | 100%     |
 | VCL Snippets     | 7                   | 7            | 100%     |
 | Version          | 9                   | 9            | 100%     |
-|                  | **160**             | **162**      | **99%**  |
+| Wordpress        | 5                   | 5            | 100%     |
+|                  | **165**             | **167**      | **99%**  |
 
 ## Usage
 
-1. Click on the `Manage Environments` button and select the `Fastly` environment. Update all key/value pairs with your account credentials and service information.
+1. Click on the `Manage Environments` button and select the `Fastly` environment. Update all key/value pairs with your account credentials and service information. The `password` and `username` properties are only necessary to be able to create new API tokens.
 
 ![Update Environment Variables](/screenshots/usage_1.png?raw=true "Update Environment Variables")
 
-2. Click on the `Manage Environments` button and select the `Fastly` environment. Rename the environment to your first service name and hit the `Update` button. Then click the `Duplicate Environment` button to clone the environment for each of your services. Select each environment to update the name to your service and update the values for `service_id` and `service_name`.
+2. Click on the `Manage Environments` button and select the `Fastly` environment. Rename the environment to your first service name and hit the `Update` button. Then click the `Duplicate Environment` button to clone the environment for each of your services. Select each environment to update the name to your service name and update the values for `service_id`, `service_name`, and `version_no`.
 
 ![Duplicate Environments](/screenshots/usage_2.png?raw=true "Duplicate Environments")
 
-3. Take a look at the screenshot below to get familiar with the basic Postman functionality. The Postman application has a very intuitive UI but in case you are looking for more information please look at their [docs](https://www.getpostman.com/docs/). **Don't forget to make sure you have selected the proper service environment before you fire any requests!**
+3. Take a look at the screenshot below to get familiar with the basic Postman functionality. The Postman application has a very intuitive UI but in case you are looking for more information please look at their [docs](https://www.getpostman.com/docs/). **Don't forget to select the proper service environment from the drop-down list before you fire any requests!**
 
 ![Basic Postman Functionality](/screenshots/usage_3.png?raw=true "Basic Postman Functionality")
 
-4. Another great feature of [Postman](https://www.getpostman.com/) is that you can generate code snippets for most command line and server side languages. All you need to do is to click on the `Generate Code Snippets` link and select your favorite language. Keep in mind that you are able to modify and copy the snippet.
+4. Another great feature of [Postman](https://www.getpostman.com/) is that you can generate code snippets for cURL and most server side languages. All you need to do is to click on the `Generate Code Snippets` link and select your favorite language. Keep in mind that you are able to modify and copy the snippet.
 
 ![Generate Code Snippets](/screenshots/usage_4.png?raw=true "Generate Code Snippets")
 
-5. That's not everything! [Postman](https://www.getpostman.com/) also generates generates a beautiful documentation of the entire collection. Toggle the `Details Toolbar` and click the `View Docs` button to open the documentation in your web browser.
+5. That's not everything! [Postman](https://www.getpostman.com/) also generates a beautiful documentation of the entire collection. Toggle the `Details Toolbar` and click the `View Docs` button to open the documentation in your web browser.
 
 ![Open Documentation](/screenshots/usage_5.png?raw=true "Open Documentation")
 
-6. The documentation provides the description, headers, body, and a sample request for all endpoints. You can switch the environment and choose your prefered language to generate a sample request with the associated variables. You can copy the request to the clipboard and paste it into your scripts to fire requests to the [Fastly API](https://docs.fastly.com/api/) outside of [Postman](https://www.getpostman.com/).
+6. The collection provides the description, headers, body, and a sample request for all endpoints. **Each request description provides a link to the Fastly docs to redirect you to the associated endpoint documentation!** You can switch the environment and choose your prefered language to generate a sample request with the associated variables. You can copy the request to the clipboard and paste it into your scripts.
 
 ![Documentation](/screenshots/usage_6.png?raw=true "Documentation")
 
-Keep in mind that you can always extend the collection and environment functionality buy adding more endpoints and variables. Don't forget to hit the `Save` button whenever you make changes you want to persist. Fastly is constantly updating the API. Please [contribute](#contribute) if you find any requests which are not covered, incomplete, or outdated.
+Keep in mind that you can always extend the collection and environment functionality by adding more requests and variables. You can customize it for your needs. Don't forget to hit the `Save` button whenever you make changes you want to persist. Fastly is constantly updating their API. Please [contribute](#contribute) if you find any requests which are not covered, incomplete, or outdated.
+
+## Tests
+
+The main feature of [Postman](https://www.getpostman.com/) is testing APIs. With Postman you can write and run tests for each request using the JavaScript language. Postman allows you to loop through the data returned by an API and perform sequential requests and tests using that data. It contains a powerful runtime based on [Node.js](https://nodejs.org/en/) that allows you to add dynamic behavior to requests and collections. This allows you to write test suites, build requests that can contain dynamic parameters, pass data between requests, and a lot more. You can add JavaScript code to execute during 2 events in the flow:
+
+1. Before a request is sent to the server, as a [pre-request script](https://www.getpostman.com/docs/postman/scripts/pre_request_scripts) under the Pre-request Script tab.
+2. After a response is received, as a [test script](https://www.getpostman.com/docs/postman/scripts/test_scripts) under the Tests tab.
+
+Whatever code you write in these sections is executed in the [Postman Sandbox](https://www.getpostman.com/docs/postman/scripts/postman_sandbox). To check what is available in the sandbox, take a look at the [documentation](https://www.getpostman.com/docs/postman/scripts/postman_sandbox). Postman tries to make the process easier by listing commonly used snippets next to the editor. You can select the snippet you want to add and the appropriate code will be added to the test editor. This is a great way to quickly build test cases.
+
+Results are displayed in a `Tests` tab under the response viewer. The tab header shows how many tests passed, and the keys that you set in the tests variable are listed here. If the value evaluates to true, the test passed.
+
+![Postman Sandbox](/screenshots/usage_7.png?raw=true "Postman Sandbox")
+
+The [Postman Collection Runner](https://www.getpostman.com/docs/postman/collection_runs/starting_a_collection_run) allows you to run either the entire collection or a single library against a corresponding environment. Don't forget to select an environment before you run your tests!
+
+![Postman Collection Runner](/screenshots/usage_8.png?raw=true "Postman Collection Runner")
+
+I know that a lot of Fastly users build their own scripts to automate requests to the Fastly API. [Postman’s Newman Tool](https://www.getpostman.com/docs/postman/collection_runs/command_line_integration_with_newman) allows you to run and test a Postman Collection directly from the command line. It is built with extensibility in mind so that you can easily integrate it with your continuous integration servers and build systems.
+
+![Postman’s Newman Tool](/screenshots/usage_8.png?raw=true "Postman’s Newman Tool")
+
+**I have added to each request at least one assertion to test the status code. I wanted to keep the collection as simple as possible. Feel free to add as many assertions to the collection as you like and as necessary for your needs!**
 
 ## Contribute
 
