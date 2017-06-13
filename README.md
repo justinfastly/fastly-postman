@@ -21,7 +21,7 @@ You'll need [Postman](https://www.getpostman.com/) in order to get started. Post
 
 Just click the button below to import the collection and environment:
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/6dd0e19fd9ee8f887442#?env%5BFastly%5D=W3siZW5hYmxlZCI6dHJ1ZSwia2V5IjoidXJsIiwidmFsdWUiOiJodHRwczovL2FwaS5mYXN0bHkuY29tIiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6InVzZXJuYW1lIiwidmFsdWUiOiJZT1VSX0ZBU1RMWV9VU0VSTkFNRSIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJwYXNzd29yZCIsInZhbHVlIjoiWU9VUl9GQVNUTFlfUEFTU1dPUkQiLCJ0eXBlIjoidGV4dCJ9LHsiZW5hYmxlZCI6dHJ1ZSwia2V5IjoidG9rZW4iLCJ2YWx1ZSI6IllPVVJfRkFTVExZX1RPS0VOIiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6ImN1c3RvbWVyX2lkIiwidmFsdWUiOiJZT1VSX0ZBU1RMWV9DVVNUT01FUl9JRCIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJ1c2VyX2lkIiwidmFsdWUiOiJZT1VSX1VTRVJfSUQiLCJ0eXBlIjoidGV4dCJ9LHsiZW5hYmxlZCI6dHJ1ZSwia2V5Ijoic2VydmljZV9pZCIsInZhbHVlIjoiWU9VUl9GQVNUTFlfU0VSVklDRV9JRCIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJzZXJ2aWNlX25hbWUiLCJ2YWx1ZSI6IllPVVJfRkFTVExZX1NFUlZJQ0VfTkFNRSIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJ2ZXJzaW9uX25vIiwidmFsdWUiOiJZT1VSX1ZFUlNJT05fTlVNQkVSIiwidHlwZSI6InRleHQifV0=)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/9e9e62eccd855d14c54b#?env%5BFastly%5D=W3siZW5hYmxlZCI6dHJ1ZSwia2V5IjoidXJsIiwidmFsdWUiOiJodHRwczovL2FwaS5mYXN0bHkuY29tIiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6InVzZXJuYW1lIiwidmFsdWUiOiJZT1VSX0ZBU1RMWV9VU0VSTkFNRSIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJwYXNzd29yZCIsInZhbHVlIjoiWU9VUl9GQVNUTFlfUEFTU1dPUkQiLCJ0eXBlIjoidGV4dCJ9LHsiZW5hYmxlZCI6dHJ1ZSwia2V5IjoidG9rZW4iLCJ2YWx1ZSI6IllPVVJfRkFTVExZX1RPS0VOIiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6ImN1c3RvbWVyX2lkIiwidmFsdWUiOiJZT1VSX0ZBU1RMWV9DVVNUT01FUl9JRCIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJ1c2VyX2lkIiwidmFsdWUiOiJZT1VSX1VTRVJfSUQiLCJ0eXBlIjoidGV4dCJ9LHsiZW5hYmxlZCI6dHJ1ZSwia2V5Ijoic2VydmljZV9pZCIsInZhbHVlIjoiWU9VUl9GQVNUTFlfU0VSVklDRV9JRCIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJzZXJ2aWNlX25hbWUiLCJ2YWx1ZSI6IllPVVJfRkFTVExZX1NFUlZJQ0VfTkFNRSIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJ2ZXJzaW9uX25vIiwidmFsdWUiOiJZT1VSX1ZFUlNJT05fTlVNQkVSIiwidHlwZSI6InRleHQifV0=)
 
 ## API Coverage
 
@@ -51,7 +51,6 @@ Some API endpoints require session authentication. These endpoints are not inclu
 | Director         | 5                   | 5            | 100%     |
 | Director Backend | 3                   | 3            | 100%     |
 | Domain           | 7                   | 7            | 100%     |
-| Event Log        | 1                   | 1            | 100%     |
 | Event Logs       | 2                   | 2            | 100%     |
 | Gzip             | 5                   | 5            | 100%     |
 | Header           | 5                   | 5            | 100%     |
@@ -70,8 +69,7 @@ Some API endpoints require session authentication. These endpoints are not inclu
 | VCL              | 11                  | 11           | 100%     |
 | VCL Snippets     | 7                   | 7            | 100%     |
 | Version          | 9                   | 9            | 100%     |
-| Wordpress        | 5                   | 5            | 100%     |
-|                  | **165**             | **167**      | **99%**  |
+|                  | **159**             | **161**      | **99%**  |
 
 ## Usage
 

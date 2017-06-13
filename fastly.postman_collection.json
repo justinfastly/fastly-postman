@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "Fastly",
-		"_postman_id": "10aae39f-96f6-723f-df0a-3626879fb542",
+		"_postman_id": "c9407279-cf5a-204e-5c96-eefffbc350ff",
 		"description": "The Fastly API is a RESTful API that supports all features available through the Fastly web interface. Use the libraries below to guide the development of your sites and applications.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -1750,7 +1750,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"item_key\": \"some_key\",\n\t\"item_value\": \"updated_value\"\n}"
+							"raw": "{\n\t\"item_key\": \"some_key\",\n\t\"item_value\": \"some_value\"\n}"
 						},
 						"description": "**Description:**\n\nCreate DictionaryItem given service, dictionary ID, item key, and item value.\n\n**Request Configuration:**\n\n- **item_key** [string] - Key for the Dictionary Item.\n- **item_value** [string] - Value for the Dictionary Item.\n\n[Documentation](https://docs.fastly.com/api/config#dictionary_item_6ec455c0ba1b21671789e1362bc7fe55)"
 					},
@@ -2527,43 +2527,6 @@
 			]
 		},
 		{
-			"name": "Event Log",
-			"description": "EventLogs keep track of things that occur within your services or organization. We track events such as activation and deactivation of Versions and mass purges.\n\n[Event Log Documentation](https://docs.fastly.com/api/account#event_log)",
-			"item": [
-				{
-					"name": "/event_log/service_id",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									"tests[\"Status code is 200\"] = responseCode.code === 200;"
-								]
-							}
-						}
-					],
-					"request": {
-						"url": " {{url}}/event_log/{{service_id}}",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Fastly-Key",
-								"value": "{{token}}",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"description": "**Description:**\n\nGet the specified event log.\n\n[Documentation](https://docs.fastly.com/api/account#event_log_ec1aa4c6ee90ac79296b84fc3b0e5cfe)"
-					},
-					"response": []
-				}
-			]
-		},
-		{
 			"name": "Event Logs",
 			"description": "Event logs used to audit actions performed by customers. Events can be filtered by user_id, service_id, customer_id and event_type.\n\n[Event Logs Documentation](https://docs.fastly.com/api/account#events)",
 			"item": [
@@ -2614,7 +2577,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/events?filter[customer_id]={{customer_id}}&page[number]=1&page[size]=1",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -2669,7 +2631,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/events?filter[service_id]={{service_id}}&page[number]=1&page[size]=3",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -2724,7 +2685,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/events?filter[user_id]={{user_id}}&page[number]=1&page[size]=3",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -3362,7 +3322,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats?from=46+minutes+ago&to=5+minutes+ago&by=minute&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -3421,7 +3380,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -3480,7 +3438,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats?from=6+days+ago&to=3+days+ago&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -3539,7 +3496,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats?from=1494374400&to=1494547200&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -3598,7 +3554,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -3657,7 +3612,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats?from=5-10-2017&to=5-12-2017&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -3747,7 +3701,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/field/hit_ratio?from=56+minutes+ago&to=38+minutes+ago&by=minute&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -3808,7 +3761,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/field/hit_ratio?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -3869,7 +3821,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/field/hit_ratio?from=6+days+ago&to=3+days+ago&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -3930,7 +3881,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/field/hit_ratio?from=1494374400&to=1494547200&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -3991,7 +3941,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/field/hit_ratio?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -4052,7 +4001,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/field/hit_ratio?from=5-10-2017&to=5-12-2017&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -4144,7 +4092,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/aggregate?from=56+minutes+ago&to=23+minutes+ago&by=minute&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -4204,7 +4151,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/aggregate?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -4264,7 +4210,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/aggregate?from=6+days+ago&to=3+days+ago&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -4324,7 +4269,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/aggregate?from=1494374400&to=1494547200&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -4384,7 +4328,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/aggregate?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -4444,7 +4387,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/aggregate?from=5-10-2017&to=5-12-2017&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -4535,7 +4477,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/service/{{service_id}}?from=56+minutes+ago&to=23+minutes+ago&by=minute&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -4596,7 +4537,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/service/{{service_id}}?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -4657,7 +4597,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/service/{{service_id}}?from=6+days+ago&to=3+days+ago&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -4718,7 +4657,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/service/{{service_id}}?from=1494374400&to=1494547200&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -4779,7 +4717,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/service/{{service_id}}?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -4840,7 +4777,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/service/{{service_id}}?from=5-10-2017&to=5-12-2017&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -4932,7 +4868,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=56+minutes+ago&to=23+minutes+ago&by=minute&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -4995,7 +4930,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -5058,7 +4992,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=6+days+ago&to=3+days+ago&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -5121,7 +5054,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=1494374400&to=1494547200&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -5184,7 +5116,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -5247,7 +5178,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/service/{{service_id}}/field/bandwidth?from=5-10-2017&to=5-12-2017&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -5341,7 +5271,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/usage?from=56+minutes+ago&to=23+minutes+ago&by=minute&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -5401,7 +5330,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/usage?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -5461,7 +5389,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/usage?from=6+days+ago&to=3+days+ago&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -5521,7 +5448,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/usage?from=1494374400&to=1494547200&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -5581,7 +5507,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/usage?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -5641,7 +5566,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/usage?from=5-10-2017&to=5-12-2017&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -5732,7 +5656,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/usage_by_service?from=56+minutes+ago&to=23+minutes+ago&by=minute&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -5792,7 +5715,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/usage_by_service?from=6+hours+ago&to=3+hours+ago&by=hour&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -5852,7 +5774,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/usage_by_service?from=6+days+ago&to=3+days+ago&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -5912,7 +5833,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/usage_by_service?from=1494374400&to=1494547200&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -5972,7 +5892,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/usage_by_service?from=05%2F10%2F2017&to=05%2F12%2F2017&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -6032,7 +5951,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/stats/usage_by_service?from=5-10-2017&to=5-12-2017&by=day&region=usa",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -6829,7 +6747,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/service/search?name={{service_name}}",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -7232,7 +7149,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/service/{{service_id}}/stats/summary?year=2017&month=4",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -7290,7 +7206,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/service/{{service_id}}/stats/summary?start_time=1494374400&end_time=1494547200",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -7348,7 +7263,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/service/{{service_id}}/stats/summary?start_time=2017-03-24T06:51:13Z&end_time=2017-04-24T06:51:13Z",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -7779,7 +7693,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/vcl/your_vcl/content?lineno=true",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
@@ -7896,7 +7809,6 @@
 					"request": {
 						"url": {
 							"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/generated_vcl/content?lineno=true",
-							"auth": {},
 							"host": [
 								"{{url}}"
 							],
