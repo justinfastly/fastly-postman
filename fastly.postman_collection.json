@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "Fastly",
-		"_postman_id": "c9407279-cf5a-204e-5c96-eefffbc350ff",
+		"_postman_id": "58557ebf-9e3b-b15f-3458-3ad9fbfaebcd",
 		"description": "The Fastly API is a RESTful API that supports all features available through the Fastly web interface. Use the libraries below to guide the development of your sites and applications.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -7409,7 +7409,7 @@
 					"response": []
 				},
 				{
-					"name": "/current_user/password",
+					"name": "/user/password",
 					"event": [
 						{
 							"listen": "test",
@@ -7422,7 +7422,7 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/current_user/password",
+						"url": " {{url}}/user/password",
 						"method": "POST",
 						"header": [
 							{
@@ -7438,7 +7438,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"old_password\": \"super_secure\",\n\t\"new_password\": \"super_mega_secure\"\n}"
+							"raw": "{\n\t\"data\": {\n\t\t\"type\":\"user\",\n\t\t\"id\":\"{{user_id}}\",\n\t\t\"attributes\": {\n\t\t\t\"old_password\":\"{{password}}\",\n\t\t\t\"new_password\":\"super_mega_secure_password\"\n\t\t}\n\t}\n}"
 						},
 						"description": "**Description:**\n\nUpdate the user's password to a new one.\n\n**Request Configuration:**\n\n- **old_password** [string] - The old password.\n- **new_password** [string] - The new password.\n\n[Documentation](https://docs.fastly.com/api/account#user_711c16f29c73b9532eabbf332cc4ee1d)"
 					},
@@ -7460,13 +7460,7 @@
 					"request": {
 						"url": " {{url}}/user/x9KzsrACXZv8tPwlEDsKb6/password/request_reset",
 						"method": "POST",
-						"header": [
-							{
-								"key": "Fastly-Key",
-								"value": "{{token}}",
-								"description": ""
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
 							"raw": ""
