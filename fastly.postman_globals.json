@@ -1,0 +1,45 @@
+{
+  "id": "8b601f74-58a4-a0a0-9d31-6952b8b38494",
+  "name": "Postman Globals",
+  "values": [
+    {
+      "key": "url",
+      "value": "https://api.fastly.com",
+      "type": "text",
+      "enabled": true
+    },
+    {
+      "key": "username",
+      "value": "YOUR_FASTLY_USERNAME",
+      "type": "text",
+      "enabled": true
+    },
+    {
+      "key": "password",
+      "value": "YOUR_FASTLY_PASSWORD",
+      "type": "text",
+      "enabled": true
+    },
+    {
+      "key": "token",
+      "value": "YOUR_FASTLY_TOKEN",
+      "type": "text",
+      "enabled": true
+    },
+    {
+      "key": "customer_id",
+      "value": "YOUR_FASTLY_CUSTOMER_ID",
+      "type": "text",
+      "enabled": true
+    },
+    {
+      "key": "user_id",
+      "value": "YOUR_USER_ID",
+      "type": "text",
+      "enabled": true
+    }
+  ],
+  "_postman_variable_scope": "globals",
+  "_postman_exported_at": "2017-06-15T18:15:05.391Z",
+  "_postman_exported_using": "Postman/5.0.0"
+}
