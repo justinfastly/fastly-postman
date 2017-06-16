@@ -1,6 +1,6 @@
 # Fastly API Collection for Postman
 
-This repository contains a [Postman](https://www.getpostman.com/) collection and an environment for the [Fastly API](https://docs.fastly.com/api/). The goal is to make the interaction with the API as easy as possible without running and modifying cURL commands every time from scratch. You just have to update the environment variables with your account credentials to get started. Once setup is complete, you have another handy option to control your [Fastly](https://www.fastly.com/) account and services!
+This repository contains a [Postman](https://www.getpostman.com/) collection and an environment for the [Fastly API](https://docs.fastly.com/api/). The goal is to make the interaction with the API as easy as possible without running and modifying cURL commands every time from scratch. You just need to update the global and environment variables to get started. Once setup is complete, you have another handy option to control your [Fastly](https://www.fastly.com/) account and services!
 
 ![Banner](/screenshots/banner.png?raw=true "Fastly API Collection for Postman")
 
@@ -19,9 +19,41 @@ You'll need [Postman](https://www.getpostman.com/) in order to get started. Post
 
 ## Install
 
-Just click the button below to import the collection and environment:
+Clone or download this repository and open [Postman](https://www.getpostman.com/). I recommend to clone it by typing the following command in your terminal:
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/b540d967daa7bf414132#?env%5BFastly%5D=W3siZW5hYmxlZCI6dHJ1ZSwia2V5IjoidXJsIiwidmFsdWUiOiJodHRwczovL2FwaS5mYXN0bHkuY29tIiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6InVzZXJuYW1lIiwidmFsdWUiOiJZT1VSX0ZBU1RMWV9VU0VSTkFNRSIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJwYXNzd29yZCIsInZhbHVlIjoiWU9VUl9GQVNUTFlfUEFTU1dPUkQiLCJ0eXBlIjoidGV4dCJ9LHsiZW5hYmxlZCI6dHJ1ZSwia2V5IjoidG9rZW4iLCJ2YWx1ZSI6IllPVVJfRkFTVExZX1RPS0VOIiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6ImN1c3RvbWVyX2lkIiwidmFsdWUiOiJZT1VSX0ZBU1RMWV9DVVNUT01FUl9JRCIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJ1c2VyX2lkIiwidmFsdWUiOiJZT1VSX1VTRVJfSUQiLCJ0eXBlIjoidGV4dCJ9LHsiZW5hYmxlZCI6dHJ1ZSwia2V5Ijoic2VydmljZV9pZCIsInZhbHVlIjoiWU9VUl9GQVNUTFlfU0VSVklDRV9JRCIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJzZXJ2aWNlX25hbWUiLCJ2YWx1ZSI6IllPVVJfRkFTVExZX1NFUlZJQ0VfTkFNRSIsInR5cGUiOiJ0ZXh0In0seyJlbmFibGVkIjp0cnVlLCJrZXkiOiJ2ZXJzaW9uX25vIiwidmFsdWUiOiJZT1VSX1ZFUlNJT05fTlVNQkVSIiwidHlwZSI6InRleHQifV0=)
+```
+$ git clone https://github.com/philippschulte/fastlyApiCollection.git
+```
+
+This way it is easier to fetch the latest changes by typing:
+
+```
+$ git pull origin master
+```
+
+Fastly is constantly updating their API and I'll try to keep up with them. By pulling the latest changes from the master branch you can avoid downloading the repository over and over again!
+
+Then you need to import the collection, environment, and globals `JSON` file. Click on the [Import](#usage) button on the top bar, and drag and drop:
+
+```
+fastly.postman_collection.json
+fastly.postman_environment.json
+fastly.postman_globals.json
+```
+
+You'll maybe notice an error message like:
+
+```
+Failed to import data: Could not import: TypeError: Cannot read property 'id' of null
+```
+
+Important is that you see the following messages:
+
+- Collection Fastly imported
+- Environment Fastly imported
+- Globals imported
+
+**Don't worry about the error message! I don't know why Postman is throwing this error but I have tested the setup and everything is working like a charm!**
 
 ## API Coverage
 
