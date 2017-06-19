@@ -31,9 +31,7 @@ This way it is easier to fetch the latest changes by typing:
 $ git pull origin master
 ```
 
-Fastly is constantly updating their API and I'll try to keep up with them. By pulling the latest changes from the master branch you can avoid downloading the repository over and over again!
-
-Then you need to import the collection, environment, and globals `JSON` file. Click on the [Import](#usage) button on the top bar, and drag and drop:
+By pulling the latest changes from the master branch you can avoid downloading the repository over and over again! Then you need to import the collection, environment, and globals `JSON` file. Click on the [Import](#usage) button on the top bar, and drag and drop:
 
 ```
 fastly.postman_collection.json
@@ -105,63 +103,76 @@ Some API endpoints require session authentication. These endpoints are not inclu
 
 ## Usage
 
-1. Click on the `Manage Environments` button and select the `Fastly` environment. Update all key/value pairs with your account credentials and service information. The `password` and `username` properties are only necessary to be able to create new API tokens.
+1. Click on the `Manage Environments` button and then on the `Globals` button at the bottom of the window. Update all global variables with your account information. The `username` and `password` fields are only necessary if you want to create API Tokens. **Don't change the variable names unless you want to update all request configurations!**
 
-![Update Environment Variables](/screenshots/usage_1.png?raw=true "Update Environment Variables")
+![Update Global Variables](/screenshots/usage_1.png?raw=true "Update Global Variables")
 
-2. Click on the `Manage Environments` button and select the `Fastly` environment. Rename the environment to your first service name and hit the `Update` button. Then click the `Duplicate Environment` button to clone the environment for each of your services. Select each environment to update the name to your service name and update the values for `service_id`, `service_name`, and `version_no`.
+2. Click on the `Manage Environments` button and select the `Fastly` environment. Rename the environment. It probably makes sense to use the `service name` or the `service ID` to name your environments. Update all environment variables with your service information. **Please do yourself a favor and don't update the variable names! If you do change them you'll need to update all request configurations!** Keep in mind that you can add as many variables as you want to your environment. To use a variable you need to enclose the variable name with double curly braces – `{{my_variable_name}}`. You can reference your variables in headers, body, and tests.
 
-![Duplicate Environments](/screenshots/usage_2.png?raw=true "Duplicate Environments")
+![Update Environment Variables](/screenshots/usage_2.png?raw=true "Update Environment Variables")
 
-3. Take a look at the screenshot below to get familiar with the basic Postman functionality. The Postman application has a very intuitive UI but in case you are looking for more information please look at their [docs](https://www.getpostman.com/docs/). **Don't forget to select the proper service environment from the drop-down list before you fire any requests!**
+3. Click on the `Manage Environments` button and then click the `Duplicate Environment` button to create an environment for each of your services. Select each environment to update the name and the values for `service_id`, `service_name`, and `version_no`. Within this window you can also export or delete and environment.
 
-![Basic Postman Functionality](/screenshots/usage_3.png?raw=true "Basic Postman Functionality")
+![Duplicate Environments](/screenshots/usage_3.png?raw=true "Duplicate Environments")
 
-4. Another great feature of [Postman](https://www.getpostman.com/) is that you can generate code snippets for cURL and most server side languages. All you need to do is to click on the `Generate Code Snippets` link and select your favorite language. Keep in mind that you are able to modify and copy the snippet.
+4. Take a look at the screenshot below to get familiar with the basic Postman functionality. The Postman application has a very intuitive UI but in case you are looking for more information please look at their [docs](https://www.getpostman.com/docs/). You can find all the necessary request information in the description section. **Each request description provides a link to redirect you to the associated Fastly documentation! You can find the link at the bottom of the description section.**
 
-![Generate Code Snippets](/screenshots/usage_4.png?raw=true "Generate Code Snippets")
+![Basic Postman Functionality](/screenshots/usage_4.png?raw=true "Basic Postman Functionality")
 
-5. That's not everything! [Postman](https://www.getpostman.com/) also generates a beautiful documentation of the entire collection. Toggle the `Details Toolbar` and click the `View Docs` button to open the documentation in your web browser.
+5. Another great feature of [Postman](https://www.getpostman.com/) is that you can generate code snippets for cURL and most server side languages. All you need to do is to click on the `Generate Code Snippets` link and select your favorite language. **This feature is awesome because your environment variables are replaced with their corresponding values! Technically there are no changes necessary in order to send the requests from you scripts!**
 
-![Open Documentation](/screenshots/usage_5.png?raw=true "Open Documentation")
+![Generate Code Snippets](/screenshots/usage_5.png?raw=true "Generate Code Snippets")
 
-6. The collection provides the description, headers, body, and a sample request for all endpoints. **Each request description provides a link to the Fastly docs to redirect you to the associated endpoint documentation!** You can switch the environment and choose your prefered language to generate a sample request with the associated variables. You can copy the request to the clipboard and paste it into your scripts.
+Don't forget that you can always customize this collection and environment to meet your needs like:
 
-![Documentation](/screenshots/usage_6.png?raw=true "Documentation")
+1. [Managing collections](https://www.getpostman.com/docs/postman/collections/managing_collections)
+2. [Adding requests](https://www.getpostman.com/docs/postman/sending_api_requests/requests)
+3. [Adding new variables to your environments like surrogate keys](https://www.getpostman.com/docs/postman/environments_and_globals/variables)
+4. [Adding test scripts](https://www.getpostman.com/docs/postman/scripts/test_scripts)
 
-**Keep in mind that you can always extend the collection and environment functionality by adding more requests and variables. You can customize it for your needs. Don't forget to hit the `Save` button whenever you make changes you want to persist. Fastly is constantly updating their API. Please [contribute](#contribute) if you find any requests which are not covered, incomplete, or outdated.**
+**Always hit the `Save` button whenever you make changes you want to persist and don't forget to select the proper environment from the drop-down list before you fire any requests!**
 
 ## Tests
 
-The main feature of [Postman](https://www.getpostman.com/) is testing APIs. With Postman you can write and run tests for each request using the JavaScript language. Postman allows you to loop through the data returned by an API and perform sequential requests and tests using that data. It contains a powerful runtime based on [Node.js](https://nodejs.org/en/) that allows you to add dynamic behavior to requests and collections. This allows you to write test suites, build requests that can contain dynamic parameters, pass data between requests, and a lot more. You can add JavaScript code to execute during 2 events in the flow:
+With [Postman](https://www.getpostman.com/) you can write and run tests for each request using the JavaScript language. Postman allows you to loop through the data returned by an API and perform sequential requests and tests using that data.
+
+It contains a powerful runtime based on [Node.js](https://nodejs.org/en/) that allows you to add dynamic behavior to requests and collections. This allows you to write test suites, build requests that can contain dynamic parameters, pass data between requests, and a lot more. You can add JavaScript code to execute during 2 events in the flow:
 
 1. Before a request is sent to the server, as a [pre-request script](https://www.getpostman.com/docs/postman/scripts/pre_request_scripts) under the Pre-request Script tab.
 2. After a response is received, as a [test script](https://www.getpostman.com/docs/postman/scripts/test_scripts) under the Tests tab.
 
-Whatever code you write in these sections is executed in the [Postman Sandbox](https://www.getpostman.com/docs/postman/scripts/postman_sandbox). To check what is available in the sandbox, take a look at the [documentation](https://www.getpostman.com/docs/postman/scripts/postman_sandbox). Postman tries to make the process easier by listing commonly used snippets next to the editor. You can select the snippet you want to add and the appropriate code will be added to the test editor. This is a great way to quickly build test cases.
+Whatever code you write in these sections is executed in the [Postman Sandbox](https://www.getpostman.com/docs/postman/scripts/postman_sandbox). To check what is available in the sandbox, take a look at their [docs](https://www.getpostman.com/docs/postman/scripts/postman_sandbox). Postman tries to make the process easier by listing commonly used snippets next to the editor. You can select the snippet you want to add and the appropriate code will be added to the test editor. This is a great way to quickly build test cases.
 
 Results are displayed in a `Tests` tab under the response viewer. The tab header shows how many tests passed, and the keys that you set in the tests variable are listed here. If the value evaluates to true, the test passed.
 
-![Postman Sandbox](/screenshots/usage_7.png?raw=true "Postman Sandbox")
+![Postman Sandbox](/screenshots/usage_6.png?raw=true "Postman Sandbox")
 
 The [Postman Collection Runner](https://www.getpostman.com/docs/postman/collection_runs/starting_a_collection_run) allows you to run either the entire collection or a single library against a corresponding environment. **Don't forget to select an environment before you run your tests!**
 
-![Postman Collection Runner](/screenshots/usage_8.png?raw=true "Postman Collection Runner")
+![Postman Collection Runner](/screenshots/usage_7.png?raw=true "Postman Collection Runner")
 
 I know that a lot of Fastly users build their own scripts to automate requests to the Fastly API. [Postman’s Newman Tool](https://www.getpostman.com/docs/postman/collection_runs/command_line_integration_with_newman) allows you to run and test a Postman Collection directly from the command line. It is built with extensibility in mind so that you can easily integrate it with your continuous integration servers and build systems.
 
-![Postman’s Newman Tool](/screenshots/usage_9.png?raw=true "Postman’s Newman Tool")
+For instance, if you want to run your assertions for the `Dictionary` library in the terminal, you just need to type:
 
-**I have added to each request at least one assertion to test the status code. I wanted to keep the collection as simple as possible. Feel free to add as many assertions to the collection as you like and as necessary for your needs!**
+```
+$ newman run fastly.postman_collection.json -e fastly.postman_environment.json -g fastly.postman_globals.json --folder Dictionary
+```
+
+![Postman’s Newman Tool](/screenshots/usage_8.png?raw=true "Postman’s Newman Tool")
+
+**I have added to each request at least one assertion to test the status code. I wanted to keep the collection as simple as possible! Feel free to add as many assertions to the collection as you like and as necessary to meet your needs!**
 
 ## Contribute
 
-In general, I follow the "fork-and-pull" Git workflow.
+Fastly is constantly updating their API. I'll try my best to keep up with them but please contribute if you find any requests which are not covered, incomplete, or outdated.
 
- 1. **Fork** the repo on GitHub
- 2. **Clone** the project to your own machine
- 3. **Commit** changes to your own branch
- 4. **Push** your work back up to your fork
+In general, I follow the "[shared repository model](https://gist.github.com/seshness/3943237)" Git workflow.
+
+ 1. **Clone** the project to your own machine
+ 2. **Create** a new feature branch
+ 3. **Commit** changes to the feature branch
+ 4. **Push** your feature branch to the GitHub remote
  5. Submit a **Pull request** so that I can review your changes
 
 NOTE: Be sure to merge the latest from "upstream" before making a pull request!
