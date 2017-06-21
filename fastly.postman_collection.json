@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "Fastly",
-		"_postman_id": "58557ebf-9e3b-b15f-3458-3ad9fbfaebcd",
+		"_postman_id": "be5b7c3d-c806-a53b-de36-2d9a775213ff",
 		"description": "The Fastly API is a RESTful API that supports all features available through the Fastly web interface. Use the libraries below to guide the development of your sites and applications.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -511,7 +511,7 @@
 						"header": [
 							{
 								"key": "Fastly-OTP",
-								"value": "490122",
+								"value": "613689",
 								"description": ""
 							},
 							{
@@ -812,7 +812,7 @@
 			"description": "Get information on current and past bills.\n\n[Billing Documentation](https://docs.fastly.com/api/account#billing)",
 			"item": [
 				{
-					"name": " /billing/year/billing_year/month/billing_month",
+					"name": "/billing/v2/year/billing_year/month/billing_month",
 					"event": [
 						{
 							"listen": "test",
@@ -825,7 +825,7 @@
 						}
 					],
 					"request": {
-						"url": "{{url}}/billing/year/2017/month/01",
+						"url": "{{url}}/billing/v2/year/2017/month/01",
 						"method": "GET",
 						"header": [
 							{
@@ -838,7 +838,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nGet the invoice for a given year and month.\n\n**Request Configuration:**\n\n- Update URL with **billing_year**\n- Update URL with **billing_month**\n\n[Documentation](https://docs.fastly.com/api/account#billing_bd3ea2cbea58ddbb82bbde0c1981fd8b)"
+						"description": "**Description:**\n\nGet the invoice for a given year and month.\n\n**Request Configuration:**\n\n- Update URL with **billing_year**\n- Update URL with **billing_month**\n\n[Documentation](https://docs.fastly.com/api/account#billing_66fbdce6042f18eddff809a17e329a3b)"
 					},
 					"response": []
 				}
