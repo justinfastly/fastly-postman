@@ -87,7 +87,6 @@ Some API endpoints require session authentication. These endpoints are not inclu
 | Healthcheck      | 5                   | 5            | 100%     |
 | Historical Stats | 8                   | 8            | 100%     |
 | Invitation       | 3                   | 3            | 100%     |
-| Pricing Extras   | 2                   | 2            | 100%     |
 | Purging          | 4                   | 4            | 100%     |
 | Request Settings | 5                   | 5            | 100%     |
 | Response Object  | 5                   | 5            | 100%     |
@@ -99,7 +98,7 @@ Some API endpoints require session authentication. These endpoints are not inclu
 | VCL              | 11                  | 11           | 100%     |
 | VCL Snippets     | 7                   | 7            | 100%     |
 | Version          | 9                   | 9            | 100%     |
-|                  | **159**             | **161**      | **99%**  |
+|                  | **157**             | **159**      | **99%**  |
 
 ## Usage
 
