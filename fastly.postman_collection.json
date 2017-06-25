@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "Fastly",
-		"_postman_id": "be5b7c3d-c806-a53b-de36-2d9a775213ff",
+		"_postman_id": "644f3235-9c0c-67b7-4682-b94b284873ca",
 		"description": "The Fastly API is a RESTful API that supports all features available through the Fastly web interface. Use the libraries below to guide the development of your sites and applications.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -6251,7 +6251,79 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nInstant Purge a particular service of items tagged with a Surrogate Key. Only one surrogate key can be purged at a time. Multiple keys can be purged using multiple purge requests.\n\n**Request Configuration:**\n\n- Update URL with **surrogate_key**\n\n[Documentation](https://docs.fastly.com/api/purge#purge_d8b8e8be84c350dd92492453a3df3230)"
+						"description": "**Description:**\n\nInstant Purge a particular service of items tagged with a Surrogate Key. Only one surrogate key can be purged at a time. Multiple keys can be purged using a batch surrogate key purge request.\n\n**Request Configuration:**\n\n- Update URL with **surrogate_key**\n\n[Documentation](https://docs.fastly.com/api/purge#purge_d8b8e8be84c350dd92492453a3df3230)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/purge",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/purge",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Surrogate-Key",
+								"value": "key_1 key_2 key_3 key_4 key_5",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nInstant Purge a particular service of items tagged with Surrogate Keys in a batch. Multiple surrogate keys can be purged in one batch request.\n\n**Request Configuration:**\n\n- Update **Surrogate_key** header (Surrogate Keys don't need to be separated by commas!)\n\n[Documentation](https://docs.fastly.com/api/purge#purge_db35b293f8a724717fcf25628d713583)"
+					},
+					"response": []
+				},
+				{
+					"name": "/service/service_id/purge",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/service/{{service_id}}/purge",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"surrogate_keys\":[\"key_1\",\"key_2\",\"key_3\", \"key_4\", \"key_5\"]\n}"
+						},
+						"description": "**Description:**\n\nInstant Purge a particular service of items tagged with Surrogate Keys in a batch using a JSON POST body.\n\n**Request Configuration:**\n\n- **surrogate_keys** [array of strings] - Surrogate Keys.\n\n[Documentation](https://docs.fastly.com/api/purge#purge_db35b293f8a724717fcf25628d713583)"
 					},
 					"response": []
 				}
