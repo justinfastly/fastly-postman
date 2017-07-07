@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "Fastly",
-		"_postman_id": "644f3235-9c0c-67b7-4682-b94b284873ca",
+		"_postman_id": "42a04f7a-af0f-7e60-c8ed-f65b16d6c123",
 		"description": "The Fastly API is a RESTful API that supports all features available through the Fastly web interface. Use the libraries below to guide the development of your sites and applications.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -160,8 +160,10 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"postman.clearEnvironmentVariable(\"acl_name\");",
-									"postman.clearEnvironmentVariable(\"acl_id\");",
+									"if (responseCode.code === 200) {",
+									"    postman.clearEnvironmentVariable(\"acl_name\");",
+									"    postman.clearEnvironmentVariable(\"acl_id\");    ",
+									"}",
 									"",
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								]
@@ -780,7 +782,9 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"postman.clearEnvironmentVariable(\"backend_name\");",
+									"if (responseCode.code === 200) {",
+									"    postman.clearEnvironmentVariable(\"backend_name\");   ",
+									"}",
 									"",
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								]
@@ -1636,8 +1640,10 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"postman.clearEnvironmentVariable(\"dictionary_id\");",
-									"postman.clearEnvironmentVariable(\"dictionary_name\");",
+									"if (responseCode.code === 200) {",
+									"    postman.clearEnvironmentVariable(\"dictionary_id\");",
+									"    postman.clearEnvironmentVariable(\"dictionary_name\");    ",
+									"}",
 									"",
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								]
@@ -2161,7 +2167,9 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"postman.clearEnvironmentVariable(\"director_name\");",
+									"if (responseCode.code === 200) {",
+									"    postman.clearEnvironmentVariable(\"director_name\");    ",
+									"}",
 									"",
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								]
@@ -2501,7 +2509,9 @@
 							"script": {
 								"type": "text/javascript",
 								"exec": [
-									"postman.clearEnvironmentVariable(\"domain_name\");",
+									"if (responseCode.code === 200) {",
+									"    postman.clearEnvironmentVariable(\"domain_name\");    ",
+									"}",
 									"",
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								]
