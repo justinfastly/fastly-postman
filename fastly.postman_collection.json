@@ -6333,7 +6333,7 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nInstant Purge a particular service of items tagged with Surrogate Keys in a batch. Multiple surrogate keys can be purged in one batch request.\n\n**Request Configuration:**\n\n- Update **Surrogate_key** header (Surrogate Keys don't need to be separated by commas!)\n\n[Documentation](https://docs.fastly.com/api/purge#purge_db35b293f8a724717fcf25628d713583)"
+						"description": "**Description:**\n\nInstant Purge a particular service of items tagged with Surrogate Keys in a batch. Up to 256 surrogate keys can be purged in one batch request.\n\n**Request Configuration:**\n\n- Update **Surrogate_key** header (Surrogate Keys don't need to be separated by commas!)\n\n[Documentation](https://docs.fastly.com/api/purge#purge_db35b293f8a724717fcf25628d713583)"
 					},
 					"response": []
 				},
@@ -6369,7 +6369,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"surrogate_keys\":[\"key_1\",\"key_2\",\"key_3\", \"key_4\", \"key_5\"]\n}"
 						},
-						"description": "**Description:**\n\nInstant Purge a particular service of items tagged with Surrogate Keys in a batch using a JSON POST body.\n\n**Request Configuration:**\n\n- **surrogate_keys** [array of strings] - Surrogate Keys.\n\n[Documentation](https://docs.fastly.com/api/purge#purge_db35b293f8a724717fcf25628d713583)"
+						"description": "**Description:**\n\nInstant Purge a particular service of items tagged with Surrogate Keys in a batch using a JSON POST body. Up to 256 surrogate keys can be purged in one batch request.\n\n**Request Configuration:**\n\n- **surrogate_keys** [array of strings] - Surrogate Keys.\n\n[Documentation](https://docs.fastly.com/api/purge#purge_db35b293f8a724717fcf25628d713583)"
 					},
 					"response": []
 				}
