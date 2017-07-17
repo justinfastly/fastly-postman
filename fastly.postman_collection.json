@@ -627,6 +627,42 @@
 						"description": "**Description:**\n\nRevoke a specific token by its id.\n\n**Request Configuration:**\n\n- Update URL with **token_id**\n\n[Documentation](https://docs.fastly.com/api/auth#tokens_4a958ba69402500937f0d8570f7ce86f)"
 					},
 					"response": []
+				},
+				{
+					"name": "/tokens",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 204\"] = responseCode.code === 204;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/tokens/1g5QqKMpHZLZdRqnpmnOtA",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\": [\n\t\t{\n\t\t\t\"id\": \"2hJtWFtoPlJZoBH1UFwo1q\",\n\t\t\t\"type\": \"token\"\n\t\t},\n\t\t{\n\t\t\t\"id\": \"SxIHEJxnFGmO5hlxARa2a\",\n\t\t\t\"type\": \"token\"\n\t\t}\n\t]\n}"
+						},
+						"description": "**Description:**\n\nRevoke Tokens in bulk format. Users may only revoke their own tokens. Superusers may revoke tokens of others.\n\n**Request Configuration:**\n\n- **id** [string] - The alphanumeric string identifying a token.\n\n[Documentation](https://docs.fastly.com/api/auth#tokens_3ec6f9aec76f49e345c0d41deef29369)"
+					},
+					"response": []
 				}
 			]
 		},

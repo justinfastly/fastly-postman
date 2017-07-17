@@ -68,7 +68,7 @@ Some API endpoints require session authentication. These endpoints are not inclu
 | :--------------- | :------------------ | :----------- | :------- |
 | ACL              | 5                   | 5            | 100%     |
 | ACL Entry        | 6                   | 6            | 100%     |
-| API Tokens       | 6                   | 6            | 100%     |
+| API Tokens       | 7                   | 7            | 100%     |
 | Backend          | 5                   | 5            | 100%     |
 | Billing          | 1                   | 1            | 100%     |
 | Billing Address  | 2                   | 4            | 50%      |
