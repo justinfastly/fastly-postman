@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "Fastly",
-		"_postman_id": "42a04f7a-af0f-7e60-c8ed-f65b16d6c123",
+		"_postman_id": "02e11c78-b08c-f449-753f-1fc08c28a742",
 		"description": "The Fastly API is a RESTful API that supports all features available through the Fastly web interface. Use the libraries below to guide the development of your sites and applications.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -7030,7 +7030,7 @@
 							"mode": "raw",
 							"raw": "{\n\t\"general.default_host\": \"www.your-awesome-app.com\",\n\t\"general.default_ttl\": 900\n}"
 						},
-						"description": "**Description:**\n\nUpdate the settings for a particular service and version.\n\n**Request Configuration:**\n\n- **general.default_host** [string] - The default host name for the version.\n- **general.default_ttl** [integer] - The default Time-to-live (TTL) for the version.\n\n[Documentation](https://docs.fastly.com/api/config#settings_9740ff4ac0c1777f455274c4850ece23)"
+						"description": "**Description:**\n\nUpdate the settings for a particular service and version.\n\n**NOTE**: If you override TTLs with custom VCL, any `general.default_ttl` value will not be honored and the expected behavior may change.\n\n**Request Configuration:**\n\n- **general.default_host** [string] - The default host name for the version.\n- **general.default_ttl** [integer] - The default Time-to-live (TTL) for the version.\n\n[Documentation](https://docs.fastly.com/api/config#settings_9740ff4ac0c1777f455274c4850ece23)"
 					},
 					"response": []
 				}
