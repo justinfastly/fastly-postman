@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "Fastly",
-		"_postman_id": "02e11c78-b08c-f449-753f-1fc08c28a742",
+		"_postman_id": "a7f60ed5-e9e4-5856-057f-6e8ffa400d7d",
 		"description": "The Fastly API is a RESTful API that supports all features available through the Fastly web interface. Use the libraries below to guide the development of your sites and applications.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -6039,6 +6039,98 @@
 							"raw": ""
 						},
 						"description": "**Description:**\n\nReturns usage information aggregated by service and grouped by service and region.\n\nDate parsing is performed using the Chronic ruby library; for the most detailed information on exactly what formats are available please visit the [Chronic](https://github.com/mojombo/chronic) repository.\n\n**Request Configuration:**\n\n- Update query string **human_readable_timestamp** parameter in URL\n- Update query string **by** [minute, hour, day] parameter in URL\n- Update query string **region** [usa, europe, anzac, asia, latam, south_africa] parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_99369fb79ebecf90cc944d5dce49cc31)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/usage_by_month",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/stats/usage_by_month",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nReturns month-to-date usage details for a given month and year. Usage details are aggregated by service and across all Fastly services, and then grouped by region.\n\nThis endpoint does not use the `from` or `to` fields for selecting the date for which data is requested. Instead, it uses `month` and `year` integer fields. Both fields are optional and default to the current month and year respectively. When set, an optional `billable_units` field will convert bandwidth to GB and divide requests by 10,000.\n\n[Documentation](https://docs.fastly.com/api/stats#historical_864bd24a3fc04848fe72f094d6f19261)"
+					},
+					"response": []
+				},
+				{
+					"name": "/stats/usage_by_month?month=month&year=year&billable_units=true",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": {
+							"raw": "{{url}}/stats/usage_by_month?month=7&year=2017&billable_units=true",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"stats",
+								"usage_by_month"
+							],
+							"query": [
+								{
+									"key": "month",
+									"value": "7",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "year",
+									"value": "2017",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "billable_units",
+									"value": "true",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Fastly-Key",
+								"value": "{{token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "**Description:**\n\nReturns month-to-date usage details for a given month and year. Usage details are aggregated by service and across all Fastly services, and then grouped by region.\n\nThis endpoint does not use the `from` or `to` fields for selecting the date for which data is requested. Instead, it uses `month` and `year` integer fields. Both fields are optional and default to the current month and year respectively. When set, an optional `billable_units` field will convert bandwidth to GB and divide requests by 10,000.\n\n**Request Configuration:**\n\n- Update query string **month** parameter in URL\n- Update query string **year** parameter in URL\n- Update query string **billable_units** parameter in URL\n\n[Documentation](https://docs.fastly.com/api/stats#historical_864bd24a3fc04848fe72f094d6f19261)"
 					},
 					"response": []
 				},

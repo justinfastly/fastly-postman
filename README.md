@@ -85,7 +85,7 @@ Some API endpoints require session authentication. These endpoints are not inclu
 | Gzip             | 5                   | 5            | 100%     |
 | Header           | 5                   | 5            | 100%     |
 | Healthcheck      | 5                   | 5            | 100%     |
-| Historical Stats | 8                   | 8            | 100%     |
+| Historical Stats | 9                   | 9            | 100%     |
 | Invitation       | 3                   | 3            | 100%     |
 | Purging          | 6                   | 6            | 100%     |
 | Request Settings | 5                   | 5            | 100%     |
