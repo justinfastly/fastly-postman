@@ -98,7 +98,7 @@ Some API endpoints require session authentication. These endpoints are not inclu
 | VCL              | 11                  | 11           | 100%     |
 | VCL Snippets     | 7                   | 7            | 100%     |
 | Version          | 9                   | 9            | 100%     |
-|                  | **160**             | **162**      | **99%**  |
+|                  | **161**             | **163**      | **99%**  |
 
 ## Usage
 
@@ -164,14 +164,4 @@ $ newman run fastly.postman_collection.json -e fastly.postman_environment.json -
 
 ## Contribute
 
-Fastly is constantly updating their API. I'll try my best to keep up with them but please contribute if you find any requests which are not covered, incomplete, or outdated.
-
-In general, I follow the "[shared repository model](https://gist.github.com/seshness/3943237)" Git workflow.
-
- 1. **Clone** the project to your own machine
- 2. **Create** a new feature branch
- 3. **Commit** changes to the feature branch
- 4. **Push** your feature branch to the GitHub remote
- 5. Submit a **Pull request** so that I can review your changes
-
-NOTE: Be sure to merge the latest from "upstream" before making a pull request!
+PRs accepted. I am open to suggestions in improving this library.
