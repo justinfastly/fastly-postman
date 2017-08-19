@@ -7589,7 +7589,7 @@
 					"response": []
 				},
 				{
-					"name": "/user/user_id/password/request_reset",
+					"name": "/user/user_email/password/request_reset",
 					"event": [
 						{
 							"listen": "test",
@@ -7602,14 +7602,14 @@
 						}
 					],
 					"request": {
-						"url": " {{url}}/user/x9KzsrACXZv8tPwlEDsKb6/password/request_reset",
+						"url": " {{url}}/user/john.doe@gmail.com/password/request_reset",
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
 							"raw": ""
 						},
-						"description": "**Description:**\n\nRequests a password reset for the specified user.\n\n**Request Configuration:**\n\n- Update URL with **user_id**\n\n[Documentation](https://docs.fastly.com/api/account#user_cee4dbb44c07d9ed078424cbbd353e1a)"
+						"description": "**Description:**\n\nRequests a password reset for the specified user.\n\n**Request Configuration:**\n\n- Update URL with **user_email**\n\n[Documentation](https://docs.fastly.com/api/account#user_cee4dbb44c07d9ed078424cbbd353e1a)"
 					},
 					"response": []
 				},
