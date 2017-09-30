@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "Fastly",
-		"_postman_id": "a7f60ed5-e9e4-5856-057f-6e8ffa400d7d",
+		"_postman_id": "cc46c380-4288-4157-4e1d-1e5a482e664b",
 		"description": "The Fastly API is a RESTful API that supports all features available through the Fastly web interface. Use the libraries below to guide the development of your sites and applications.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -1317,7 +1317,7 @@
 		},
 		{
 			"name": "Customer",
-			"description": "A Customer is the base object which owns your Users and Services.\n\n[Customer Documentation](https://docs.fastly.com/api/account#customer)",
+			"description": "A Customer is the base object that owns your Users and Services.\n\n[Customer Documentation](https://docs.fastly.com/api/account#customer)",
 			"item": [
 				{
 					"name": "/customer/customer_id/users",
@@ -6169,7 +6169,7 @@
 		},
 		{
 			"name": "Invitation",
-			"description": "The invitations are created by the customer in order to invite employees to create user accounts that operate under the main customer account.\n\n[Invitation Documentation](https://docs.fastly.com/api/account#invitation)",
+			"description": "Invitations allow users to create accounts that operate under a main customer account. For bulk operations and access control specification, see the [Invitations API endpoint](https://docs.fastly.com/api/account#invitations) instead.\n\n[Invitation Documentation](https://docs.fastly.com/api/account#invitation)",
 			"item": [
 				{
 					"name": "/invitation",
