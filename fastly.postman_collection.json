@@ -1,7 +1,7 @@
 {
 	"info": {
 		"name": "Fastly",
-		"_postman_id": "695677cc-73d1-1c87-d726-8ef802656a20",
+		"_postman_id": "3a3a011b-99f7-1f3d-9692-e78b95a5a431",
 		"description": "The Fastly API is a RESTful API that supports all features available through the Fastly web interface. Use the libraries below to guide the development of your sites and applications.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -5211,12 +5211,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{url}}//service/{{service_id}}/details",
+									"raw": "{{url}}/service/{{service_id}}/details",
 									"host": [
 										"{{url}}"
 									],
 									"path": [
-										"",
 										"service",
 										"{{service_id}}",
 										"details"
@@ -7350,7 +7349,6 @@
 			"item": [
 				{
 					"name": "/stats",
-					"description": "",
 					"item": [
 						{
 							"name": "/stats",
@@ -7731,7 +7729,6 @@
 				},
 				{
 					"name": "/stats/field/stats_field",
-					"description": "",
 					"item": [
 						{
 							"name": "/stats/field/stats_field",
@@ -8126,7 +8123,6 @@
 				},
 				{
 					"name": "/stats/aggregate",
-					"description": "",
 					"item": [
 						{
 							"name": "/stats/aggregate",
@@ -8514,7 +8510,6 @@
 				},
 				{
 					"name": "/stats/service/service_id",
-					"description": "",
 					"item": [
 						{
 							"name": "/stats/service/service_id",
@@ -8909,7 +8904,6 @@
 				},
 				{
 					"name": "/stats/service/service_id/field/stats_field",
-					"description": "",
 					"item": [
 						{
 							"name": "/stats/service/service_id/field/stats_field",
@@ -9318,7 +9312,6 @@
 				},
 				{
 					"name": "/stats/usage",
-					"description": "",
 					"item": [
 						{
 							"name": "/stats/usage",
@@ -9706,7 +9699,6 @@
 				},
 				{
 					"name": "/stats/usage_by_service",
-					"description": "",
 					"item": [
 						{
 							"name": "/stats/usage_by_service",
@@ -10094,7 +10086,6 @@
 				},
 				{
 					"name": "/stats/usage_by_month",
-					"description": "",
 					"item": [
 						{
 							"name": "/stats/usage_by_month",
@@ -10196,7 +10187,6 @@
 				},
 				{
 					"name": "/stats/regions",
-					"description": "",
 					"item": [
 						{
 							"name": "/stats/regions",
@@ -10234,6 +10224,62 @@
 									]
 								},
 								"description": "**Description:**\n\nFetches the list of codes for regions that are covered by the Fastly CDN service.\n\n[Documentation](https://docs.fastly.com/api/stats#historical_dc06fafd90cb9e4b5378fdea2103987f)"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Remote logging",
+			"description": "Fastly offers logging to a number of formats and platforms. In addition to offering syslog streams, we offer logs shipped in various formats and to various hosted logging providers.",
+			"item": [
+				{
+					"name": "Amazon S3",
+					"description": "Fastly will upload log messages to the S3 bucket, and in the format, specified in the S3 object.",
+					"item": [
+						{
+							"name": "/service/service_id/version/version_no/logging/s3",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/s3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"s3"
+									]
+								},
+								"description": "**Description:**\n\nList all of the S3s for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_s3_b77fbd72ff50e5199373bebf97226690)"
 							},
 							"response": []
 						}
