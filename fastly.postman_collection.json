@@ -1,7 +1,7 @@
 {
 	"info": {
 		"name": "Fastly",
-		"_postman_id": "3a3a011b-99f7-1f3d-9692-e78b95a5a431",
+		"_postman_id": "b13f3c56-7fdf-09bb-f996-ed284794a803",
 		"description": "The Fastly API is a RESTful API that supports all features available through the Fastly web interface. Use the libraries below to guide the development of your sites and applications.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -10280,6 +10280,1378 @@
 									]
 								},
 								"description": "**Description:**\n\nList all of the S3s for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_s3_b77fbd72ff50e5199373bebf97226690)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/s3",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"my-s3-endpoint-name\",\n\t\"bucket_name\": \"my-s3-bucket-name\",\n\t\"access_key\": \"AWSACCESSKEY\",\n\t\"secret_key\": \"AWSSECRETKEY\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/s3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"s3"
+									]
+								},
+								"description": "**Description:**\n\nCreate a S3 for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_s3_a3afaf505cb81fb44622fbcc6e41a03d)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/s3/name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"my-s3-endpoint-name2\",\n\t\"old_name\": \"my-s3-endpoint-name\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/s3/{{log_endpoint_name}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"s3",
+										"{{log_endpoint_name}}"
+									]
+								},
+								"description": "**Description:**\n\nUpdate the S3 for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_s3_e67e51d577b87a3a94c010cfdcb92bbf)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/s3/name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"my-s3-endpoint-name2\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/s3/{{log_endpoint_name}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"s3",
+										"{{log_endpoint_name}}"
+									]
+								},
+								"description": "**Description:**\n\nDelete the S3 for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_s3_47d3a6b61f9cf36b157fa518909dc67b)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/s3/name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/s3/{{log_endpoint_name}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"s3",
+										"{{log_endpoint_name}}"
+									]
+								},
+								"description": "**Description:**\n\nGet the S3 for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_s3_a0aa45451a426a46c1a7b0d4ed602f39)"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Amazon S3 canary",
+					"description": "Fastly will upload log messages to the S3 bucket, and in the format, specified in the S3 Canary object. This is a temporary controller to test a new S3 library and, as such, is part of a limited availability release. For more information, see our [product and feature life cycle descriptions](https://docs.fastly.com/guides/fastly-product-lifecycle/#limited-availability). If you would like to try it, please contact support@fastly.com.",
+					"item": [
+						{
+							"name": "/service/service_id/version/version_no/logging/s3canary",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/s3canary",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"s3canary"
+									]
+								},
+								"description": "**Description:**\n\nList all of the S3s for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_s3_canary_dd75fd7922620cf82f011d9ae0bcaaf8)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/s3canary",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"my-s3canary-endpoint-name\",\n\t\"bucket_name\": \"my-s3-bucket-name\",\n\t\"access_key\": \"AWSACCESSKEY\",\n\t\"secret_key\": \"AWSSECRETKEY\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/s3canary",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"s3canary"
+									]
+								},
+								"description": "**Description:**\n\nCreate a S3 Canary for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_s3_canary_61a852c6310849656a942960e1b69923)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/s3canary/name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"my-s3canary-endpoint-name2\",\n\t\"old_name\": \"my-s3canary-endpoint-name\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/s3canary/{{log_endpoint_name}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"s3canary",
+										"{{log_endpoint_name}}"
+									]
+								},
+								"description": "**Description:**\n\nUpdate the S3 Canary for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_s3_canary_1bfa030d43cd2d3d6d218cfcd2337b86)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/s3canary/name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"my-s3-endpoint-name2\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/s3canary/{{log_endpoint_name}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"s3canary",
+										"{{log_endpoint_name}}"
+									]
+								},
+								"description": "**Description:**\n\nDelete the S3 Canary for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_s3_canary_a5c29699677920855d2b7508e2571313)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/s3canary/name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/s3canary/{{log_endpoint_name}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"s3canary",
+										"{{log_endpoint_name}}"
+									]
+								},
+								"description": "**Description:**\n\nGet the S3 Canary for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_s3_canary_5f39fe683fe484e92948e66e181b65d6)"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Digital Ocean Spaces",
+					"description": "Fastly will upload log messages to the DigitalOcean Space in the format specified in the DigitalOcean Spaces object.",
+					"item": [
+						{
+							"name": "/service/service_id/version/version_no/logging/digitalocean",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/digitalocean",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"digitalocean"
+									]
+								},
+								"description": "**Description:**\n\nList all of the DigitalOcean Spaces for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_digitalocean_69e13d0b7a2539f9670ca4072a7b69cc)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/digitalocean",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"my-digitalocean-endpoint-name\",\n\t\"bucket_name\": \"my-digitalocean-space-name\",\n\t\"access_key\": \"DIGITALOCEANACCESSKEY\",\n\t\"secret_key\": \"DIGITALOCEANSECRETKEY\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/digitalocean",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"digitalocean"
+									]
+								},
+								"description": "**Description:**\n\nCreate a DigitalOcean Space for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_digitalocean_e1abb0a9f1760b8325a7d7c54b282565)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/digitalocean/name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"my-digitalocean-endpoint-name2\",\n\t\"old_name\": \"my-digitalocean-endpoint-name\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/digitalocean/{{log_endpoint_name}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"digitalocean",
+										"{{log_endpoint_name}}"
+									]
+								},
+								"description": "**Description:**\n\nUpdate the DigitalOcean Space for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_digitalocean_cfda32b0ed8655dc6394f305b5134e52)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/digitalocean/name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"my-s3-endpoint-name2\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/digitalocean/{{log_endpoint_name}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"digitalocean",
+										"{{log_endpoint_name}}"
+									]
+								},
+								"description": "**Description:**\n\nDelete the DigitalOcean Space for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_digitalocean_c26e7e2c6d4ef8c6350ff7a245368891)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/digitalocean/name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/digitalocean/{{log_endpoint_name}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"digitalocean",
+										"{{log_endpoint_name}}"
+									]
+								},
+								"description": "**Description:**\n\nGet the DigitalOcean Space for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_digitalocean_3e274e5da118e0b4995adb5218ce5c81)"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Google Cloud Storage",
+					"description": "Fastly will upload log messages to the GCS bucket, and in the format, specified in the GCS object.",
+					"item": [
+						{
+							"name": "/service/service_id/version/version_no/logging/gcs",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/gcs",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"gcs"
+									]
+								},
+								"description": "**Description:**\n\nList all of the GCSs for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_gcs_dbaeecf7d842a09eb28fe5a9609f3ee9)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/gcs",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"my_gcs_logging\",\n\t\"bucket_name\": \"my_log_bucket\",\n\t\"secret_key\": \"GCSSECRETKEY\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/gcs",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"gcs"
+									]
+								},
+								"description": "**Description:**\n\nCreate GCS Logging for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_gcs_ca6b2485305d2eb50227ab3d16d74bb6)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/gcs/name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"my-gcs-endpoint-name2\",\n\t\"old_name\": \"my-gcs-endpoint-name\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/gcs/{{log_endpoint_name}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"gcs",
+										"{{log_endpoint_name}}"
+									]
+								},
+								"description": "**Description:**\n\nUpdate the GCS Logging for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_gcs_ea810342c2b1fc853aeada03c6b50e9e)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/gcs/name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"my-gcs-endpoint-name2\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/gcs/{{log_endpoint_name}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"gcs",
+										"{{log_endpoint_name}}"
+									]
+								},
+								"description": "**Description:**\n\nDelete the GCS Logging for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_gcs_7df022e5c48ea8f056303634a92b8782)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/gcs/name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/gcs/{{log_endpoint_name}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"gcs",
+										"{{log_endpoint_name}}"
+									]
+								},
+								"description": "**Description:**\n\nGet the GCS Logging for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_gcs_9e4205e1ee22495ca415676960a9d1db)"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Google BigQuery",
+					"description": "Fastly will upload log messages to the Google BigQuery dataset and table, and in the format specified in the BigQuery object.",
+					"item": [
+						{
+							"name": "/service/service_id/version/version_no/logging/bigquery",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/bigquery",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"bigquery"
+									]
+								},
+								"description": "**Description:**\n\nList all of the BigQuerys for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_bigquery_12f025a8e2af633647c63bae84bf4eae)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/bigquery",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"my_bigquery_logging\",\n    \"project_id\": \"example-fastly-log\",\n    \"dataset\": \"fastly_log_test\",\n    \"table\": \"fastly_logs\",\n    \"user\": \"fastly-bigquery-log@example-fastly-log.iam.gserviceaccount.com\",\n    \"secret_key\": \"GCSSECRETKEY\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/bigquery",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"bigquery"
+									]
+								},
+								"description": "**Description:**\n\nCreate BigQuery Logging for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_bigquery_c0a13ffe69c0d60da52daf9116e44e2b)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/bigquery/name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"my-bigquery-endpoint-name2\",\n\t\"old_name\": \"my-bigquery-endpoint-name\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/bigquery/{{log_endpoint_name}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"bigquery",
+										"{{log_endpoint_name}}"
+									]
+								},
+								"description": "**Description:**\n\nUpdate the BigQuery for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_bigquery_0baa9a4a4e4ac9ac52d79ba4e47f26c7)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/bigquery/name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"my-bigquery-endpoint-name2\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/bigquery/{{log_endpoint_name}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"bigquery",
+										"{{log_endpoint_name}}"
+									]
+								},
+								"description": "**Description:**\n\nDelete the BigQuery Logging for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_bigquery_5c98cad79cc7a37001103a91a4f5d379)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/bigquery/name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/bigquery/{{log_endpoint_name}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"bigquery",
+										"{{log_endpoint_name}}"
+									]
+								},
+								"description": "**Description:**\n\nGet the BigQuery Logging for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_bigquery_29866055e75ca6c20434259f2503042c)"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Heroku",
+					"description": "Fastly will stream log messages to the Heroku account, and in the format specified in the Heroku object. This feature is part of a limited availability release. For more information, see our [product and feature life cycle descriptions](https://docs.fastly.com/guides/fastly-product-lifecycle/#limited-availability). If you would like to try it, please contact support@fastly.com.",
+					"item": [
+						{
+							"name": "/service/service_id/version/version_no/logging/heroku",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/heroku",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"heroku"
+									]
+								},
+								"description": "**Description:**\n\nList all of the Herokus for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_heroku_0cd1bc1f492c444c005b1f31c55427c7)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/heroku",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"my_heroku_logging\",\n\t\"token\": \"deadbeef\",\n\t\"url\": \"https://1.us.logplex.io/logs\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/heroku",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"heroku"
+									]
+								},
+								"description": "**Description:**\n\nCreate a Heroku for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_heroku_bfe289bbae0d8d65a3e55b086030ff38)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/heroku/name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"my-heroku-endpoint-name2\",\n\t\"old_name\": \"my-heroku-endpoint-name\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/heroku/{{log_endpoint_name}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"heroku",
+										"{{log_endpoint_name}}"
+									]
+								},
+								"description": "**Description:**\n\nUpdate the Heroku for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_heroku_75ea10febb893fdd63c04db6a235f836)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/heroku/name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"my-heroku-endpoint-name2\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/heroku/{{log_endpoint_name}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"heroku",
+										"{{log_endpoint_name}}"
+									]
+								},
+								"description": "**Description:**\n\nDelete the Heroku for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_heroku_75d7b665ebab0499b8ef33ce65e53a70)"
+							},
+							"response": []
+						},
+						{
+							"name": "/service/service_id/version/version_no/logging/heroku/name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Fastly-Key",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/service/{{service_id}}/version/{{version_no}}/logging/heroku/{{log_endpoint_name}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"service",
+										"{{service_id}}",
+										"version",
+										"{{version_no}}",
+										"logging",
+										"heroku",
+										"{{log_endpoint_name}}"
+									]
+								},
+								"description": "**Description:**\n\nGet the Heroku for a particular service and version.\n\n[Documentation](https://docs.fastly.com/api/logging#logging_heroku_e37de864471275f887b96eccf8ac84f3)"
 							},
 							"response": []
 						}
